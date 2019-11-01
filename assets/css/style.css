@@ -59,6 +59,7 @@ a.tudo {
           transform: translate(-50%, -50%);
   border-radius: 30px;
   overflow: hidden;
+  padding: 15px;
 }
 
 .pag-stories .sobre-produto .titulo {
