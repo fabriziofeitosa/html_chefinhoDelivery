@@ -33,25 +33,44 @@ a.tudo {
         PAG. STORIES
 ####################################### */
 
+
 .pag-stories {
     position: relative;
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
     background-size: cover;
 
     .sobre-empresa {
         position: absolute;
         top: 0;
         left: 0;
-        display: none;
+        display: none !important;
     }
+
+    $cw: 80%;
+    $ch: 30%;
+
+    $ct: 50%;
+    $cl: 50%;
+
+    $blur-w: (100%/$cw) * 100%;
+
+    $tx: $cl - ($cw/2);
+    $ty: $ct - ($ch/2);
 
     .sobre-produto {
         text-align: center;
         color: #fff;
-        max-width: 80%;
+        background-image: inherit;
+        width: $cw; /* =cw */
+        height: $ch; /* =ch */
+        position: absolute;
+        top: $ct; /* =ct */
+        left: $cl; /* =cl */
+        transform: translate(-50%, -50%);
+        border-radius: 30px;
+        overflow: hidden;
+
         .titulo {
             font-size: 34px;
             line-height: 1.1;
@@ -59,13 +78,27 @@ a.tudo {
             text-transform: uppercase;
         }
         .sobre {
-            max-width: 80%;
+            width: 80%;
+            margin-left: 10%;
             font-size: 18px;
             line-height: 1.2;
         }
         .preco {
             color: orange;
             font-size: 34px;
+            font-weight: bold;;
+        }
+        .blur {
+            background-image: inherit;
+            background-size: cover;
+            height: 100vh; /* h */
+            width: $blur-w; /* (100/cw) x 100% */
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform: translate(-$tx,-$ty); /* - [cl - (cw/2)] % ,  -[ct - (ch/2)] % */
+            filter: blur(10px);
+            z-index: -1;
         }
     }
 

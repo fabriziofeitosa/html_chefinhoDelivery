@@ -30,10 +30,8 @@ a.tudo {
 ####################################### */
 .pag-stories {
   position: relative;
-  width: 100%;
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
   background-size: cover;
 }
 
@@ -41,13 +39,26 @@ a.tudo {
   position: absolute;
   top: 0;
   left: 0;
-  display: none;
+  display: none !important;
 }
 
 .pag-stories .sobre-produto {
   text-align: center;
   color: #fff;
-  max-width: 80%;
+  background-image: inherit;
+  width: 80%;
+  /* =cw */
+  height: 30%;
+  /* =ch */
+  position: absolute;
+  top: 50%;
+  /* =ct */
+  left: 50%;
+  /* =cl */
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 30px;
+  overflow: hidden;
 }
 
 .pag-stories .sobre-produto .titulo {
@@ -58,7 +69,8 @@ a.tudo {
 }
 
 .pag-stories .sobre-produto .sobre {
-  max-width: 80%;
+  width: 80%;
+  margin-left: 10%;
   font-size: 18px;
   line-height: 1.2;
 }
@@ -66,6 +78,25 @@ a.tudo {
 .pag-stories .sobre-produto .preco {
   color: orange;
   font-size: 34px;
+  font-weight: bold;
+}
+
+.pag-stories .sobre-produto .blur {
+  background-image: inherit;
+  background-size: cover;
+  height: 100vh;
+  /* h */
+  width: 125%;
+  /* (100/cw) x 100% */
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-transform: translate(-10%, -35%);
+          transform: translate(-10%, -35%);
+  /* - [cl - (cw/2)] % ,  -[ct - (ch/2)] % */
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+  z-index: -1;
 }
 
 .pag-stories .btn-infor,
