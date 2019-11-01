@@ -1,0 +1,94 @@
+@charset "UTF-8";
+/*
+Author: Fabrizio Feitosa
+Author URI: http://fabriziofeitosa.me
+*/
+/* #######################################
+        CONFIGURAÇÕES
+####################################### */
+/* #######################################
+        BÁSICO
+####################################### */
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+a.tudo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* #######################################
+        PAG. STORIES
+####################################### */
+.pag-stories {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.pag-stories .sobre-empresa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.pag-stories .sobre-produto {
+  text-align: center;
+  color: #fff;
+  max-width: 80%;
+}
+
+.pag-stories .sobre-produto .titulo {
+  font-size: 34px;
+  line-height: 1.1;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.pag-stories .sobre-produto .sobre {
+  max-width: 80%;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.pag-stories .sobre-produto .preco {
+  color: orange;
+  font-size: 34px;
+}
+
+.pag-stories .btn-infor,
+.pag-stories .btn-pedir {
+  position: absolute;
+  bottom: 20px;
+}
+
+.pag-stories .btn-infor {
+  left: 20px;
+}
+
+.pag-stories .btn-pedir {
+  right: 20px;
+}
+
+.btn-float {
+  background-color: orange;
+  color: #fff;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  display: block;
+  font-size: 40px;
+}
+/*# sourceMappingURL=style.css.map */
