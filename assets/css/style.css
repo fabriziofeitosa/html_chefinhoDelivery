@@ -40,6 +40,10 @@ a.tudo {
   display: block;
 }
 
+*:focus {
+  outline: none !important;
+}
+
 /* #######################################
         Estáticos
 ####################################### */
@@ -58,9 +62,6 @@ a.tudo {
   max-height: 80%;
 }
 
-/* #######################################
-        PAG. 01 - Home
-####################################### */
 .btn-principal {
   z-index: 997;
   position: fixed;
@@ -207,6 +208,83 @@ a.tudo {
 }
 
 /* #######################################
+        PAG. 01 - Home
+####################################### */
+.pag-home header {
+  padding: 0 15px;
+}
+
+.pag-home header img {
+  max-width: 100%;
+}
+
+.pag-home header .principal {
+  margin-top: 10px;
+  height: 60px;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  border-radius: 10px;
+}
+
+.pag-home header .principal .logo {
+  width: 20%;
+  height: 40px;
+  margin-right: 10px;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.pag-home header .principal .logo img {
+  max-height: 80%;
+}
+
+.pag-home header .principal .busca {
+  width: 80%;
+  height: 40px;
+  position: relative;
+  background-color: #e6e6e6;
+  color: #000;
+  border-radius: 10px;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.pag-home header .principal .busca input {
+  width: 100%;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  padding: 0 50px 0 15px;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.pag-home header .principal .busca button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+}
+
+.pag-home header .principal.focus {
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  padding-right: 10px;
+}
+
+.pag-home header .principal.focus .logo {
+  width: 0%;
+}
+
+.pag-home header .principal.focus .busca {
+  width: 100%;
+}
+
+/* #######################################
         PAG. 04 - STORIES
 ####################################### */
 .pag-stories {
@@ -306,6 +384,7 @@ a.tudo {
   background-size: cover;
   height: 100vh;
   /* h */
+  height: calc(var(--vh, 1vh) * 100);
   width: 125%;
   /* (100/cw) x 100% */
   position: absolute;
