@@ -12,4 +12,11 @@ jQuery(document).ready(function ($) {
     });
     ajusteBarraDeNavegação();
 
+    // ################################################
+
+    // Animação btn principal
+    $('.pag-home .btn-principal .icon-principal').on('click', function(){
+        $('.pag-home .btn-principal').toggleClass('aberto');
+    });
+
 });

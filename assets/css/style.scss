@@ -49,7 +49,159 @@ a.tudo {
 }
 
 /* #######################################
-        PAG. STORIES
+        Estáticos
+####################################### */
+
+$tamanhoBola: 70px;
+.btn-float {
+    background-color: $laranja;
+    color: #fff;
+    width: $tamanhoBola;
+    height: $tamanhoBola;
+    border-radius: 100%;
+    display: block;
+    font-size: 40px;
+
+    img {
+        max-width: 80%;
+        max-height: 80%;
+    }
+}
+
+/* #######################################
+        PAG. 01 - Home
+####################################### */
+
+.btn-principal {
+    z-index: 997;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: $tamanhoBola;
+    min-height: $tamanhoBola;
+    .icon-principal {
+        z-index: 999;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-color: $laranja;
+        color: #fff;
+        font-size: 34px;
+        width: $tamanhoBola;
+        height: $tamanhoBola;
+        border-radius: 100%;
+        display: block;
+        font-size: 40px;
+        line-height: $tamanhoBola;
+        text-align: center;
+        transition: all .2s;
+
+        img {
+            position: absolute;
+            max-width: 80%;
+            max-height: 80%;
+            transition: all .2s;
+
+            &.garfo {
+                top: 10%;
+                left: 30%;
+            }
+            &.faca {
+                top: 10%;
+                right: 30%;
+            }
+        }
+    }
+    .outros {
+        z-index: 998;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        border-radius: 100%;
+        width: $tamanhoBola;
+        height: $tamanhoBola;
+        background-color: #fad67a;
+        overflow: hidden;
+        opacity: 0;
+        transition: all .2s;
+
+        .outro-btn {
+            width: $tamanhoBola - 10px;
+            height: $tamanhoBola - 10px;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 100%;
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+
+        .position01 {
+            position: absolute;
+            top: 50%;
+            left: 15%;
+            transform: translate(-50%,-50%);
+        }
+        .position02 {
+            position: absolute;
+            top: 25%;
+            left: 25%;
+            transform: translate(-50%,-50%);
+        }
+        .position03 {
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .position04 {
+            position: absolute;
+            top: 25%;
+            right: 25%;
+            transform: translate(50%,-50%);
+        }
+        .position05 {
+            position: absolute;
+            top: 50%;
+            right: 15%;
+            transform: translate(50%,-50%);
+        }
+    }
+
+    &.aberto {
+        .icon-principal {
+            font-size: 46px;
+            width: $tamanhoBola + 20px;
+            height: $tamanhoBola + 20px;
+            line-height: $tamanhoBola + 20px;
+
+            img.garfo {
+                transform: rotate(30deg);
+                left: 45%;
+            }
+            img.faca {
+                transform: rotate(-30deg);
+                right: 45%;
+            }
+        }
+        .outros {
+            width: 350px;
+            height: 350px;
+            opacity: 1;
+        }
+    }
+}
+
+.pag-home {
+}
+
+/* #######################################
+        PAG. 04 - STORIES
 ####################################### */
 
 
@@ -164,19 +316,16 @@ a.tudo {
 
     .btn-infor {
         left: 20px;
+        img {
+            width: 60%;
+            height: 60%;
+        }
     }
     .btn-pedir {
         right: 20px;
+        img {
+            width: 70%;
+            height: 70%;
+        };
     }
-}
-
-$tamanhoBola: 70px;
-.btn-float {
-    background-color: $laranja;
-    color: #fff;
-    width: $tamanhoBola;
-    height: $tamanhoBola;
-    border-radius: 100%;
-    display: block;
-    font-size: 40px;
 }

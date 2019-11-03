@@ -41,7 +41,173 @@ a.tudo {
 }
 
 /* #######################################
-        PAG. STORIES
+        Estáticos
+####################################### */
+.btn-float {
+  background-color: #ffa500;
+  color: #fff;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  display: block;
+  font-size: 40px;
+}
+
+.btn-float img {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+/* #######################################
+        PAG. 01 - Home
+####################################### */
+.btn-principal {
+  z-index: 997;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  min-width: 70px;
+  min-height: 70px;
+}
+
+.btn-principal .icon-principal {
+  z-index: 999;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #ffa500;
+  color: #fff;
+  font-size: 34px;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  display: block;
+  font-size: 40px;
+  line-height: 70px;
+  text-align: center;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.btn-principal .icon-principal img {
+  position: absolute;
+  max-width: 80%;
+  max-height: 80%;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.btn-principal .icon-principal img.garfo {
+  top: 10%;
+  left: 30%;
+}
+
+.btn-principal .icon-principal img.faca {
+  top: 10%;
+  right: 30%;
+}
+
+.btn-principal .outros {
+  z-index: 998;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 100%;
+  width: 70px;
+  height: 70px;
+  background-color: #fad67a;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.btn-principal .outros .outro-btn {
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 100%;
+}
+
+.btn-principal .outros .outro-btn img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.btn-principal .outros .position01 {
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.btn-principal .outros .position02 {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.btn-principal .outros .position03 {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.btn-principal .outros .position04 {
+  position: absolute;
+  top: 25%;
+  right: 25%;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+}
+
+.btn-principal .outros .position05 {
+  position: absolute;
+  top: 50%;
+  right: 15%;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+}
+
+.btn-principal.aberto .icon-principal {
+  font-size: 46px;
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+}
+
+.btn-principal.aberto .icon-principal img.garfo {
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+  left: 45%;
+}
+
+.btn-principal.aberto .icon-principal img.faca {
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+  right: 45%;
+}
+
+.btn-principal.aberto .outros {
+  width: 350px;
+  height: 350px;
+  opacity: 1;
+}
+
+/* #######################################
+        PAG. 04 - STORIES
 ####################################### */
 .pag-stories {
   position: relative;
@@ -165,17 +331,17 @@ a.tudo {
   left: 20px;
 }
 
+.pag-stories .btn-infor img {
+  width: 60%;
+  height: 60%;
+}
+
 .pag-stories .btn-pedir {
   right: 20px;
 }
 
-.btn-float {
-  background-color: #ffa500;
-  color: #fff;
-  width: 70px;
-  height: 70px;
-  border-radius: 100%;
-  display: block;
-  font-size: 40px;
+.pag-stories .btn-pedir img {
+  width: 70%;
+  height: 70%;
 }
 /*# sourceMappingURL=style.css.map */
