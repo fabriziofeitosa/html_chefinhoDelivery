@@ -16,10 +16,10 @@ jQuery(document).ready(function ($) {
 
     // Animação input buscar
     $('.pag-home header #inputBuscar').focusin(function () {
-        $('.pag-home header .principal').toggleClass('focus');
+        $('.pag-home header').toggleClass('focus');
     });
     $('.pag-home header #inputBuscar').focusout(function () {
-        $('.pag-home header .principal').toggleClass('focus');
+        $('.pag-home header').toggleClass('focus');
     });
 
     // ################################################

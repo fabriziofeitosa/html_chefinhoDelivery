@@ -204,16 +204,15 @@ $tamanhoBola: 70px;
 
 .pag-home {
     header {
-        padding: 0 15px;
+        margin: 0 15px;
+        border-radius: 10px;
+        transition: all .2s;
         img {
             max-width: 100%;
         }
-
         .principal {
             margin-top: 10px;
             height: 60px;
-            transition: all .2s;
-            border-radius: 10px;
             .logo {
                 width: 20%;
                 height: 40px;
@@ -250,17 +249,25 @@ $tamanhoBola: 70px;
                     border: none;
                 }
             }
+        }
+        .resultados {
+            display: none;
+        }
 
-            &.focus {
-                background-color: #fff;
-                box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
-                padding-right: 10px;
+        &.focus {
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.8);
+            padding-right: 10px;
+            .principal {
                 .logo {
                     width: 0%;
                 }
                 .busca {
                     width: 100%;
                 }
+            }
+            .resultados {
+                display: block;
             }
         }
     }
