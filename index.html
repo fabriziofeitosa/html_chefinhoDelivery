@@ -1,60 +1,105 @@
-<!doctype html>
-<html lang="pt-br">
-
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Projeto Chefinho Delivery</title>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900" rel="stylesheet">
 
-    <script src="https://kit.fontawesome.com/1c0fb1834f.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: #070a14;
+            color: #fff;
+        }
 
-    <title>Chefinho Delivery</title>
+        .conteudo {
+            font-family: 'Raleway', sans-serif;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 50px 0;
+        }
+
+        h1,
+        p {
+            margin: 0;
+            font-weight: normal;
+        }
+
+        h3.titulo {
+            margin-top: 80px;
+        }
+
+        h3.primeiroTitulo {
+            margin-top: 30px;
+        }
+
+        strong {
+            font-weight: 900;
+        }
+
+        ul.lista {
+            padding-left: 15px;
+            list-style: none;
+            padding: 0;
+        }
+
+        ul.lista li {
+            border: 1px solid #eeeeee;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.04);
+        }
+
+        ul.lista li>a {
+            display: block;
+            color: orange;
+            text-decoration: none;
+            margin-bottom: 5px;
+        }
+
+        ul.lista li>a:last-of-type {
+            margin-bottom: 10px;
+        }
+
+        hr {
+            margin: 20px 0;
+        }
+
+        .finalizado {
+            display: inline-block;
+            text-transform: uppercase;
+            font-size: 10px;
+            font-weight: bold;
+            line-height: 1;
+            display: inline-block;
+            background-color: orange;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
+
 <body>
+    <div class="conteudo">
+        <h1>Projeto <strong style="color: orange">Chefinho Delivery</strong></h1>
+        <p style="font-size: 14px; margin-bottom: 0px;">Arquivos com os mesmos nomes das telas e as últimas 3 atualizações das mesmas.</p>
 
-    <div class="pag-stories d-flex justify-content-center align-items-center" style="background-image: url(assets/imgs/bg_hamburguer.jpg);">
+        <!-- Dashboard -->
+        <h3 class="primeiroTitulo" style="color: orange"># Dashboard</h3>
+        <ul class="lista">
 
-        <!-- Sobre a empresa/loja -->
-        <div class="sobre-empresa d-flex flex-row">
-            <div class="logo">LOGO</div>
-            <div class="sobre d-flex flex-column">
-                <div class="barrinha">BARRINHA</div>
-                <div class="avaliacao">ESTRELAS</div>
-            </div>
-        </div>
+            <li>
+                <span class="finalizado">Finalizada!</span>
+                <a href="tela04.html">- Pag. 04</a>
+                <hr>
+                <strong>Updates: </strong><br>
+                <span class="sobre">
+                    03/11/2019 - Finalização da Pag. 04
+                </span>
+            </li>
 
-        <!-- Informações sobre o produto -->
-        <div class="sobre-produto d-flex flex-column justify-content-center">
-            <div class="titulo">Buguer com refri</div>
-            <div class="sobre">Burger de bacon com refri pepsi lata</div>
-            <div class="preco">R$ 23,90</div>
-            <div class="blur"></div>
-        </div>
-
-        <!-- Mais informações -->
-        <div class="btn-float btn-infor d-flex justify-content-center align-items-center">
-            <i class="fas fa-info-circle"></i>
-        </div>
-
-        <!-- Fazer o pedido -->
-        <div class="btn-float btn-pedir d-flex justify-content-center align-items-center">
-            <i class="fas fa-utensils"></i>
-        </div>
+        </ul>
 
     </div>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="assets/js/jquery-3.3.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
-
-</html>
