@@ -25,7 +25,9 @@ Author URI: http://fabriziofeitosa.me
 ####################################### */
 body, html {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
   font-family: 'Bahnschrift Regular';
 }
 
@@ -207,26 +209,104 @@ a.tudo {
   opacity: 1;
 }
 
+.card-item {
+  position: relative;
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  margin: 0 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.card-item .logotipo {
+  width: 30%;
+}
+
+.card-item .logotipo img {
+  max-width: 100%;
+}
+
+.card-item .infor {
+  width: 70%;
+  padding-left: 10px;
+}
+
+.card-item .infor .nome {
+  font-size: 24px;
+  line-height: 1.2;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card-item .infor .avaliacao {
+  font-size: 12px;
+  color: #ffa500;
+}
+
+.card-item .infor .avaliacao .estrelas,
+.card-item .infor .avaliacao .nota {
+  display: inline;
+}
+
+.card-item .infor .avaliacao .nota {
+  margin-left: 5px;
+}
+
+.card-item .infor .categoria {
+  font-size: 14px;
+}
+
+.card-item .status {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 14px;
+}
+
+.card-item .status .bola {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: silver;
+  border-radius: 100%;
+}
+
+.card-item .status.online .bola {
+  background-color: green;
+}
+
+.card-item.deBusca {
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+          box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+.card-item.deBusca .infor {
+  background-color: #f6f7f8;
+}
+
 /* #######################################
-        PAG. 01 - Home
+        HEADER
 ####################################### */
-.pag-home header {
+header.principal {
   margin: 0 15px;
   border-radius: 10px;
   -webkit-transition: all .2s;
   transition: all .2s;
+  padding-top: 10px;
 }
 
-.pag-home header img {
+header.principal img {
   max-width: 100%;
 }
 
-.pag-home header .principal {
-  margin-top: 10px;
+header.principal .logobusca {
   height: 60px;
 }
 
-.pag-home header .principal .logo {
+header.principal .logobusca .logo {
   width: 20%;
   height: 40px;
   margin-right: 10px;
@@ -234,11 +314,11 @@ a.tudo {
   transition: all .2s;
 }
 
-.pag-home header .principal .logo img {
+header.principal .logobusca .logo img {
   max-height: 80%;
 }
 
-.pag-home header .principal .busca {
+header.principal .logobusca .busca {
   width: 80%;
   height: 40px;
   position: relative;
@@ -249,7 +329,7 @@ a.tudo {
   transition: all .2s;
 }
 
-.pag-home header .principal .busca input {
+header.principal .logobusca .busca input {
   width: 100%;
   height: 40px;
   background-color: transparent;
@@ -259,7 +339,7 @@ a.tudo {
   line-height: 1;
 }
 
-.pag-home header .principal .busca button {
+header.principal .logobusca .busca button {
   position: absolute;
   top: 0;
   right: 0;
@@ -269,27 +349,63 @@ a.tudo {
   border: none;
 }
 
-.pag-home header .resultados {
+header.principal .resultados {
   display: none;
+  padding-top: 10px;
 }
 
-.pag-home header.focus {
+header.principal.focus {
+  z-index: 100;
+  position: absolute;
+  top: 10px;
+  left: 2.5%;
+  width: 95%;
+  margin: 0;
+  padding-top: 5px;
+  padding-right: 0;
   background-color: #fff;
-  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
-          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
-  padding-right: 10px;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
-.pag-home header.focus .principal .logo {
+header.principal.focus .logobusca {
+  padding: 0 15px;
+}
+
+header.principal.focus .logobusca .logo {
   width: 0%;
+  margin-right: 0;
 }
 
-.pag-home header.focus .principal .busca {
+header.principal.focus .logobusca .busca {
   width: 100%;
 }
 
-.pag-home header.focus .resultados {
+header.principal.focus .resultados {
   display: block;
+}
+
+header.principal.focus + .area-conteudo {
+  padding-top: 90px;
+}
+
+header.principal.focus ~ * {
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+}
+
+/* #######################################
+        PAG. 01 - Home
+####################################### */
+.pag-home {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
+}
+
+.pag-home .area-conteudo {
+  padding-top: 20px;
 }
 
 /* #######################################

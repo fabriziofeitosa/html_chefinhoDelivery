@@ -32,8 +32,9 @@ $laranja: #ffa500;
 
 body, html {
     width: 100%;
-    height: 100%;
-
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
     font-family: 'Bahnschrift Regular';
 }
 
@@ -198,78 +199,173 @@ $tamanhoBola: 70px;
     }
 }
 
+.card-item {
+    position: relative;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    margin: 0 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    .logotipo {
+        width: 30%;
+        img {
+            max-width: 100%;
+        }
+    }
+    .infor {
+        width: 70%;
+        padding-left: 10px;
+        .nome {
+            font-size: 24px;
+            line-height: 1.2;
+            width: 100%;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .avaliacao {
+            font-size: 12px;
+            color: $laranja;
+            .estrelas,
+            .nota {
+                display: inline;
+            }
+            .nota {
+                margin-left: 5px;
+            }
+        }
+        .categoria {
+            font-size: 14px;
+        }
+    }
+    .status {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        font-size: 14px;
+        .bola {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: silver;
+            border-radius: 100%;
+        }
+        &.online {
+            .bola {
+                background-color: green;
+            }
+        }
+    }
+
+    &.deBusca {
+        box-shadow: 0 0 0 rgba(0,0,0,0);
+        .infor {
+            background-color: #f6f7f8;
+        }
+    }
+}
+
+/* #######################################
+        HEADER
+####################################### */
+
+header.principal {
+    margin: 0 15px;
+    border-radius: 10px;
+    transition: all .2s;
+    padding-top: 10px;
+    img {
+        max-width: 100%;
+    }
+    .logobusca {
+        height: 60px;
+        .logo {
+            width: 20%;
+            height: 40px;
+            margin-right: 10px;
+            transition: all .2s;
+            img {
+                max-height: 80%;
+            }
+        }
+        .busca {
+            width: 80%;
+            height: 40px;
+            position: relative;
+            background-color: #e6e6e6;
+            color: #000;
+            border-radius: 10px;
+            transition: all .2s;
+            input {
+                width: 100%;
+                height: 40px;
+                background-color: transparent;
+                border: none;
+                padding: 0 50px 0 15px;
+                font-size: 16px;
+                line-height: 1;
+            }
+            button {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 40px;
+                height: 40px;
+                background-color: transparent;
+                border: none;
+            }
+        }
+    }
+    .resultados {
+        display: none;
+        padding-top: 10px;
+    }
+
+    &.focus {
+        z-index: 100;
+        position: absolute;
+        top: 10px;
+        left: 2.5%;
+        width: 95%;
+        margin: 0;
+        padding-top: 5px;
+        padding-right: 0;
+        background-color: #fff;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+        .logobusca {
+            padding: 0 15px;
+            .logo {
+                width: 0%;
+                margin-right: 0;
+            }
+            .busca {
+                width: 100%;
+            }
+        }
+        .resultados {
+            display: block;
+        }
+        & + .area-conteudo {
+            padding-top: 90px;
+        }
+        & ~ * {
+            filter: blur(5px);
+        }
+    }
+}
+
 /* #######################################
         PAG. 01 - Home
 ####################################### */
 
 .pag-home {
-    header {
-        margin: 0 15px;
-        border-radius: 10px;
-        transition: all .2s;
-        img {
-            max-width: 100%;
-        }
-        .principal {
-            margin-top: 10px;
-            height: 60px;
-            .logo {
-                width: 20%;
-                height: 40px;
-                margin-right: 10px;
-                transition: all .2s;
-                img {
-                    max-height: 80%;
-                }
-            }
-            .busca {
-                width: 80%;
-                height: 40px;
-                position: relative;
-                background-color: #e6e6e6;
-                color: #000;
-                border-radius: 10px;
-                transition: all .2s;
-                input {
-                    width: 100%;
-                    height: 40px;
-                    background-color: transparent;
-                    border: none;
-                    padding: 0 50px 0 15px;
-                    font-size: 16px;
-                    line-height: 1;
-                }
-                button {
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    width: 40px;
-                    height: 40px;
-                    background-color: transparent;
-                    border: none;
-                }
-            }
-        }
-        .resultados {
-            display: none;
-        }
-
-        &.focus {
-            background-color: #fff;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.8);
-            padding-right: 10px;
-            .principal {
-                .logo {
-                    width: 0%;
-                }
-                .busca {
-                    width: 100%;
-                }
-            }
-            .resultados {
-                display: block;
-            }
-        }
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
+    .area-conteudo {
+        padding-top: 20px;
     }
 }
 

@@ -25,8 +25,8 @@ jQuery(document).ready(function ($) {
     // ################################################
 
     // Animação btn principal
-    $('.pag-home .btn-principal .icon-principal').on('click', function(){
-        $('.pag-home .btn-principal').toggleClass('aberto');
+    $('.btn-principal .icon-principal').on('click', function(){
+        $('.btn-principal').toggleClass('aberto');
     });
 
 });
