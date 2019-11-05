@@ -69,6 +69,10 @@ body .add-blur {
   max-height: 80%;
 }
 
+.btn-float:hover, .btn-float:active {
+  background-color: #ffb733;
+}
+
 .btn-principal {
   z-index: 997;
   position: fixed;

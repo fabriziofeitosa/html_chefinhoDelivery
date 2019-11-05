@@ -71,10 +71,13 @@ $tamanhoBola: 70px;
     border-radius: 100%;
     display: block;
     font-size: 40px;
-
     img {
         max-width: 80%;
         max-height: 80%;
+    }
+    &:hover,
+    &:active {
+        background-color: lighten($laranja, 10%);
     }
 }
 
