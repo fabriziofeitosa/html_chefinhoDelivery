@@ -277,6 +277,10 @@ $tamanhoBola: 70px;
             background-color: #f6f7f8;
         }
     }
+    &:hover,
+    &:active {
+        background-color: #e7e6e6;
+    }
 }
 
 $bolaStories-w: 70px;
