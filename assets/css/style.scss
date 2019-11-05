@@ -328,6 +328,7 @@ $bolaStories-w: 70px;
 ####################################### */
 
 header.principal {
+    z-index: 1000;
     margin: 0 15px;
     border-radius: 10px;
     transition: all .2s;
