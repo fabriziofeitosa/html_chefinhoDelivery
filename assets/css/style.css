@@ -442,6 +442,13 @@ header.principal .resultados .categorias .lista-cat {
   overflow-y: hidden;
   white-space: nowrap;
   margin-bottom: 20px;
+  scrollbar-width: none;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+}
+
+header.principal .resultados .categorias .lista-cat::-webkit-scrollbar {
+  display: none;
 }
 
 header.principal .resultados .categorias .lista-cat .item {
