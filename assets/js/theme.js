@@ -14,6 +14,20 @@ jQuery(document).ready(function ($) {
 
     // ################################################
 
+    // Slide Home
+    $('.pag-home .slide-home').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        fade: true,
+        cssEase: 'linear'
+    });
+
+    // ################################################
+
     // Animação input buscar
     let header = $('.pag-home header');
     $('.pag-home header #inputBuscar').focusin(function () {

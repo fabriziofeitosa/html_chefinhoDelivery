@@ -540,6 +540,10 @@ header.principal.focus + .area-conteudo {
   max-width: 100%;
 }
 
+.pag-home .area-conteudo .slide-home .slick-dots {
+  bottom: 0;
+}
+
 /* #######################################
         PAG. 04 - STORIES
 ####################################### */
