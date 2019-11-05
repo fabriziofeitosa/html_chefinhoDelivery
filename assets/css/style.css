@@ -472,7 +472,6 @@ header.principal .resultados .categorias .lista-cat .item .nome {
 }
 
 header.principal.focus {
-  z-index: 100;
   position: absolute;
   top: 10px;
   left: 2.5%;
