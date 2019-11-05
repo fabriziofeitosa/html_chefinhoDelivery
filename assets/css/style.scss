@@ -53,6 +53,10 @@ a.tudo {
     outline: none !important;
 }
 
+body .add-blur {
+    filter: blur(5px);
+}
+
 /* #######################################
         Estáticos
 ####################################### */
@@ -208,8 +212,17 @@ $tamanhoBola: 70px;
     margin-bottom: 12px;
     .logotipo {
         width: 30%;
-        img {
-            max-width: 100%;
+        background-position: center;
+        background-size: cover;
+        &::before {
+            content: '';
+            padding-top: 100%;
+            float: left;
+        }
+        &::after {
+            content: '';
+            display: block;
+            clear: both;
         }
     }
     .infor {
@@ -262,6 +275,50 @@ $tamanhoBola: 70px;
         box-shadow: 0 0 0 rgba(0,0,0,0);
         .infor {
             background-color: #f6f7f8;
+        }
+    }
+}
+
+$bolaStories-w: 70px;
+.stories-list {
+    width: calc(100% - 30px);
+    height: $bolaStories-w + 5px;
+    margin: 0 15px;
+    margin-bottom: 20px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+
+    scrollbar-width: none;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    .storie-item {
+        position: relative;
+        width: $bolaStories-w;
+        height: $bolaStories-w;
+        display: inline-block;
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
+        .img {
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+        }
+        .status {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 20px;
+            height: 20px;
+            background-color: $laranja;
+            border-radius: 100%;
         }
     }
 }
@@ -320,6 +377,52 @@ header.principal {
     .resultados {
         display: none;
         padding-top: 10px;
+        .mensagem {
+            max-width: 75%;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 1;
+            padding: 15px 0;
+            color: silver;
+        }
+        .categorias {
+            padding: 0 15px;
+            .titulo {
+                font-size: 18px;
+            }
+            .lista-cat {
+                overflow-x: scroll;
+                overflow-y: hidden;
+                white-space: nowrap;
+                margin-bottom: 20px;
+                .item {
+                    position: relative;
+                    display: inline-block;
+                    width: 100px;
+                    height: 100px;
+                    background-position: center;
+                    background-size: cover;
+                    &:not(:first-child) {
+                        margin-left: -3px;
+                    }
+                    .gradient {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.7) 100%);
+                    }
+                    .nome {
+                        position: absolute;
+                        bottom: 5px;
+                        right: 5px;
+                        color: #fff;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
     }
 
     &.focus {
@@ -349,9 +452,9 @@ header.principal {
         & + .area-conteudo {
             padding-top: 90px;
         }
-        & ~ * {
-            filter: blur(5px);
-        }
+        // & ~ * {
+        //     filter: blur(5px);
+        // }
     }
 }
 
@@ -366,6 +469,17 @@ header.principal {
     min-height: calc(var(--vh, 1vh) * 100);
     .area-conteudo {
         padding-top: 20px;
+        padding-bottom: 80px;
+
+        .slide-home {
+            padding: 0 15px;
+            margin-bottom: 20px;
+            .slide-item {
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
     }
 }
 

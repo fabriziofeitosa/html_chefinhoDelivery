@@ -15,17 +15,22 @@ jQuery(document).ready(function ($) {
     // ################################################
 
     // Animação input buscar
+    let header = $('.pag-home header');
     $('.pag-home header #inputBuscar').focusin(function () {
-        $('.pag-home header').toggleClass('focus');
+        header.siblings().toggleClass('add-blur');
+        header.toggleClass('focus');
     });
     $('.pag-home header #inputBuscar').focusout(function () {
-        $('.pag-home header').toggleClass('focus');
+        header.siblings().toggleClass('add-blur');
+        header.toggleClass('focus');
     });
 
     // ################################################
 
     // Animação btn principal
-    $('.btn-principal .icon-principal').on('click', function(){
+    let btnPrincipal = $('.btn-principal .btn-blur');
+    btnPrincipal.on('click', function () {
+        btnPrincipal.parent('section').siblings().toggleClass('add-blur');
         $('.btn-principal').toggleClass('aberto');
     });
 
