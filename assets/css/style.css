@@ -546,6 +546,7 @@ header.principal.focus + .area-conteudo {
 
 .pag-home .area-conteudo .slide-home .slick-dots {
   bottom: 0;
+  left: 0;
 }
 
 /* #######################################
