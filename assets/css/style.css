@@ -51,6 +51,15 @@ body .add-blur {
           filter: blur(5px);
 }
 
+.modal-backdrop.show {
+  opacity: 0;
+}
+
+body.modal-open .pag-login .conteudo {
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+}
+
 /* #######################################
         Estáticos
 ####################################### */
@@ -698,7 +707,7 @@ header.principal.focus + .area-conteudo {
   width: 100vw;
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
-  padding-top: 15vh;
+  padding-top: 10vh;
 }
 
 .pag-login .conteudo {
@@ -718,10 +727,6 @@ header.principal.focus + .area-conteudo {
 .pag-login .conteudo form {
   width: 80%;
   margin: 0 auto;
-}
-
-.pag-login .conteudo form .form-group {
-  margin-bottom: 10px;
 }
 
 .pag-login .conteudo form .form-group input {
@@ -781,5 +786,85 @@ header.principal.focus + .area-conteudo {
 .pag-login .conteudo form .links a {
   display: block;
   color: inherit;
+}
+
+#modalLogin .modal-content {
+  -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+#modalLogin .modal-body .bemvindo {
+  color: #ffa500;
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+#modalLogin .modal-body .avatar {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  margin: 0 auto 20px;
+  width: 50%;
+  border-radius: 100%;
+  border: 1px solid #ffa500;
+}
+
+#modalLogin .modal-body .avatar::before {
+  content: '';
+  padding-top: 100%;
+  float: left;
+}
+
+#modalLogin .modal-body .avatar::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+#modalLogin .modal-body .avatar .editar {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  background-color: #ffa500;
+  border-radius: 100%;
+  text-align: center;
+}
+
+#modalLogin .modal-body .avatar .editar img {
+  width: 50%;
+  max-width: 100%;
+}
+
+#modalLogin .modal-body .form-group input {
+  background-color: #e7e8e8;
+  width: 100%;
+  border: none;
+  padding: 15px;
+  font-size: 18px;
+  line-height: 1;
+}
+
+#modalLogin .modal-body .botoes {
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+#modalLogin .modal-body .botoes .voltar,
+#modalLogin .modal-body .botoes .cadastrar {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border: none;
+}
+
+#modalLogin .modal-body .botoes .voltar {
+  margin-right: 10px;
 }
 /*# sourceMappingURL=style.css.map */

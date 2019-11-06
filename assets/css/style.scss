@@ -66,6 +66,16 @@ body .add-blur {
     &::-webkit-input-placeholder { @content; }
 }
 
+.modal-backdrop {
+    &.show {
+        opacity: 0;
+    }
+}
+
+body.modal-open .pag-login .conteudo {
+    filter: blur(4px);
+}
+
 /* #######################################
         Estáticos
 ####################################### */
@@ -651,7 +661,7 @@ header.principal {
     width: 100vw;
     height: 100vh;
     height: calc(var(--vh, 1vh) * 100);
-    padding-top: 15vh;
+    padding-top: 10vh;
     .conteudo {
         margin: 0 auto;
         .logo {
@@ -666,7 +676,6 @@ header.principal {
             width: 80%;
             margin: 0 auto;
             .form-group {
-                margin-bottom: 10px;
                 input {
                     width: 100%;
                     background-color: transparent;
@@ -701,6 +710,80 @@ header.principal {
                     display: block;
                     color: inherit;
                 }
+            }
+        }
+    }
+}
+#modalLogin {
+    .modal-content {
+        box-shadow: 0 0 30px rgba(0,0,0,0.3);
+        border-radius: 10px;
+    }
+    .modal-body {
+        .bemvindo {
+            color: $laranja;
+            font-size: 24px;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .avatar {
+            position: relative;
+            background-position: center;
+            background-size: cover;
+            margin: 0 auto 20px;
+            width: 50%;
+            border-radius: 100%;
+            border: 1px solid $laranja;
+            &::before {
+                content: '';
+                padding-top: 100%;
+                float: left;
+            }
+            &::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+            .editar {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 50px;
+                height: 50px;
+                background-color: $laranja;
+                border-radius: 100%;
+                text-align: center;
+                img {
+                    width: 50%;
+                    max-width: 100%;
+                }
+            }
+        }
+        .form-group {
+            input {
+                background-color: #e7e8e8;
+                width: 100%;
+                border: none;
+                padding: 15px;
+                font-size: 18px;
+                line-height: 1;
+            }
+        }
+        .botoes {
+            text-align: center;
+            margin: 0 auto;
+            padding-bottom: 20px;
+            .voltar,
+            .cadastrar {
+                display: inline-block;
+                width: 60px;
+                height: 60px;
+                background-color: transparent;
+                border: none;
+            }
+            .voltar {
+                margin-right: 10px;
             }
         }
     }

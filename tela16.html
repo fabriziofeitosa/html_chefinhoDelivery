@@ -11,7 +11,7 @@
     <meta name="msapplication-navbutton-color" content="#ffa500">
 
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
 
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -41,11 +41,55 @@
                 <button type="submit">Entrar</button>
                 <!-- Outros links -->
                 <div class="links">
-                    <a href="#criarConta" class="criarConta">+ Criar Conta</a>
+                    <a href="#criarConta" class="criarConta" data-toggle="modal" data-target="#modalLogin">+ Criar Conta</a>
                     <a href="#visitante" class="visitante">Entrar como Visitante</a>
                 </div>
             </form>
             <!-- Fim Forumlario de Login-->
+        </div>
+
+        <!-- Modal Cadastro -->
+        <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="LoginModal"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <!-- Frase de bem vindo -->
+                        <div class="bemvindo">Bem-vindo ao chefinho</div>
+                        <!-- Inicio do formulario -->
+                        <form action="#">
+                            <!-- Avatar | url fica na tag style -->
+                            <div class="avatar" style="background-image: url(assets/imgs/avatar.jpg);">
+                                <div class="editar d-flex justify-content-center align-items-center">
+                                    <!-- Icone e link para chamar o editar -->
+                                    <img src="assets/imgs/SVG/iconEditar.svg" alt="Editar Foto">
+                                    <a href="#editar" class="tudo"></a>
+                                </div>
+                            </div>
+                            <!-- Campos -->
+                            <div class="form-group">
+                                <input type="text" placeholder="Nome">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Telefone">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="E-mail">
+                            </div>
+                            <!-- Botoões -->
+                            <div class="botoes">
+                                <button class="voltar" type="button" data-dismiss="modal">
+                                    <img src="assets/imgs/SVG/btn-voltar.svg" alt="Voltar">
+                                </button>
+                                <button class="cadastrar" type="submit">
+                                    <img src="assets/imgs/SVG/btn-ok.svg" alt="Confirmar cadastro">
+                                </button>
+                            </div>
+                        </form>
+                        <!-- Fim do formulario -->
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>
