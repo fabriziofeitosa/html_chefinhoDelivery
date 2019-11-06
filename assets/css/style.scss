@@ -10,6 +10,7 @@ Author URI: http://fabriziofeitosa.me
 ####################################### */
 
 $laranja: #ffa500;
+$laranjaEscuro: #c37129;
 
 @font-face {
     font-family: 'nougatregular';
@@ -55,6 +56,14 @@ a.tudo {
 
 body .add-blur {
     filter: blur(5px);
+}
+
+@mixin input-placeholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
 }
 
 /* #######################################
@@ -506,7 +515,6 @@ header.principal {
         PAG. 04 - STORIES
 ####################################### */
 
-
 .pag-stories {
     position: relative;
     width: 100vw;
@@ -630,5 +638,70 @@ header.principal {
             width: 70%;
             height: 70%;
         };
+    }
+}
+
+/* #######################################
+        PAG. 16 - LOGIN
+####################################### */
+
+.pag-login {
+    background-color: $laranja;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    padding-top: 15vh;
+    .conteudo {
+        margin: 0 auto;
+        .logo {
+            text-align: center;
+            margin-bottom: 30px;
+            img {
+                width: 50%;
+                max-width: 100%;
+            }
+        }
+        form {
+            width: 80%;
+            margin: 0 auto;
+            .form-group {
+                margin-bottom: 10px;
+                input {
+                    width: 100%;
+                    background-color: transparent;
+                    border: none;
+                    border-bottom: 1px solid $laranjaEscuro;
+                    padding: 5px 15px;
+                    font-size: 18px;
+                    @include input-placeholder() {
+                        color: $laranjaEscuro;
+                        opacity: 1;
+                    }
+                }
+            }
+            button {
+                display: block;
+                background-color: #f78f1e;
+                color: #fff;
+                border: none;
+                width: 80%;
+                margin: 20px auto 0;
+                padding: 15px 15px;
+                font-size: 18px;
+                border-radius: 10px;
+                line-height: 1;
+            }
+            .links {
+                margin-top: 20px;
+                color: $laranjaEscuro;
+                text-align: center;
+                font-size: 18px;
+                a {
+                    display: block;
+                    color: inherit;
+                }
+            }
+        }
     }
 }

@@ -688,4 +688,98 @@ header.principal.focus + .area-conteudo {
   width: 70%;
   height: 70%;
 }
+
+/* #######################################
+        PAG. 16 - LOGIN
+####################################### */
+.pag-login {
+  background-color: #ffa500;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  padding-top: 15vh;
+}
+
+.pag-login .conteudo {
+  margin: 0 auto;
+}
+
+.pag-login .conteudo .logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.pag-login .conteudo .logo img {
+  width: 50%;
+  max-width: 100%;
+}
+
+.pag-login .conteudo form {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.pag-login .conteudo form .form-group {
+  margin-bottom: 10px;
+}
+
+.pag-login .conteudo form .form-group input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #c37129;
+  padding: 5px 15px;
+  font-size: 18px;
+}
+
+.pag-login .conteudo form .form-group input.placeholder {
+  color: #c37129;
+  opacity: 1;
+}
+
+.pag-login .conteudo form .form-group input:-moz-placeholder {
+  color: #c37129;
+  opacity: 1;
+}
+
+.pag-login .conteudo form .form-group input::-moz-placeholder {
+  color: #c37129;
+  opacity: 1;
+}
+
+.pag-login .conteudo form .form-group input:-ms-input-placeholder {
+  color: #c37129;
+  opacity: 1;
+}
+
+.pag-login .conteudo form .form-group input::-webkit-input-placeholder {
+  color: #c37129;
+  opacity: 1;
+}
+
+.pag-login .conteudo form button {
+  display: block;
+  background-color: #f78f1e;
+  color: #fff;
+  border: none;
+  width: 80%;
+  margin: 20px auto 0;
+  padding: 15px 15px;
+  font-size: 18px;
+  border-radius: 10px;
+  line-height: 1;
+}
+
+.pag-login .conteudo form .links {
+  margin-top: 20px;
+  color: #c37129;
+  text-align: center;
+  font-size: 18px;
+}
+
+.pag-login .conteudo form .links a {
+  display: block;
+  color: inherit;
+}
 /*# sourceMappingURL=style.css.map */
