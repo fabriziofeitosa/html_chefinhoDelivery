@@ -705,6 +705,21 @@ header.principal.focus + .area-conteudo {
 }
 
 /* #######################################
+        PAG. 05 - EMPRESA E SERVIÇOS
+####################################### */
+.pag-empresa {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
+}
+
+.pag-empresa .area-conteudo {
+  padding-top: 20px;
+  padding-bottom: 80px;
+}
+
+/* #######################################
         PAG. 16 - LOGIN
 ####################################### */
 .pag-login {

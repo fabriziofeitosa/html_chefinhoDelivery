@@ -376,6 +376,21 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/slick/slick.min.js"></script>
     <script src="assets/js/theme.js"></script>
+
+    <script>
+        // Slide Home
+        $('.pag-home .slide-home').slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            fade: true,
+            cssEase: 'linear'
+        });
+    </script>
 </body>
 
 </html>
