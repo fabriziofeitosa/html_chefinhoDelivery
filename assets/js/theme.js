@@ -15,12 +15,12 @@ jQuery(document).ready(function ($) {
     // ################################################
 
     // Animação input buscar
-    let header = $('.pag-home header');
-    $('.pag-home header #inputBuscar').focusin(function () {
+    let header = $('.pag header');
+    $('.pag header #inputBuscar').focusin(function () {
         header.siblings().toggleClass('add-blur');
         header.toggleClass('focus');
     });
-    $('.pag-home header #inputBuscar').focusout(function () {
+    $('.pag header #inputBuscar').focusout(function () {
         header.siblings().toggleClass('add-blur');
         header.toggleClass('focus');
     });
