@@ -61,7 +61,7 @@ body .add-blur {
   opacity: 0;
 }
 
-body.modal-open .pag-login .conteudo {
+body.modal-open .pag > *:not(.modal) {
   -webkit-filter: blur(4px);
           filter: blur(4px);
 }
@@ -795,6 +795,7 @@ header.principal.focus + .area-conteudo {
 }
 
 #modalLogin .modal-body .bemvindo,
+#modalRegistro .modal-body .bemvindo,
 #modalFormConvidado .modal-body .bemvindo {
   color: #ffa500;
   font-size: 24px;
@@ -804,12 +805,14 @@ header.principal.focus + .area-conteudo {
 }
 
 #modalLogin .modal-body .sub-frase,
+#modalRegistro .modal-body .sub-frase,
 #modalFormConvidado .modal-body .sub-frase {
   font-size: 14px;
   line-height: 1.2;
 }
 
 #modalLogin .modal-body .avatar,
+#modalRegistro .modal-body .avatar,
 #modalFormConvidado .modal-body .avatar {
   position: relative;
   background-position: center;
@@ -821,6 +824,7 @@ header.principal.focus + .area-conteudo {
 }
 
 #modalLogin .modal-body .avatar::before,
+#modalRegistro .modal-body .avatar::before,
 #modalFormConvidado .modal-body .avatar::before {
   content: '';
   padding-top: 100%;
@@ -828,6 +832,7 @@ header.principal.focus + .area-conteudo {
 }
 
 #modalLogin .modal-body .avatar::after,
+#modalRegistro .modal-body .avatar::after,
 #modalFormConvidado .modal-body .avatar::after {
   content: '';
   display: block;
@@ -835,6 +840,7 @@ header.principal.focus + .area-conteudo {
 }
 
 #modalLogin .modal-body .avatar .editar,
+#modalRegistro .modal-body .avatar .editar,
 #modalFormConvidado .modal-body .avatar .editar {
   position: absolute;
   bottom: 0;
@@ -847,17 +853,20 @@ header.principal.focus + .area-conteudo {
 }
 
 #modalLogin .modal-body .avatar .editar img,
+#modalRegistro .modal-body .avatar .editar img,
 #modalFormConvidado .modal-body .avatar .editar img {
   width: 50%;
   max-width: 100%;
 }
 
 #modalLogin .modal-body .form-group,
+#modalRegistro .modal-body .form-group,
 #modalFormConvidado .modal-body .form-group {
   position: relative;
 }
 
 #modalLogin .modal-body .form-group input,
+#modalRegistro .modal-body .form-group input,
 #modalFormConvidado .modal-body .form-group input {
   background-color: #e7e8e8;
   width: 100%;
@@ -869,17 +878,20 @@ header.principal.focus + .area-conteudo {
 }
 
 #modalLogin .modal-body .form-group .btn-editar,
+#modalRegistro .modal-body .form-group .btn-editar,
 #modalFormConvidado .modal-body .form-group .btn-editar {
   display: none;
 }
 
 #modalLogin .modal-body .form-group.editar input:disabled,
+#modalRegistro .modal-body .form-group.editar input:disabled,
 #modalFormConvidado .modal-body .form-group.editar input:disabled {
   color: #ffa500;
   background-color: transparent;
 }
 
 #modalLogin .modal-body .form-group.editar .btn-editar,
+#modalRegistro .modal-body .form-group.editar .btn-editar,
 #modalFormConvidado .modal-body .form-group.editar .btn-editar {
   display: block;
   position: absolute;
@@ -892,16 +904,19 @@ header.principal.focus + .area-conteudo {
 }
 
 #modalLogin .modal-body .form-group.editar .btn-editar img,
+#modalRegistro .modal-body .form-group.editar .btn-editar img,
 #modalFormConvidado .modal-body .form-group.editar .btn-editar img {
   max-width: 100%;
 }
 
 #modalLogin .modal-body .form-group.editar .btn-editar path,
+#modalRegistro .modal-body .form-group.editar .btn-editar path,
 #modalFormConvidado .modal-body .form-group.editar .btn-editar path {
   fill: #ffa500;
 }
 
 #modalLogin .modal-body .botoes,
+#modalRegistro .modal-body .botoes,
 #modalFormConvidado .modal-body .botoes {
   text-align: center;
   margin: 0 auto;
@@ -910,6 +925,8 @@ header.principal.focus + .area-conteudo {
 
 #modalLogin .modal-body .botoes .voltar,
 #modalLogin .modal-body .botoes .cadastrar,
+#modalRegistro .modal-body .botoes .voltar,
+#modalRegistro .modal-body .botoes .cadastrar,
 #modalFormConvidado .modal-body .botoes .voltar,
 #modalFormConvidado .modal-body .botoes .cadastrar {
   display: inline-block;
@@ -920,6 +937,7 @@ header.principal.focus + .area-conteudo {
 }
 
 #modalLogin .modal-body .botoes .voltar,
+#modalRegistro .modal-body .botoes .voltar,
 #modalFormConvidado .modal-body .botoes .voltar {
   margin-right: 10px;
 }

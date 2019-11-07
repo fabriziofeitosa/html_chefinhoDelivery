@@ -78,7 +78,7 @@ body .add-blur {
     }
 }
 
-body.modal-open .pag-login .conteudo {
+body.modal-open .pag > *:not(.modal) {
     filter: blur(4px);
 }
 
@@ -722,6 +722,7 @@ header.principal {
 }
 
 #modalLogin,
+#modalRegistro,
 #modalFormConvidado {
     .modal-body {
         .bemvindo {
