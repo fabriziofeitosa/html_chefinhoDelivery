@@ -670,7 +670,93 @@ header.principal {
         padding-top: 20px;
         padding-bottom: 80px;
         .sobreEmpresa {
-            
+            text-align: center;
+            .logo {
+                background-position: center;
+                background-size: cover;
+                width: 50%;
+                margin: 0 auto;
+                border-radius: 100%;
+                &::before {
+                    content: '';
+                    padding-top: 100%;
+                    float: left;
+                }
+                &::after {
+                    content: '';
+                    display: block;
+                    clear: both;
+                }
+            }
+            .nome {
+                font-size: 34px;
+                line-height: 1;
+                padding: 0 20px;
+                margin-top: 10px;
+            }
+            .avaliacao {
+                color: $laranja;
+                font-size: 18px;
+                .votar {
+                    background-color: $laranja;
+                    display: inline-block;
+                    width: 30px;
+                    height: 30px;
+                    color: #fff;
+                    border-radius: 100%;
+                    font-size: 24px;
+                    line-height: 30px;
+                    &:hover,
+                    &:active {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        .listaCategorias {
+            width: 100%;
+            margin-top: 30px;
+            .item-categoria {
+                background-position: center;
+                background-size: cover;
+                width: 33.33%;
+                position: relative;
+                transition: all .2s;
+                &::before {
+                    content: '';
+                    padding-top: 100%;
+                    float: left;
+                }
+                &::after {
+                    content: '';
+                    display: block;
+                    clear: both;
+                }
+                .gradient {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.7) 100%);
+                    transition: all .2s;
+                }
+                .nome {
+                    position: absolute;
+                    right: 8px;
+                    bottom: 10px;
+                    color: #fff;
+                    line-height: 1;
+                    font-size: 18px;
+                }
+                &:hover {
+                    border: 2px solid $laranja;
+                    padding: -2px;
+                    .gradient {
+                        background: linear-gradient(to bottom, rgba(0,0,0,0) 50%, $laranja 100%);
+                    }
+                }
+            }
         }
     }
 }
