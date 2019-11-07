@@ -42,7 +42,7 @@
                 <!-- Outros links -->
                 <div class="links">
                     <a href="#criarConta" class="criarConta" data-toggle="modal" data-target="#modalLogin">+ Criar Conta</a>
-                    <a href="#visitante" class="visitante">Entrar como Visitante</a>
+                    <a href="#visitante" class="visitante" data-toggle="modal" data-target="#modalFormConvidado">Entrar como Visitante</a>
                 </div>
             </form>
             <!-- Fim Forumlario de Login-->
@@ -81,12 +81,108 @@
                                 <button class="voltar" type="button" data-dismiss="modal">
                                     <img src="assets/imgs/SVG/btn-voltar.svg" alt="Voltar">
                                 </button>
-                                <button class="cadastrar" type="submit">
+                                <button class="cadastrar" type="submit" data-toggle="modal" data-target="#modalContinuar" data-dismiss="modal">
                                     <img src="assets/imgs/SVG/btn-ok.svg" alt="Confirmar cadastro">
                                 </button>
                             </div>
                         </form>
                         <!-- Fim do formulario -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Continuar  -->
+        <div class="modal fade" id="modalContinuar" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h2 class="titulo">Vamos continuar?</h2>
+                        <p class="frase">Você acabou de criar seu cadastro. Bem-Vindo! Mas ainda não tem nenhuma opção de endereço e forma de pagamento favoritadas nas configurações. Vamos continuar?</p>
+                        <!-- Links destinos -->
+                        <div class="opcoes d-flex flex-row justify-content-between align-items-center">
+                            <div data-dismiss="modal" class="continuar">Sair e<br>continuar</div>
+                            <a href="#" class="configs">Ir para configurações</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Cadastro -->
+        <div class="modal fade" id="modalFormConvidado" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <!-- Frase de bem vindo -->
+                        <div class="bemvindo">Você é nosso convidado!</div>
+                        <p class="sub-frase">Para continuar como visitante é necessário inserir o seu endereço para encontrarmos os locais cadastrados perto de você.
+                        Você ainda pode voltar e fazer login.</p>
+
+                        <!-- Ativar localização -->
+                        <div class="localizacao">
+                            <a href="#localização">
+                                <img src="assets/imgs/SVG/mark.svg" alt="Marcador mapa">
+                                <span>Usar minha localização</span>
+                            </a>
+                        </div>
+
+                        <!-- Truque com o checkbox para exibir o formulario | via CSS -->
+                        <label for="inserirDados" class="labelInserirDados">
+                            <span>Inserir Dados</span>
+                            <div class="setinha">
+                                <img src="assets/imgs/SVG/seta-down.svg" alt="Setinha para baixo">
+                            </div>
+                        </label>
+                        <input type="checkbox" id="inserirDados">
+
+                        <!-- Inicio do formulario -->
+                        <form action="#">
+                            <!-- Campos -->
+                            <div class="campos">
+                                <div class="form-group">
+                                    <input type="text" placeholder="Rua">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Nº">
+                                </div>
+                                <div class="form-group editar">
+                                    <input type="text" value="Taqueralto" disabled>
+                                    <div class="btn-editar">
+                                        <img src="assets/imgs/SVG/iconEditar.svg" alt="Editar" class="svg">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Cidade">
+                                </div>
+                            </div>
+                            <!-- Botoões -->
+                            <div class="botoes">
+                                <button class="voltar" type="button" data-dismiss="modal">
+                                    <img src="assets/imgs/SVG/btn-voltar.svg" alt="Voltar">
+                                </button>
+                                <button class="cadastrar" type="button" data-toggle="modal" data-target="#modalAtention" data-dismiss="modal">
+                                    <img src="assets/imgs/SVG/btn-ok.svg" alt="Confirmar cadastro">
+                                </button>
+                            </div>
+                        </form>
+                        <!-- Fim do formulario -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Atenção Convidado  -->
+        <div class="modal fade" id="modalAtention" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h2 class="titulo">Atenção!</h2>
+                        <p class="frase">Ao entrar como convidado você não conseguirá realizar pedidos. O app servirá apenas para consulta. Para fazer seu cadastro mais tarde acesse o perfil no menu</p>
+                        <!-- Links destinos -->
+                        <div class="opcoes d-flex flex-row justify-content-between align-items-center">
+                            <a href="#" class="prosseguir">Prosseguir para consulta</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -102,6 +198,22 @@
         crossorigin="anonymous"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/theme.js"></script>
+
+    <script>
+
+        // para o "mostrar dados" no modal de convidado
+        $('.labelInserirDados').click(function(){
+            $(this).toggleClass('checked')
+        });
+
+        // Corrigir bug ao trocar de um modal para outro
+        $('.modal').on('shown.bs.modal', function (e) {
+            if ($(".modal-backdrop").length) {
+                $('body').addClass('modal-open');
+            }
+        })
+
+    </script>
 </body>
 
 </html>

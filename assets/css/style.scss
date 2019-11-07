@@ -66,6 +66,12 @@ body .add-blur {
     &::-webkit-input-placeholder { @content; }
 }
 
+.modal {
+    .modal-content {
+        box-shadow: 0 0 30px rgba(0,0,0,0.3);
+        border-radius: 25px;
+    }
+}
 .modal-backdrop {
     &.show {
         opacity: 0;
@@ -714,11 +720,9 @@ header.principal {
         }
     }
 }
-#modalLogin {
-    .modal-content {
-        box-shadow: 0 0 30px rgba(0,0,0,0.3);
-        border-radius: 10px;
-    }
+
+#modalLogin,
+#modalFormConvidado {
     .modal-body {
         .bemvindo {
             color: $laranja;
@@ -726,6 +730,10 @@ header.principal {
             text-align: center;
             text-transform: uppercase;
             margin-bottom: 20px;
+        }
+        .sub-frase {
+            font-size: 14px;
+            line-height: 1.2;
         }
         .avatar {
             position: relative;
@@ -761,6 +769,7 @@ header.principal {
             }
         }
         .form-group {
+            position: relative;
             input {
                 background-color: #e7e8e8;
                 width: 100%;
@@ -768,6 +777,32 @@ header.principal {
                 padding: 15px;
                 font-size: 18px;
                 line-height: 1;
+                border-radius: 10px;
+            }
+            .btn-editar {
+                display: none;
+            }
+
+            &.editar {
+                input:disabled {
+                    color: $laranja;
+                    background-color: transparent;
+                }
+                .btn-editar {
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    right: 10px;
+                    transform: translateY(-50%);
+                    width: 25px;
+                    height: 25px;
+                    img {
+                        max-width: 100%;
+                    }
+                    path {
+                        fill: $laranja;
+                    }
+                }
             }
         }
         .botoes {
@@ -784,6 +819,111 @@ header.principal {
             }
             .voltar {
                 margin-right: 10px;
+            }
+        }
+    }
+}
+
+#modalFormConvidado {
+    .modal-body {
+        position: relative;
+        .sub-frase {
+            padding: 0 20px;
+        }
+        .localizacao {
+            color: $laranja;
+            text-align: center;
+            margin-bottom: 20px;
+            a {
+                color: inherit;
+            }
+            img {
+                display: inline-block;
+                width: 10px;
+            }
+        }
+        form {
+            .campos {
+                display: none;
+            }
+            .botoes {
+                margin-top: 20px;
+            }
+        }
+        label {
+            color: $laranjaEscuro;
+            text-align: center;
+            display: block;
+            .setinha {
+                display: inline-block;
+                width: 10px;
+                transform: rotate(180deg);
+                transition: all .2s;
+                img {
+                    max-width: 100%;
+                }
+            }
+            &.checked {
+                .setinha {
+                    transform: rotate(0deg);
+                }
+            }
+        }
+        #inserirDados {
+            position: absolute;
+            left: -9999px;
+            &:checked {
+                & + form .campos {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+#modalContinuar,
+#modalAtention {
+    .modal-content {
+        overflow: hidden;
+    }
+    .modal-body {
+        padding: 25px;
+        .titulo {
+            color: $laranja;
+            margin-bottom: 10px;
+        }
+        .frase {
+            font-size: 14px;
+            line-height: 1.2;
+        }
+        .opcoes {
+            .continuar,
+            .configs,
+            .prosseguir {
+                padding: 20px;
+                width: 100%;
+                color: $laranja;
+                text-align: center;
+                line-height: 1.2;
+                font-size: 18px;
+                &:hover,
+                &:active {
+                    text-decoration: none;
+                }
+            }
+            .continuar {
+                margin: 0 0 -25px -25px;
+                border-top: 1px solid #686868;
+                border-right: 1px solid #686868;
+            }
+            .configs {
+                margin: 0 -25px -25px 0;
+                border-top: 1px solid #686868;
+            }
+            .prosseguir {
+                margin: 0 -25px -25px -25px;
+                border-top: 1px solid #686868;
+                width: 150%;
             }
         }
     }
