@@ -930,6 +930,18 @@ header.principal.focus + .area-conteudo {
   padding: 10px 20px;
 }
 
+.pag-carrinho .sobre-compra #slideCarrinho {
+  min-height: 100px;
+}
+
+.pag-carrinho .sobre-compra #slideCarrinho .slick-dots li button:before {
+  color: orange;
+}
+
+.pag-carrinho .sobre-compra #slideCarrinho .slick-dots li.slick-active button:before {
+  color: orange !important;
+}
+
 .pag-carrinho .sobre-compra .confirmar-itens > .titulo {
   font-size: 28px;
 }
