@@ -245,6 +245,7 @@ body.modal-open .pag > *:not(.modal) {
 
 .card-item .logotipo {
   width: 30%;
+  max-width: 30%;
   background-position: center;
   background-size: cover;
 }
@@ -259,6 +260,10 @@ body.modal-open .pag > *:not(.modal) {
   content: '';
   display: block;
   clear: both;
+}
+
+.card-item .logotipo img {
+  max-width: 100%;
 }
 
 .card-item .infor {
@@ -917,6 +922,139 @@ header.principal.focus + .area-conteudo {
   color: inherit;
 }
 
+/* #######################################
+        PAG. 25 - Carrinho
+####################################### */
+.pag-carrinho .sobre-compra {
+  padding: 10px 20px;
+}
+
+.pag-carrinho .sobre-compra .confirmar-itens > .titulo {
+  font-size: 28px;
+}
+
+.pag-carrinho .sobre-compra .confirmar-itens .empresa > .logo {
+  width: 20%;
+  background-position: center;
+  background-size: cover;
+  border-radius: 100%;
+}
+
+.pag-carrinho .sobre-compra .confirmar-itens .empresa > .logo::before {
+  content: '';
+  padding-top: 100%;
+  float: left;
+}
+
+.pag-carrinho .sobre-compra .confirmar-itens .empresa > .logo::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.pag-carrinho .sobre-compra .confirmar-itens .empresa > .nome {
+  font-size: 34px;
+  padding-left: 10px;
+  letter-spacing: -2px;
+}
+
+.pag-carrinho .sobre-compra .confirmar-itens .pedido-lista {
+  padding: 0;
+  margin: 20px 0 0;
+  list-style: none;
+}
+
+.pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .item,
+.pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .total {
+  position: relative;
+  padding-left: 30px;
+}
+
+.pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .item .editar,
+.pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .total .editar {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 18px;
+}
+
+.pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .item .editar img,
+.pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .total .editar img {
+  max-width: 100%;
+}
+
+.pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .item .editar path,
+.pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .total .editar path {
+  fill: #ffa500;
+}
+
+.pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .item .sobre > .nome,
+.pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .total .sobre > .nome {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .item .sobre .observacao,
+.pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .total .sobre .observacao {
+  position: relative;
+  padding: 4px 0 4px 30px;
+  margin: 4px 0;
+  color: #a7a7a7;
+  font-size: 12px;
+}
+
+.pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .item .sobre .observacao::before,
+.pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .total .sobre .observacao::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 15px;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background-color: #a7a7a7;
+}
+
+.pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .item .preco,
+.pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .total .preco {
+  color: #ffa500;
+  font-size: 20px;
+}
+
+.pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .item {
+  margin-bottom: 5px;
+}
+
+.pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .total {
+  margin: 30px 0 20px;
+}
+
+.pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .total .preco .taxa {
+  display: block;
+  color: #a7a7a7;
+  font-size: 12px;
+}
+
+.pag-carrinho .sobre-compra .btn-continuar {
+  background-color: #ffa500;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 8px;
+}
+
+.pag-carrinho .pedidos-anteriores > .titulo {
+  font-size: 20px;
+  padding-left: 15px;
+  margin-bottom: 10px;
+}
+
+/* #######################################
+        Modals
+####################################### */
 #modalLogin .modal-body .bemvindo,
 #modalRegistro .modal-body .bemvindo,
 #modalFormConvidado .modal-body .bemvindo {

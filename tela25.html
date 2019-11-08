@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="theme-color" content="#ffa500">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#ffa500">
+    <meta name="msapplication-navbutton-color" content="#ffa500">
+
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="https://kit.fontawesome.com/1c0fb1834f.js" crossorigin="anonymous"></script>
+
+    <title>Chefinho Delivery</title>
+</head>
+<body>
+
+    <div class="pag pag-carrinho">
+
+        <!-- Header principal -->
+        <!-- Add class "focus" após clicar na caixa de busca -->
+        <header class="principal">
+            <!-- Logo & Busca -->
+            <div class="logobusca d-flex flex-row align-items-center">
+                <div class="logo">
+                    <img src="assets/imgs/logo-cd.svg" alt="Logo Chefinho Delivery">
+                </div>
+                <div class="busca">
+                    <form action="#">
+                        <input type="text" name="inputBuscar" id="inputBuscar" placeholder="O que você procura?">
+                        <button type="submit">
+                            <img src="assets/imgs/SVG/lupa.svg" alt="Lupa de busca">
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <!-- Resultados de busca -->
+            <div class="resultados">
+
+                <!-- Card Item -->
+                <div class="card-item deBusca d-flex flex-row">
+                    <!-- Logotipo da empresa -->
+                    <div class="logotipo">
+                        <img src="assets/imgs/empresa02.jpg" alt="Logo da Empresa">
+                    </div>
+                    <!-- Informações -->
+                    <div class="infor d-flex flex-column justify-content-center">
+                        <div class="nome">Tognin Pizzas</div>
+                        <div class="avaliacao">
+                            <div class="estrelas">
+                                <!-- Atenção aos 3 tipos de icones a seguir -->
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <!-- Avaliação em numeros / Total de votos -->
+                            <div class="nota">4,8 (12)</div>
+                        </div>
+                        <div class="categoria">• Lancher</div>
+                    </div>
+                    <!-- Status da Empresa -->
+                    <div class="status online">
+                        <span class="bola"></span>
+                        Online
+                    </div>
+                </div>
+                <!-- Fim do Card Item -->
+
+                <!-- Mensagem -->
+                <div class="mensagem">Essas foram as opções que encontramos para sua pesquisa.</div>
+
+                <!-- Categorias -->
+                <div class="categorias">
+                    <div class="titulo">Ou escolha uma categoria</div>
+                    <!-- Lista da categorias -->
+                    <div class="lista-cat">
+
+                        <!-- item categoria | Imagem como bg na tag style -->
+                        <div class="item" style="background-image: url(assets/imgs/img-stories01.jpg);">
+                            <div class="gradient"></div>
+                            <div class="nome">Burguer</div>
+                            <a href="#linkCategoria" class="tudo"></a>
+                        </div>
+
+                        <!-- item categoria | Imagem como bg na tag style -->
+                        <div class="item" style="background-image: url(assets/imgs/img-stories02.jpg);">
+                            <div class="gradient"></div>
+                            <div class="nome">Burguer</div>
+                            <a href="#linkCategoria" class="tudo"></a>
+                        </div>
+
+                        <!-- item categoria | Imagem como bg na tag style -->
+                        <div class="item" style="background-image: url(assets/imgs/img-stories03.jfif);">
+                            <div class="gradient"></div>
+                            <div class="nome">Burguer</div>
+                            <a href="#linkCategoria" class="tudo"></a>
+                        </div>
+
+                        <!-- item categoria | Imagem como bg na tag style -->
+                        <div class="item" style="background-image: url(assets/imgs/bg_hamburguer.jpg);">
+                            <div class="gradient"></div>
+                            <div class="nome">Burguer</div>
+                            <a href="#linkCategoria" class="tudo"></a>
+                        </div>
+
+                        <!-- item categoria | Imagem como bg na tag style -->
+                        <div class="item" style="background-image: url(assets/imgs/img-stories02.jpg);">
+                            <div class="gradient"></div>
+                            <div class="nome">Burguer</div>
+                            <a href="#linkCategoria" class="tudo"></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </header>
+
+        <section class="area-conteudo">
+
+            <!-- Itens sobre a compra -->
+            <div class="sobre-compra">
+
+                <div>
+                    <!-- Confirmação -->
+                    <div class="confirmar-itens">
+                        <div class="titulo">Confirmar Itens</div>
+                        <!-- Sobre empresa -->
+                        <div class="empresa d-flex align-items-center">
+                            <div class="logo" style="background-image: url(assets/imgs/empresa06.jpg);"></div>
+                            <div class="nome">Hot Burgers</div>
+                        </div>
+                        <!-- Lista dos pedidos-->
+                        <ul class="pedido-lista">
+                            <!-- item -->
+                            <li class="item d-flex">
+                                <a href="#" class="editar">
+                                    <img class="svg" src="assets/imgs/SVG/iconEditar.svg" alt="Editar">
+                                </a>
+                                <div class="sobre">
+                                    <div class="nome">1 Burguer Bacon</div>
+                                </div>
+                                <div class="preco ml-auto">R$ 13,00</div>
+                            </li>
+                            <!-- item -->
+                            <li class="item d-flex">
+                                <a href="#" class="editar">
+                                    <img class="svg" src="assets/imgs/SVG/iconEditar.svg" alt="Editar">
+                                </a>
+                                <div class="sobre">
+                                    <div class="nome">1 Burguer Duplo</div>
+                                    <div class="observacao">Sem tomate e sem cebola</div>
+                                </div>
+                                <div class="preco ml-auto">R$ 13,00</div>
+                            </li>
+                            <!-- item -->
+                            <li class="item d-flex">
+                                <a href="#" class="editar">
+                                    <img class="svg" src="assets/imgs/SVG/iconEditar.svg" alt="Editar">
+                                </a>
+                                <div class="sobre">
+                                    <div class="nome">Pepsi 2L</div>
+                                </div>
+                                <div class="preco ml-auto">R$ 7,00</div>
+                            </li>
+
+                            <!-- TOTAL -->
+                            <li class="total d-flex">
+                                <div class="sobre">
+                                    <div class="nome">Total</div>
+                                </div>
+                                <div class="preco ml-auto d-flex flex-column text-right">
+                                    R$ 37,00
+                                    <!-- Taxa de Entrega -->
+                                    <span class="taxa">Taxa de entrega R$ 4,00</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Btn Próximo -->
+                <button class="btn-continuar">Próximo</button>
+
+            </div>
+
+            <!-- Pedisos Anteriores -->
+            <div class="pedidos-anteriores">
+                <div class="titulo">Pedidos Anteriores</div>
+
+                <!-- Card Item -->
+                <div class="card-item deBusca d-flex flex-row">
+                    <!-- Logotipo da empresa -->
+                    <div class="logotipo">
+                        <img src="assets/imgs/empresa02.jpg" alt="Logo da Empresa">
+                    </div>
+                    <!-- Informações -->
+                    <div class="infor d-flex flex-column justify-content-center">
+                        <div class="nome">Tognin Pizzas</div>
+                        <div class="avaliacao">
+                            <div class="estrelas">
+                                <!-- Atenção aos 3 tipos de icones a seguir -->
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <!-- Avaliação em numeros / Total de votos -->
+                            <div class="nota">4,8 (12)</div>
+                        </div>
+                        <div class="categoria">• Lancher</div>
+                    </div>
+                    <!-- Status da Empresa -->
+                    <div class="status online">
+                        <span class="bola"></span>
+                        Online
+                    </div>
+                </div>
+                <!-- Fim do Card Item -->
+
+                <!-- Card Item -->
+                <div class="card-item deBusca d-flex flex-row">
+                    <!-- Logotipo da empresa -->
+                    <div class="logotipo">
+                        <img src="assets/imgs/empresa06.jpg" alt="Logo da Empresa">
+                    </div>
+                    <!-- Informações -->
+                    <div class="infor d-flex flex-column justify-content-center">
+                        <div class="nome">Burguer</div>
+                        <div class="avaliacao">
+                            <div class="estrelas">
+                                <!-- Atenção aos 3 tipos de icones a seguir -->
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <!-- Avaliação em numeros / Total de votos -->
+                            <div class="nota">4,8 (12)</div>
+                        </div>
+                        <div class="categoria">• Lancher</div>
+                    </div>
+                    <!-- Status da Empresa -->
+                    <div class="status online">
+                        <span class="bola"></span>
+                        Online
+                    </div>
+                </div>
+                <!-- Fim do Card Item -->
+
+            </div>
+
+        </section>
+
+        <!-- Btn Principal Flutuante -->
+        <!-- Basta add class "aberto" para mostrar os outros -->
+        <section class="btn-principal">
+            <!-- Icones Principal -->
+            <div class="icon-principal btn-blur">
+                <img src="assets/imgs/SVG/garfo.svg" alt="Garfo" class="garfo">
+                <img src="assets/imgs/SVG/faca.svg" alt="Faca" class="faca">
+            </div>
+
+            <!-- Outros icones | Cada um com uma class -->
+            <div class="outros">
+                <a href="#config" class="outro-btn position01">
+                    <img src="assets/imgs/SVG/icon01.svg" alt="Configuração">
+                </a>
+                <a href="#inicio" class="outro-btn position02">
+                    <img src="assets/imgs/SVG/icon02.svg" alt="Inicio">
+                </a>
+                <a href="#perfil" class="outro-btn position03">
+                    <img src="assets/imgs/SVG/icon03.svg" alt="Perfil">
+                </a>
+                <a href="#chat" class="outro-btn position04">
+                    <img src="assets/imgs/SVG/icon04.svg" alt="Chat">
+                </a>
+                <a href="#carrinho" class="outro-btn position05">
+                    <img src="assets/imgs/SVG/icon05.svg" alt="Carrinho">
+                </a>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/theme.js"></script>
+
+    <script>
+        // Receber DATA do botão
+        $('#modalProdutos').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget);
+            var imgCategoria = button.data('imgcategoria');
+            var nomecategoria = button.data('nomecategoria');
+            var modal = $(this);
+            modal.find('.modal-body .header .img').css('background-image', 'url(' + imgCategoria + ')');
+            modal.find('.modal-body .header .titulo').html(nomecategoria);
+        })
+
+        // Botões de QTD mais e menos
+        let btnMenos = $('.paraCarrinho .qtd button.menos');
+        let btnMais = $('.paraCarrinho .qtd button.mais');
+        btnMenos.on('click', function(){
+            let inputQtd = $(this).siblings('input');
+            if(inputQtd.val() <= 1) return;
+            inputQtd.val(inputQtd.val() - 1);
+        });
+        btnMais.on('click', function(){
+            let inputQtd = $(this).siblings('input');
+            if(inputQtd.val() >= 99) return;
+            inputQtd.val(+inputQtd.val() + 1);
+        });
+
+        // Clica no produto e abrir opções
+        $('.item-produto .sobre').on('click', function(){
+            $(this).parents('.item-produto').toggleClass('aberto');
+        });
+
+    </script>
+</body>
+
+</html>

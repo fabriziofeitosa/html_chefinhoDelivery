@@ -240,6 +240,7 @@ $tamanhoBola: 70px;
     margin-bottom: 12px;
     .logotipo {
         width: 30%;
+        max-width: 30%;
         background-position: center;
         background-size: cover;
         &::before {
@@ -251,6 +252,9 @@ $tamanhoBola: 70px;
             content: '';
             display: block;
             clear: both;
+        }
+        img {
+            max-width: 100%;
         }
     }
     .infor {
@@ -824,6 +828,127 @@ header.principal {
         }
     }
 }
+
+/* #######################################
+        PAG. 25 - Carrinho
+####################################### */
+
+.pag-carrinho {
+    .sobre-compra {
+        padding: 10px 20px;
+        .confirmar-itens {
+            > .titulo {
+                font-size: 28px;
+            }
+            .empresa {
+                > .logo {
+                    width: 20%;
+                    background-position: center;
+                    background-size: cover;
+                    border-radius: 100%;
+                    &::before {
+                        content: '';
+                        padding-top: 100%;
+                        float: left;
+                    }
+                    &::after {
+                        content: '';
+                        display: block;
+                        clear: both;
+                    }
+                }
+                > .nome {
+                    font-size: 34px;
+                    padding-left: 10px;
+                    letter-spacing: -2px;
+                }
+            }
+            .pedido-lista {
+                padding: 0;
+                margin: 20px 0 0;
+                list-style: none;
+                > .item,
+                > .total {
+                    position: relative;
+                    padding-left: 30px;
+                    .editar {
+                        position: absolute;
+                        top: -2px;
+                        left: 0;
+                        width: 18px;
+                        img {
+                            max-width: 100%;
+                        }
+                        path {
+                            fill: $laranja;
+                        }
+                    }
+                    .sobre {
+                        > .nome {
+                            font-size: 20px;
+                            line-height: 1;
+                        }
+                        .observacao {
+                            position: relative;
+                            padding: 4px 0 4px 30px;
+                            margin: 4px 0;
+                            color: darken(silver, 10%);
+                            font-size: 12px;
+                            &::before {
+                                content: '';
+                                display: block;
+                                position: absolute;
+                                left: 15px;
+                                top: 0;
+                                width: 1px;
+                                height: 100%;
+                                background-color: darken(silver, 10%);
+                            }
+                        }
+                    }
+                    .preco {
+                        color: $laranja;
+                        font-size: 20px;
+                    }
+                }
+                > .item {
+                    margin-bottom: 5px;
+                }
+                > .total {
+                    margin: 30px 0 20px;
+                    .preco {
+                        .taxa {
+                            display: block;
+                            color: darken(silver, 10%);
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+        .btn-continuar {
+            background-color: $laranja;
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 8px;
+        }
+    }
+    .pedidos-anteriores {
+        > .titulo {
+            font-size: 20px;
+            padding-left: 15px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+/* #######################################
+        Modals
+####################################### */
 
 #modalLogin,
 #modalRegistro,
