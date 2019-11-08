@@ -1129,31 +1129,41 @@ header.principal.focus + .area-conteudo {
   display: block;
 }
 
+#modalProdutos .modal-content,
 #modalContinuar .modal-content,
 #modalAtention .modal-content {
   overflow: hidden;
 }
 
+#modalProdutos .modal-body,
 #modalContinuar .modal-body,
 #modalAtention .modal-body {
   padding: 25px;
 }
 
+#modalProdutos .modal-body .titulo,
 #modalContinuar .modal-body .titulo,
 #modalAtention .modal-body .titulo {
   color: #ffa500;
   margin-bottom: 10px;
 }
 
+#modalProdutos .modal-body .frase,
 #modalContinuar .modal-body .frase,
 #modalAtention .modal-body .frase {
   font-size: 14px;
   line-height: 1.2;
 }
 
+#modalProdutos .modal-body .opcoes .sacola,
+#modalProdutos .modal-body .opcoes .continuar,
+#modalProdutos .modal-body .opcoes .configs,
+#modalProdutos .modal-body .opcoes .prosseguir,
+#modalContinuar .modal-body .opcoes .sacola,
 #modalContinuar .modal-body .opcoes .continuar,
 #modalContinuar .modal-body .opcoes .configs,
 #modalContinuar .modal-body .opcoes .prosseguir,
+#modalAtention .modal-body .opcoes .sacola,
 #modalAtention .modal-body .opcoes .continuar,
 #modalAtention .modal-body .opcoes .configs,
 #modalAtention .modal-body .opcoes .prosseguir {
@@ -1165,11 +1175,23 @@ header.principal.focus + .area-conteudo {
   font-size: 18px;
 }
 
-#modalContinuar .modal-body .opcoes .continuar:hover, #modalContinuar .modal-body .opcoes .continuar:active,
+#modalProdutos .modal-body .opcoes .sacola:hover, #modalProdutos .modal-body .opcoes .sacola:active,
+#modalProdutos .modal-body .opcoes .continuar:hover,
+#modalProdutos .modal-body .opcoes .continuar:active,
+#modalProdutos .modal-body .opcoes .configs:hover,
+#modalProdutos .modal-body .opcoes .configs:active,
+#modalProdutos .modal-body .opcoes .prosseguir:hover,
+#modalProdutos .modal-body .opcoes .prosseguir:active,
+#modalContinuar .modal-body .opcoes .sacola:hover,
+#modalContinuar .modal-body .opcoes .sacola:active,
+#modalContinuar .modal-body .opcoes .continuar:hover,
+#modalContinuar .modal-body .opcoes .continuar:active,
 #modalContinuar .modal-body .opcoes .configs:hover,
 #modalContinuar .modal-body .opcoes .configs:active,
 #modalContinuar .modal-body .opcoes .prosseguir:hover,
 #modalContinuar .modal-body .opcoes .prosseguir:active,
+#modalAtention .modal-body .opcoes .sacola:hover,
+#modalAtention .modal-body .opcoes .sacola:active,
 #modalAtention .modal-body .opcoes .continuar:hover,
 #modalAtention .modal-body .opcoes .continuar:active,
 #modalAtention .modal-body .opcoes .configs:hover,
@@ -1179,6 +1201,7 @@ header.principal.focus + .area-conteudo {
   text-decoration: none;
 }
 
+#modalProdutos .modal-body .opcoes .continuar,
 #modalContinuar .modal-body .opcoes .continuar,
 #modalAtention .modal-body .opcoes .continuar {
   margin: 0 0 -25px -25px;
@@ -1186,16 +1209,165 @@ header.principal.focus + .area-conteudo {
   border-right: 1px solid #686868;
 }
 
+#modalProdutos .modal-body .opcoes .configs,
 #modalContinuar .modal-body .opcoes .configs,
 #modalAtention .modal-body .opcoes .configs {
   margin: 0 -25px -25px 0;
   border-top: 1px solid #686868;
 }
 
+#modalProdutos .modal-body .opcoes .sacola,
+#modalProdutos .modal-body .opcoes .prosseguir,
+#modalContinuar .modal-body .opcoes .sacola,
 #modalContinuar .modal-body .opcoes .prosseguir,
+#modalAtention .modal-body .opcoes .sacola,
 #modalAtention .modal-body .opcoes .prosseguir {
   margin: 0 -25px -25px -25px;
   border-top: 1px solid #686868;
   width: 150%;
+}
+
+#modalProdutos .modal-body .header {
+  margin: -25px -25px 20px -25px;
+}
+
+#modalProdutos .modal-body .header .img {
+  position: relative;
+  background-color: #f5f5f5;
+  width: 100px;
+  background-position: center;
+  background-size: cover;
+}
+
+#modalProdutos .modal-body .header .img .gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(255, 255, 255, 0)), to(white));
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, white 100%);
+}
+
+#modalProdutos .modal-body .header .titulo {
+  padding-top: 25px;
+  padding-left: 20px;
+}
+
+#modalProdutos .modal-body .lista-itens {
+  margin-bottom: 20px;
+}
+
+#modalProdutos .modal-body .lista-itens .item-produto:not(:first-child) {
+  margin-top: 20px;
+}
+
+#modalProdutos .modal-body .lista-itens .item-produto .sobre .nome {
+  color: #c37129;
+  font-size: 24px;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+#modalProdutos .modal-body .lista-itens .item-produto .sobre .desc {
+  color: #a7a7a7;
+  line-height: 1.2;
+  margin-bottom: 5px;
+}
+
+#modalProdutos .modal-body .lista-itens .item-produto .sobre .preco {
+  color: #ffa500;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+#modalProdutos .modal-body .lista-itens .item-produto .paraCarrinho {
+  position: relative;
+  display: none;
+  padding-left: 10%;
+}
+
+#modalProdutos .modal-body .lista-itens .item-produto .paraCarrinho::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 5%;
+  width: 1px;
+  height: 100%;
+  background-color: silver;
+}
+
+#modalProdutos .modal-body .lista-itens .item-produto .paraCarrinho input,
+#modalProdutos .modal-body .lista-itens .item-produto .paraCarrinho button {
+  background-color: transparent;
+  border: none;
+  display: inline-block;
+}
+
+#modalProdutos .modal-body .lista-itens .item-produto .paraCarrinho input {
+  background-color: #e6e6e6;
+  border-radius: 5px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  padding: 0 5px;
+  font-size: 18px;
+}
+
+#modalProdutos .modal-body .lista-itens .item-produto .paraCarrinho input::-webkit-outer-spin-button, #modalProdutos .modal-body .lista-itens .item-produto .paraCarrinho input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+  /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+#modalProdutos .modal-body .lista-itens .item-produto .paraCarrinho input[type=number] {
+  -moz-appearance: textfield;
+  /* Firefox */
+}
+
+#modalProdutos .modal-body .lista-itens .item-produto .paraCarrinho .menos,
+#modalProdutos .modal-body .lista-itens .item-produto .paraCarrinho .mais {
+  width: 30px;
+  height: 40px;
+}
+
+#modalProdutos .modal-body .lista-itens .item-produto .paraCarrinho .mais img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+#modalProdutos .modal-body .lista-itens .item-produto .paraCarrinho .paraSacola {
+  background-color: #ffa500;
+  color: #fff;
+  border-radius: 20px;
+  padding: 0 20px;
+  font-size: 14px;
+}
+
+#modalProdutos .modal-body .lista-itens .item-produto .paraCarrinho .observacao {
+  margin-top: 10px;
+}
+
+#modalProdutos .modal-body .lista-itens .item-produto .paraCarrinho .observacao textarea {
+  width: 100%;
+  background-color: #e6e6e6;
+  border-radius: 5px;
+  border: none;
+  resize: none;
+  font-size: 18px;
+  padding: 8px 10px;
+  margin: 0 0 -10px 0;
+}
+
+#modalProdutos .modal-body .lista-itens .item-produto.aberto .paraCarrinho {
+  display: block;
+}
+
+#modalProdutos .modal-body .opcoes .sacola {
+  border: none;
+  background-color: #ffa500;
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */

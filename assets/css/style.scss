@@ -986,6 +986,7 @@ header.principal {
     }
 }
 
+#modalProdutos,
 #modalContinuar,
 #modalAtention {
     .modal-content {
@@ -1002,6 +1003,7 @@ header.principal {
             line-height: 1.2;
         }
         .opcoes {
+            .sacola,
             .continuar,
             .configs,
             .prosseguir {
@@ -1025,10 +1027,146 @@ header.principal {
                 margin: 0 -25px -25px 0;
                 border-top: 1px solid #686868;
             }
+            .sacola,
             .prosseguir {
                 margin: 0 -25px -25px -25px;
                 border-top: 1px solid #686868;
                 width: 150%;
+            }
+        }
+    }
+}
+
+#modalProdutos {
+    .modal-body {
+        .header {
+            margin: -25px -25px 20px -25px;
+            .img {
+                position: relative;
+                background-color: #f5f5f5;
+                width: 100px;
+                background-position: center;
+                background-size: cover;
+                .gradient {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(to right, rgba(255,255,255,0) 50%, rgba(255, 255, 255, 1) 100%);
+                }
+            }
+            .titulo {
+                padding-top: 25px;
+                padding-left: 20px;
+            }
+        }
+        .lista-itens {
+            margin-bottom: 20px;
+            .item-produto {
+                &:not(:first-child) {
+                    margin-top: 20px;
+                }
+                .sobre {
+                    .nome {
+                        color: $laranjaEscuro;
+                        font-size: 24px;
+                        line-height: 1;
+                        margin-bottom: 10px;
+                    }
+                    .desc {
+                        color: darken(silver, 10%);
+                        line-height: 1.2;
+                        margin-bottom: 5px;
+                    }
+                    .preco {
+                        color: $laranja;
+                        font-size: 20px;
+                        margin-bottom: 10px;
+                    }
+                }
+                .paraCarrinho {
+                    position: relative;
+                    display: none;
+                    padding-left: 10%;
+                    &::before {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        left: 5%;
+                        width: 1px;
+                        height: 100%;
+                        background-color: silver;
+                    }
+                    input,
+                    button {
+                        background-color: transparent;
+                        border: none;
+                        display: inline-block;
+                    }
+                    input {
+                        background-color: #e6e6e6;
+                        border-radius: 5px;
+                        width: 40px;
+                        height: 40px;
+                        text-align: center;
+                        padding: 0 5px;
+                        font-size: 18px;
+                        &::-webkit-outer-spin-button,
+                        &::-webkit-inner-spin-button {
+                            /* display: none; <- Crashes Chrome on hover */
+                            -webkit-appearance: none;
+                            margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+                        }
+
+                        &[type=number] {
+                            -moz-appearance:textfield; /* Firefox */
+                        }
+                    }
+                    .menos,
+                    .mais {
+                        width: 30px;
+                        height: 40px;
+                    }
+                    .mais {
+                        img {
+                            transform: rotate(180deg);
+                        }
+                    }
+                    .paraSacola {
+                        background-color: $laranja;
+                        color: #fff;
+                        border-radius: 20px;
+                        padding: 0 20px;
+                        font-size: 14px;
+                    }
+                    .observacao {
+                        margin-top: 10px;
+                        textarea {
+                            width: 100%;
+                            background-color: #e6e6e6;
+                            border-radius: 5px;
+                            border: none;
+                            resize: none;
+                            font-size: 18px;
+                            padding: 8px 10px;
+                            margin: 0 0 -10px 0;
+                        }
+                    }
+                }
+                &.aberto {
+                    .paraCarrinho {
+                        display: block;
+                    }
+                }
+            }
+        }
+        .opcoes {
+            .sacola {
+                border: none;
+                background-color: $laranja;
+                color: #fff;
             }
         }
     }

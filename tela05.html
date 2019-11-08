@@ -150,38 +150,193 @@
             <!-- Categorias de produtos -->
             <div class="listaCategorias d-flex flex-row flex-wrap">
                 <!-- Item Categoria -->
-                <div class="item-categoria" style="background-image: url(assets/imgs/categoria01.jpg);">
+                <!-- Aqui é setado duas DATAS: img categoria e nome da categoria -->
+                <div class="item-categoria"
+                    style="background-image: url(assets/imgs/categoria01.jpg);"
+                    data-imgcategoria="assets/imgs/categoria01.jpg"
+                    data-nomecategoria="Burguer"
+                    data-toggle="modal" data-target="#modalProdutos">
                     <div class="gradient"></div>
                     <div class="nome">Burguer</div>
                 </div>
                 <!-- Item Categoria -->
-                <div class="item-categoria" style="background-image: url(assets/imgs/categoria02.jpg);">
+                <div class="item-categoria"
+                    style="background-image: url(assets/imgs/categoria02.jpg);"
+                    data-imgcategoria="assets/imgs/categoria02.jpg"
+                    data-nomecategoria="Porções"
+                    data-toggle="modal" data-target="#modalProdutos">
                     <div class="gradient"></div>
                     <div class="nome">Porções</div>
                 </div>
                 <!-- Item Categoria -->
-                <div class="item-categoria" style="background-image: url(assets/imgs/categoria03.jpg);">
+                <div class="item-categoria"
+                    style="background-image: url(assets/imgs/categoria03.jpg);"
+                    data-imgcategoria="assets/imgs/categoria03.jpg"
+                    data-nomecategoria="Dogs"
+                    data-toggle="modal" data-target="#modalProdutos">
                     <div class="gradient"></div>
                     <div class="nome">Dogs</div>
                 </div>
                 <!-- Item Categoria -->
-                <div class="item-categoria" style="background-image: url(assets/imgs/categoria04.jpg);">
+                <div class="item-categoria"
+                    style="background-image: url(assets/imgs/categoria04.jpg);"
+                    data-imgcategoria="assets/imgs/categoria04.jpg"
+                    data-nomecategoria="Bebidas"
+                    data-toggle="modal" data-target="#modalProdutos">
                     <div class="gradient"></div>
                     <div class="nome">Bebidas</div>
                 </div>
                 <!-- Item Categoria -->
-                <div class="item-categoria" style="background-image: url(assets/imgs/categoria05.jpg);">
+                <div class="item-categoria"
+                    style="background-image: url(assets/imgs/categoria05.jpg);"
+                    data-imgcategoria="assets/imgs/categoria05.jpg"
+                    data-nomecategoria="Pratos"
+                    data-toggle="modal" data-target="#modalProdutos">
                     <div class="gradient"></div>
                     <div class="nome">Pratos</div>
                 </div>
                 <!-- Item Categoria -->
-                <div class="item-categoria" style="background-image: url(assets/imgs/categoria06.jpg);">
+                <div class="item-categoria"
+                    style="background-image: url(assets/imgs/categoria06.jpg);"
+                    data-imgcategoria="assets/imgs/categoria06.jpg"
+                    data-nomecategoria="Açaí"
+                    data-toggle="modal" data-target="#modalProdutos">
                     <div class="gradient"></div>
                     <div class="nome">Açaí</div>
                 </div>
             </div>
 
         </section>
+
+        <!-- Modal de produtos  -->
+        <div class="modal fade" id="modalProdutos" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <!-- Header do modal -->
+                        <!-- img e titulo setada via data JS, só olhar no final desse arquivo -->
+                        <div class="header d-flex flex-row">
+                            <div class="img">
+                                <div class="gradient"></div>
+                            </div>
+                            <h2 class="titulo">Categoria...</h2>
+                        </div>
+                        <!-- Lista de itens -->
+                        <div class="lista-itens">
+
+                            <!-- Produto -->
+                            <div class="item-produto">
+                                <!-- Principais informações -->
+                                <div class="sobre">
+                                    <div class="nome">Burger Bacon</div>
+                                    <div class="desc">Pão, hamburguer, mussarela, presunto, ovo, bacon, tomate, alface e molho especial.</div>
+                                    <div class="preco">R$ 13,00</div>
+                                </div>
+                                <!-- Opção para enviar ao sacola/carrinho -->
+                                <div class="paraCarrinho">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="qtd d-flex flex-row">
+                                            <!-- Btn menos -->
+                                            <button class="menos">
+                                                <img src="assets/imgs/SVG/seta-down.svg" alt="Menos">
+                                            </button>
+                                            <!-- Input de quantidade -->
+                                            <input type="number" class="qtd-iten" value="1" min="1" max="99">
+                                            <!-- Btn mais -->
+                                            <button class="mais">
+                                                <img src="assets/imgs/SVG/seta-down.svg" alt="Menos">
+                                            </button>
+                                        </div>
+                                        <!-- Btn para enviar a sacola -->
+                                        <button class="paraSacola">Colocar na Sacola</button>
+                                    </div>
+                                    <!-- Obersavação do usuario -->
+                                    <div class="observacao">
+                                        <textarea rows="3" placeholder="Observação"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Fim do Produto -->
+
+                            <!-- Produto -->
+                            <div class="item-produto">
+                                <!-- Principais informações -->
+                                <div class="sobre">
+                                    <div class="nome">Burger Bacon</div>
+                                    <div class="desc">Pão, hamburguer, mussarela, presunto, ovo, bacon, tomate, alface e molho especial.</div>
+                                    <div class="preco">R$ 13,00</div>
+                                </div>
+                                <!-- Opção para enviar ao sacola/carrinho -->
+                                <div class="paraCarrinho">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="qtd d-flex flex-row">
+                                            <!-- Btn menos -->
+                                            <button class="menos">
+                                                <img src="assets/imgs/SVG/seta-down.svg" alt="Menos">
+                                            </button>
+                                            <!-- Input de quantidade -->
+                                            <input type="number" class="qtd-iten" value="1" min="1" max="99">
+                                            <!-- Btn mais -->
+                                            <button class="mais">
+                                                <img src="assets/imgs/SVG/seta-down.svg" alt="Menos">
+                                            </button>
+                                        </div>
+                                        <!-- Btn para enviar a sacola -->
+                                        <button class="paraSacola">Colocar na Sacola</button>
+                                    </div>
+                                    <!-- Obersavação do usuario -->
+                                    <div class="observacao">
+                                        <textarea rows="3" placeholder="Observação"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Fim do Produto -->
+
+                            <!-- Produto -->
+                            <div class="item-produto">
+                                <!-- Principais informações -->
+                                <div class="sobre">
+                                    <div class="nome">Burger Bacon</div>
+                                    <div class="desc">Pão, hamburguer, mussarela, presunto, ovo, bacon, tomate, alface e molho especial.</div>
+                                    <div class="preco">R$ 13,00</div>
+                                </div>
+                                <!-- Opção para enviar ao sacola/carrinho -->
+                                <div class="paraCarrinho">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="qtd d-flex flex-row">
+                                            <!-- Btn menos -->
+                                            <button class="menos">
+                                                <img src="assets/imgs/SVG/seta-down.svg" alt="Menos">
+                                            </button>
+                                            <!-- Input de quantidade -->
+                                            <input type="number" class="qtd-iten" value="1" min="1" max="99">
+                                            <!-- Btn mais -->
+                                            <button class="mais">
+                                                <img src="assets/imgs/SVG/seta-down.svg" alt="Menos">
+                                            </button>
+                                        </div>
+                                        <!-- Btn para enviar a sacola -->
+                                        <button class="paraSacola">Colocar na Sacola</button>
+                                    </div>
+                                    <!-- Obersavação do usuario -->
+                                    <div class="observacao">
+                                        <textarea rows="3" placeholder="Observação"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Fim do Produto -->
+
+                        </div>
+                        <!-- Fim Lista de itens -->
+
+                        <!-- Btn da sacola/carrinho -->
+                        <div class="opcoes d-flex flex-row justify-content-between align-items-center">
+                            <a href="#" class="sacola">Sacola Vazia</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Btn Principal Flutuante -->
         <!-- Basta add class "aberto" para mostrar os outros -->
@@ -222,6 +377,40 @@
         crossorigin="anonymous"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/theme.js"></script>
+
+    <script>
+        $('#modalProdutos').modal('show');
+
+        // Receber DATA do botão
+        $('#modalProdutos').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget);
+            var imgCategoria = button.data('imgcategoria');
+            var nomecategoria = button.data('nomecategoria');
+            var modal = $(this);
+            modal.find('.modal-body .header .img').css('background-image', 'url(' + imgCategoria + ')');
+            modal.find('.modal-body .header .titulo').html(nomecategoria);
+        })
+
+        // Botões de QTD mais e menos
+        let btnMenos = $('.paraCarrinho .qtd button.menos');
+        let btnMais = $('.paraCarrinho .qtd button.mais');
+        btnMenos.on('click', function(){
+            let inputQtd = $(this).siblings('input');
+            if(inputQtd.val() <= 1) return;
+            inputQtd.val(inputQtd.val() - 1);
+        });
+        btnMais.on('click', function(){
+            let inputQtd = $(this).siblings('input');
+            if(inputQtd.val() >= 99) return;
+            inputQtd.val(+inputQtd.val() + 1);
+        });
+
+        // Clica no produto e abrir opções
+        $('.item-produto .sobre').on('click', function(){
+            $(this).parents('.item-produto').toggleClass('aberto');
+        });
+
+    </script>
 </body>
 
 </html>
