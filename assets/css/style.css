@@ -263,6 +263,7 @@ body.modal-open .pag > *:not(.modal) {
 }
 
 .card-item .logotipo img {
+  width: 100%;
   max-width: 100%;
 }
 
