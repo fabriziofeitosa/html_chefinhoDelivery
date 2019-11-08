@@ -926,6 +926,10 @@ header.principal.focus + .area-conteudo {
 /* #######################################
         PAG. 25 - Carrinho
 ####################################### */
+.pag-carrinho .area-conteudo {
+  padding-bottom: 80px;
+}
+
 .pag-carrinho .sobre-compra {
   padding: 10px 20px;
 }
