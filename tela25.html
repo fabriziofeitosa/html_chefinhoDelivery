@@ -339,13 +339,18 @@
 
         // Slide Carrinho
         $('#slideCarrinho').slick({
-            draggable: false,
             infinite: false,
             slidesToShow: 1,
             slidesToScroll: 1,
             dots: true,
             arrows: false,
-            adaptiveHeight: true
+            adaptiveHeight: true,
+            draggable: false,
+            swipe: false
+        });
+        // Passar Slide
+        $('.sobre-compra .btn-continuar').on('click',function(){
+            $('#slideCarrinho').slick('slickNext');
         });
 
     </script>
