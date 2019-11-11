@@ -834,6 +834,58 @@ header.principal.focus + .area-conteudo {
 }
 
 /* #######################################
+        PAG. 6 e 7 - PEDIDO ENVIADO
+####################################### */
+.pag-enviado {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
+}
+
+.pag-enviado .area-conteudo {
+  padding-top: 20px;
+  padding-bottom: 80px;
+}
+
+.pag-enviado .area-conteudo .pedido-infor {
+  min-height: 380px;
+  text-align: center;
+}
+
+.pag-enviado .area-conteudo .pedido-infor .titulo-status {
+  padding-top: 20px;
+  font-family: 'nougatregular';
+  text-transform: uppercase;
+  color: #ffa500;
+  line-height: 1;
+}
+
+.pag-enviado .area-conteudo .pedido-infor .status-tempo .circulo {
+  position: relative;
+}
+
+.pag-enviado .area-conteudo .pedido-infor .status-tempo .circulo strong {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 34px;
+}
+
+.pag-enviado .area-conteudo .pedido-infor .status-tempo .status {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.pag-enviado .pedidos-anteriores > .titulo {
+  font-size: 20px;
+  padding-left: 15px;
+  margin-bottom: 10px;
+}
+
+/* #######################################
         PAG. 16 - LOGIN
 ####################################### */
 .pag-login {

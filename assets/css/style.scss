@@ -767,6 +767,56 @@ header.principal {
 }
 
 /* #######################################
+        PAG. 6 e 7 - PEDIDO ENVIADO
+####################################### */
+
+.pag-enviado {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
+    .area-conteudo {
+        padding-top: 20px;
+        padding-bottom: 80px;
+        .pedido-infor {
+            min-height: 380px;
+            text-align: center;
+            .titulo-status {
+                padding-top: 20px;
+                font-family: 'nougatregular';
+                text-transform: uppercase;
+                color: $laranja;
+                line-height: 1;
+            }
+            .status-tempo {
+                $tamanhoCirculo: 150px;
+                .circulo {
+                    position: relative;
+                    strong {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        font-size: 34px;
+                    }
+                }
+                .status {
+                    font-size: 24px;
+                    line-height: 1;
+                }
+            }
+        }
+    }
+    .pedidos-anteriores {
+        > .titulo {
+            font-size: 20px;
+            padding-left: 15px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+/* #######################################
         PAG. 16 - LOGIN
 ####################################### */
 
