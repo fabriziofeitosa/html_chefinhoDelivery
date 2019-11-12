@@ -767,7 +767,7 @@ header.principal {
 }
 
 /* #######################################
-        PAG. 6 e 7 - PEDIDO ENVIADO
+        PAG. 06 e 07 - PEDIDO ENVIADO
 ####################################### */
 
 .pag-enviado {
@@ -843,6 +843,101 @@ header.principal {
             font-size: 20px;
             padding-left: 15px;
             margin-bottom: 10px;
+        }
+    }
+}
+
+/* #######################################
+        PAG. 08 - CHAT
+####################################### */
+
+$headerChat-h: 60px;
+.pag-chat {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    background-size: cover;
+    .chat {
+        &-header {
+            background-color: $laranja;
+            color: #fff;
+            height: $headerChat-h;
+            .btn-voltar {
+                width: 40px;
+                text-align: center;
+                svg {
+                    height: 25px;
+                }
+                path {
+                    fill: #fff;
+                }
+                img {
+                    display: none;
+                }
+            }
+            .avatar {
+                width: 45px;
+                height: 45px;
+                border-radius: 100%;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    max-width: 100%;
+                    display: inline-block;
+                }
+            }
+            .nome {
+                font-size: 24px;
+                margin-left: 10px;
+                line-height: 1;
+            }
+        }
+        &-body {
+            height: calc(100% - #{$headerChat-h});
+            position: relative;
+            padding-bottom: 60px;
+            .mensagens {
+                overflow-y: auto;
+                height: 100%;
+                width: 100%;
+            }
+            .caixa-envio {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 60px;
+                padding: 0 20px;
+                .msg {
+                    width: 100%;
+                    input {
+                        height: 40px;
+                        width: 100%;
+                        border-radius: 20px;
+                        border: none;
+                        padding: 0 15px;
+                    }
+                }
+                .enviar {
+                    width: 40px;
+                    margin-left: 15px;
+                    .btn-enviar {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 100%;
+                        background-color: $laranja;
+                        border: none;
+                        svg {
+                            height: 25px;
+                        }
+                        path {
+                            fill: #fff;
+                        }
+                    }
+                }
+            }
         }
     }
 }

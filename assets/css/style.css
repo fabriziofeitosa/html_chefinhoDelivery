@@ -834,7 +834,7 @@ header.principal.focus + .area-conteudo {
 }
 
 /* #######################################
-        PAG. 6 e 7 - PEDIDO ENVIADO
+        PAG. 06 e 07 - PEDIDO ENVIADO
 ####################################### */
 .pag-enviado {
   position: relative;
@@ -922,6 +922,114 @@ header.principal.focus + .area-conteudo {
   font-size: 20px;
   padding-left: 15px;
   margin-bottom: 10px;
+}
+
+/* #######################################
+        PAG. 08 - CHAT
+####################################### */
+.pag-chat {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  background-size: cover;
+}
+
+.pag-chat .chat-header {
+  background-color: #ffa500;
+  color: #fff;
+  height: 60px;
+}
+
+.pag-chat .chat-header .btn-voltar {
+  width: 40px;
+  text-align: center;
+}
+
+.pag-chat .chat-header .btn-voltar svg {
+  height: 25px;
+}
+
+.pag-chat .chat-header .btn-voltar path {
+  fill: #fff;
+}
+
+.pag-chat .chat-header .btn-voltar img {
+  display: none;
+}
+
+.pag-chat .chat-header .avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.pag-chat .chat-header .avatar img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  display: inline-block;
+}
+
+.pag-chat .chat-header .nome {
+  font-size: 24px;
+  margin-left: 10px;
+  line-height: 1;
+}
+
+.pag-chat .chat-body {
+  height: calc(100% - 60px);
+  position: relative;
+  padding-bottom: 60px;
+}
+
+.pag-chat .chat-body .mensagens {
+  overflow-y: auto;
+  height: 100%;
+  width: 100%;
+}
+
+.pag-chat .chat-body .caixa-envio {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  padding: 0 20px;
+}
+
+.pag-chat .chat-body .caixa-envio .msg {
+  width: 100%;
+}
+
+.pag-chat .chat-body .caixa-envio .msg input {
+  height: 40px;
+  width: 100%;
+  border-radius: 20px;
+  border: none;
+  padding: 0 15px;
+}
+
+.pag-chat .chat-body .caixa-envio .enviar {
+  width: 40px;
+  margin-left: 15px;
+}
+
+.pag-chat .chat-body .caixa-envio .enviar .btn-enviar {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: #ffa500;
+  border: none;
+}
+
+.pag-chat .chat-body .caixa-envio .enviar .btn-enviar svg {
+  height: 25px;
+}
+
+.pag-chat .chat-body .caixa-envio .enviar .btn-enviar path {
+  fill: #fff;
 }
 
 /* #######################################
