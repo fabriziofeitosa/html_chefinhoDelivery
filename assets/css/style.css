@@ -879,6 +879,45 @@ header.principal.focus + .area-conteudo {
   line-height: 1;
 }
 
+.pag-enviado .area-conteudo .pedido-infor .aviso-ops {
+  padding: 0 30px 0;
+}
+
+.pag-enviado .area-conteudo .pedido-infor .aviso-ops .titulo {
+  font-size: 60px;
+}
+
+.pag-enviado .area-conteudo .pedido-infor .aviso-ops .sub {
+  color: #ffa500;
+  line-height: 1;
+}
+
+.pag-enviado .area-conteudo .pedido-infor .aviso-ops .sobre {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.pag-enviado .area-conteudo .pedido-infor .options {
+  padding-top: 30px;
+}
+
+.pag-enviado .area-conteudo .pedido-infor .options > div {
+  position: relative;
+  width: 20%;
+  color: #ffa500;
+  line-height: 1;
+}
+
+.pag-enviado .area-conteudo .pedido-infor .options > div span {
+  margin-top: 5px;
+  display: inline-block;
+}
+
+.pag-enviado .area-conteudo .pedido-infor .options .ligacao,
+.pag-enviado .area-conteudo .pedido-infor .options .chat {
+  margin-left: 5%;
+}
+
 .pag-enviado .pedidos-anteriores > .titulo {
   font-size: 20px;
   padding-left: 15px;

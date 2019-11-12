@@ -805,6 +805,37 @@ header.principal {
                     line-height: 1;
                 }
             }
+            .aviso-ops {
+                padding: 0 30px 0;
+                .titulo {
+                    font-size: 60px;
+                }
+                .sub {
+                    color: $laranja;
+                    line-height: 1;
+                }
+                .sobre {
+                    font-size: 14px;
+                    line-height: 1;
+                }
+            }
+            .options {
+                padding-top: 30px;
+                > div {
+                    position: relative;
+                    width: 20%;
+                    color: $laranja;
+                    line-height: 1;
+                    span {
+                        margin-top: 5px;
+                        display: inline-block;
+                    }
+                }
+                .ligacao,
+                .chat {
+                    margin-left: 5%;
+                }
+            }
         }
     }
     .pedidos-anteriores {
