@@ -137,7 +137,7 @@
                         <img src="assets/imgs/SVG/icon_home.svg" alt="Novo pedido">
                         <span>Novo<br>Pedido</span>
                         <!-- Link de destino | Não precisa de conteudo -->
-                        <a href="#1" class="tudo"></a>
+                        <a href="#1" class="tudo" data-toggle="modal" data-target="#modalCancelarPedido"></a>
                     </div>
                     <div class="ligacao">
                         <img src="assets/imgs/SVG/icon_phone.svg" alt="Ligar por telefone">
@@ -218,6 +218,23 @@
 
         </section>
 
+        <!-- Modal "Tem certeza?"  -->
+        <div class="modal fade" id="modalCancelarPedido" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h2 class="titulo">Tem certeza?</h2>
+                        <p class="frase">Você está prestes a cancelar o pedido atual e realizar um novo pedido, mas ainda pode entrar em contato conosco e continuar com o pedido atual normalmente.</p>
+                        <!-- Links destinos -->
+                        <div class="opcoes d-flex flex-row justify-content-between align-items-stretch">
+                            <div class="continuar d-flex align-items-center">Cancelar e realizar um novo pedido</div>
+                            <div data-dismiss="modal" class="configs" class="d-flex align-items-center justify-content-center">Entrar em<br>contato</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Btn Principal Flutuante -->
         <!-- Basta add class "aberto" para mostrar os outros -->
         <section class="btn-principal">
@@ -260,6 +277,7 @@
     <script src="assets/js/theme.js"></script>
 
     <script>
+        // Configuração do circulo de progresso
         var c4 = $('.circulo');
         c4.circleProgress({
             startAngle: -Math.PI / 2,
@@ -267,6 +285,8 @@
             lineCap: 'round',
             fill: { color: '#ffa500' }
         });
+
+        $('#modalCancelarPedido').modal('show');
     </script>
 </body>
 
