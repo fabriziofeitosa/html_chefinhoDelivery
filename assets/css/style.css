@@ -1329,6 +1329,7 @@ header.principal.focus + .area-conteudo {
 /* #######################################
         Modals
 ####################################### */
+#modalPerfil .modal-body .bemvindo,
 #modalLogin .modal-body .bemvindo,
 #modalRegistro .modal-body .bemvindo,
 #modalFormConvidado .modal-body .bemvindo {
@@ -1339,6 +1340,7 @@ header.principal.focus + .area-conteudo {
   margin-bottom: 20px;
 }
 
+#modalPerfil .modal-body .sub-frase,
 #modalLogin .modal-body .sub-frase,
 #modalRegistro .modal-body .sub-frase,
 #modalFormConvidado .modal-body .sub-frase {
@@ -1346,6 +1348,7 @@ header.principal.focus + .area-conteudo {
   line-height: 1.2;
 }
 
+#modalPerfil .modal-body .avatar,
 #modalLogin .modal-body .avatar,
 #modalRegistro .modal-body .avatar,
 #modalFormConvidado .modal-body .avatar {
@@ -1358,6 +1361,7 @@ header.principal.focus + .area-conteudo {
   border: 1px solid #ffa500;
 }
 
+#modalPerfil .modal-body .avatar::before,
 #modalLogin .modal-body .avatar::before,
 #modalRegistro .modal-body .avatar::before,
 #modalFormConvidado .modal-body .avatar::before {
@@ -1366,6 +1370,7 @@ header.principal.focus + .area-conteudo {
   float: left;
 }
 
+#modalPerfil .modal-body .avatar::after,
 #modalLogin .modal-body .avatar::after,
 #modalRegistro .modal-body .avatar::after,
 #modalFormConvidado .modal-body .avatar::after {
@@ -1374,6 +1379,7 @@ header.principal.focus + .area-conteudo {
   clear: both;
 }
 
+#modalPerfil .modal-body .avatar .editar,
 #modalLogin .modal-body .avatar .editar,
 #modalRegistro .modal-body .avatar .editar,
 #modalFormConvidado .modal-body .avatar .editar {
@@ -1387,6 +1393,7 @@ header.principal.focus + .area-conteudo {
   text-align: center;
 }
 
+#modalPerfil .modal-body .avatar .editar img,
 #modalLogin .modal-body .avatar .editar img,
 #modalRegistro .modal-body .avatar .editar img,
 #modalFormConvidado .modal-body .avatar .editar img {
@@ -1394,12 +1401,14 @@ header.principal.focus + .area-conteudo {
   max-width: 100%;
 }
 
+#modalPerfil .modal-body .form-group,
 #modalLogin .modal-body .form-group,
 #modalRegistro .modal-body .form-group,
 #modalFormConvidado .modal-body .form-group {
   position: relative;
 }
 
+#modalPerfil .modal-body .form-group input,
 #modalLogin .modal-body .form-group input,
 #modalRegistro .modal-body .form-group input,
 #modalFormConvidado .modal-body .form-group input {
@@ -1412,23 +1421,11 @@ header.principal.focus + .area-conteudo {
   border-radius: 10px;
 }
 
+#modalPerfil .modal-body .form-group .btn-editar,
 #modalLogin .modal-body .form-group .btn-editar,
 #modalRegistro .modal-body .form-group .btn-editar,
 #modalFormConvidado .modal-body .form-group .btn-editar {
   display: none;
-}
-
-#modalLogin .modal-body .form-group.editar input:disabled,
-#modalRegistro .modal-body .form-group.editar input:disabled,
-#modalFormConvidado .modal-body .form-group.editar input:disabled {
-  color: #ffa500;
-  background-color: transparent;
-}
-
-#modalLogin .modal-body .form-group.editar .btn-editar,
-#modalRegistro .modal-body .form-group.editar .btn-editar,
-#modalFormConvidado .modal-body .form-group.editar .btn-editar {
-  display: block;
   position: absolute;
   top: 50%;
   right: 10px;
@@ -1438,18 +1435,43 @@ header.principal.focus + .area-conteudo {
   height: 25px;
 }
 
-#modalLogin .modal-body .form-group.editar .btn-editar img,
-#modalRegistro .modal-body .form-group.editar .btn-editar img,
-#modalFormConvidado .modal-body .form-group.editar .btn-editar img {
+#modalPerfil .modal-body .form-group .btn-editar img,
+#modalLogin .modal-body .form-group .btn-editar img,
+#modalRegistro .modal-body .form-group .btn-editar img,
+#modalFormConvidado .modal-body .form-group .btn-editar img {
   max-width: 100%;
 }
 
-#modalLogin .modal-body .form-group.editar .btn-editar path,
-#modalRegistro .modal-body .form-group.editar .btn-editar path,
-#modalFormConvidado .modal-body .form-group.editar .btn-editar path {
+#modalPerfil .modal-body .form-group .btn-editar path,
+#modalLogin .modal-body .form-group .btn-editar path,
+#modalRegistro .modal-body .form-group .btn-editar path,
+#modalFormConvidado .modal-body .form-group .btn-editar path {
   fill: #ffa500;
 }
 
+#modalPerfil .modal-body .form-group.editar input:disabled,
+#modalLogin .modal-body .form-group.editar input:disabled,
+#modalRegistro .modal-body .form-group.editar input:disabled,
+#modalFormConvidado .modal-body .form-group.editar input:disabled {
+  color: #ffa500;
+  background-color: transparent;
+}
+
+#modalPerfil .modal-body .form-group.editar .btn-editar,
+#modalLogin .modal-body .form-group.editar .btn-editar,
+#modalRegistro .modal-body .form-group.editar .btn-editar,
+#modalFormConvidado .modal-body .form-group.editar .btn-editar {
+  display: block;
+}
+
+#modalPerfil .modal-body .form-group.noBlock .btn-editar,
+#modalLogin .modal-body .form-group.noBlock .btn-editar,
+#modalRegistro .modal-body .form-group.noBlock .btn-editar,
+#modalFormConvidado .modal-body .form-group.noBlock .btn-editar {
+  display: block;
+}
+
+#modalPerfil .modal-body .botoes,
 #modalLogin .modal-body .botoes,
 #modalRegistro .modal-body .botoes,
 #modalFormConvidado .modal-body .botoes {
@@ -1458,6 +1480,8 @@ header.principal.focus + .area-conteudo {
   padding-bottom: 20px;
 }
 
+#modalPerfil .modal-body .botoes .voltar,
+#modalPerfil .modal-body .botoes .cadastrar,
 #modalLogin .modal-body .botoes .voltar,
 #modalLogin .modal-body .botoes .cadastrar,
 #modalRegistro .modal-body .botoes .voltar,
@@ -1471,10 +1495,83 @@ header.principal.focus + .area-conteudo {
   border: none;
 }
 
+#modalPerfil .modal-body .botoes .voltar,
 #modalLogin .modal-body .botoes .voltar,
 #modalRegistro .modal-body .botoes .voltar,
 #modalFormConvidado .modal-body .botoes .voltar {
   margin-right: 10px;
+}
+
+#modalPerfil .modal-body .form-group input {
+  padding: 8px 15px;
+}
+
+#modalPerfil .modal-body .avatar {
+  margin-bottom: 10px;
+}
+
+#modalPerfil .modal-body .nomeUsuario {
+  color: #ffa500;
+  font-size: 30px;
+  letter-spacing: -1px;
+  text-align: center;
+  line-height: 1;
+}
+
+#modalPerfil .modal-body .nomeUsuario .btn-editar {
+  display: inline-block;
+  margin-left: 10px;
+  width: 20px;
+}
+
+#modalPerfil .modal-body .nomeUsuario .btn-editar path {
+  fill: #ffa500;
+}
+
+#modalPerfil .modal-body .avaliacao {
+  text-align: center;
+  color: #ffa500;
+  margin-bottom: 15px;
+}
+
+#modalPerfil .modal-body .avaliacao .qtdPedidos {
+  font-size: 12px;
+  color: silver;
+}
+
+#modalPerfil .modal-body .meuCodigo {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#modalPerfil .modal-body .meuCodigo .titulo {
+  font-size: 17px;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+#modalPerfil .modal-body .meuCodigo .cod {
+  color: #ffa500;
+  font-size: 34px;
+  line-height: 1;
+}
+
+#modalPerfil .modal-body .meusPontos .titulo {
+  line-height: 1;
+  font-size: 17px;
+  text-align: right;
+}
+
+#modalPerfil .modal-body .meusPontos .pontos {
+  margin: 0 0 20px 10px;
+  background-color: #e6e6e6;
+  font-size: 34px;
+  line-height: 1;
+  text-align: center;
+  width: 80px;
+  border-radius: 8px;
+  color: #ffa500;
+  padding: 4px 15px;
 }
 
 #modalFormConvidado .modal-body {

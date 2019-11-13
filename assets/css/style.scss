@@ -1188,6 +1188,7 @@ $headerChat-h: 60px;
         Modals
 ####################################### */
 
+#modalPerfil,
 #modalLogin,
 #modalRegistro,
 #modalFormConvidado {
@@ -1249,6 +1250,18 @@ $headerChat-h: 60px;
             }
             .btn-editar {
                 display: none;
+                position: absolute;
+                top: 50%;
+                right: 10px;
+                transform: translateY(-50%);
+                width: 25px;
+                height: 25px;
+                img {
+                    max-width: 100%;
+                }
+                path {
+                    fill: $laranja;
+                }
             }
 
             &.editar {
@@ -1258,18 +1271,11 @@ $headerChat-h: 60px;
                 }
                 .btn-editar {
                     display: block;
-                    position: absolute;
-                    top: 50%;
-                    right: 10px;
-                    transform: translateY(-50%);
-                    width: 25px;
-                    height: 25px;
-                    img {
-                        max-width: 100%;
-                    }
-                    path {
-                        fill: $laranja;
-                    }
+                }
+            }
+            &.noBlock {
+                .btn-editar {
+                    display: block;
                 }
             }
         }
@@ -1287,6 +1293,75 @@ $headerChat-h: 60px;
             }
             .voltar {
                 margin-right: 10px;
+            }
+        }
+    }
+}
+
+#modalPerfil {
+    .modal-body {
+        .form-group {
+            input {
+                padding: 8px 15px;
+            }
+        }
+        .avatar {
+            margin-bottom: 10px;
+        }
+        .nomeUsuario {
+            color: $laranja;
+            font-size: 30px;
+            letter-spacing: -1px;
+            text-align: center;
+            line-height: 1;
+            .btn-editar {
+                display: inline-block;
+                margin-left: 10px;
+                width: 20px;
+                path {
+                    fill: $laranja;
+                }
+            }
+        }
+        .avaliacao {
+            text-align: center;
+            color: $laranja;
+            margin-bottom: 15px;
+            .qtdPedidos {
+                font-size: 12px;
+                color: silver;
+            }
+        }
+        .meuCodigo {
+            text-align: center;
+            margin-bottom: 15px;
+            .titulo {
+                font-size: 17px;
+                line-height: 1;
+                margin-bottom: 5px;
+            }
+            .cod {
+                color: $laranja;
+                font-size: 34px;
+                line-height: 1;
+            }
+        }
+        .meusPontos {
+            .titulo {
+                line-height: 1;
+                font-size: 17px;
+                text-align: right;
+            }
+            .pontos {
+                margin: 0 0 20px 10px;
+                background-color: lighten(silver, 15%);
+                font-size: 34px;
+                line-height: 1;
+                text-align: center;
+                width: 80px;
+                border-radius: 8px;
+                color: $laranja;
+                padding: 4px 15px;
             }
         }
     }
