@@ -988,6 +988,64 @@ header.principal.focus + .area-conteudo {
   overflow-y: auto;
   height: 100%;
   width: 100%;
+  padding: 20px 0;
+}
+
+.pag-chat .chat-body .mensagens .tempo {
+  -ms-flex-item-align: center !important;
+      -ms-grid-row-align: center !important;
+      align-self: center !important;
+  color: #8d8d8d;
+}
+
+.pag-chat .chat-body .mensagens .balao {
+  position: relative;
+  background-color: #fff;
+  color: #000;
+  border-radius: .4em;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.pag-chat .chat-body .mensagens .balao.recebido {
+  margin-left: 25px;
+  background-color: #ffa500;
+}
+
+.pag-chat .chat-body .mensagens .balao.recebido::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-right-color: #ffa500;
+  border-left: 0;
+  border-bottom: 0;
+  margin-top: -10px;
+  margin-left: -20px;
+}
+
+.pag-chat .chat-body .mensagens .balao.enviado {
+  -ms-flex-item-align: end !important;
+      align-self: flex-end !important;
+  margin-right: 25px;
+}
+
+.pag-chat .chat-body .mensagens .balao.enviado::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-left-color: #fff;
+  border-right: 0;
+  border-bottom: 0;
+  margin-top: -10px;
+  margin-right: -20px;
 }
 
 .pag-chat .chat-body .caixa-envio {
@@ -1024,12 +1082,9 @@ header.principal.focus + .area-conteudo {
   border: none;
 }
 
-.pag-chat .chat-body .caixa-envio .enviar .btn-enviar svg {
-  height: 25px;
-}
-
-.pag-chat .chat-body .caixa-envio .enviar .btn-enviar path {
-  fill: #fff;
+.pag-chat .chat-body .caixa-envio .enviar .btn-enviar img {
+  max-width: 100%;
+  padding-left: 5px;
 }
 
 /* #######################################

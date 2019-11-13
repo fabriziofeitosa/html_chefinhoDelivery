@@ -902,6 +902,55 @@ $headerChat-h: 60px;
                 overflow-y: auto;
                 height: 100%;
                 width: 100%;
+                padding: 20px 0;
+                .tempo {
+                    align-self: center !important;
+                    color: darken(silver, 20%);
+                }
+                .balao {
+                    position: relative;
+                    background-color: #fff;
+                    color: #000;
+                    border-radius: .4em;
+                    padding: 10px;
+                    margin-top: 20px;
+                    &.recebido {
+                        margin-left: 25px;
+                        background-color: $laranja;
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            top: 50%;
+                            width: 0;
+                            height: 0;
+                            border: 20px solid transparent;
+                            border-right-color: $laranja;
+                            border-left: 0;
+                            border-bottom: 0;
+                            margin-top: -10px;
+                            margin-left: -20px;
+                        }
+                    }
+                    &.enviado {
+                        align-self: flex-end !important;
+                        margin-right: 25px;
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            right: 0;
+                            top: 50%;
+                            width: 0;
+                            height: 0;
+                            border: 20px solid transparent;
+                            border-left-color: #fff;
+                            border-right: 0;
+                            border-bottom: 0;
+                            margin-top: -10px;
+                            margin-right: -20px;
+                        }
+                    }
+                }
             }
             .caixa-envio {
                 position: absolute;
@@ -929,11 +978,9 @@ $headerChat-h: 60px;
                         border-radius: 100%;
                         background-color: $laranja;
                         border: none;
-                        svg {
-                            height: 25px;
-                        }
-                        path {
-                            fill: #fff;
+                        img {
+                            max-width: 100%;
+                            padding-left: 5px;
                         }
                     }
                 }
