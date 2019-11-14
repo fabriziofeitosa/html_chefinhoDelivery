@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="theme-color" content="#ffa500">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#ffa500">
+    <meta name="msapplication-navbutton-color" content="#ffa500">
+
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="https://kit.fontawesome.com/1c0fb1834f.js" crossorigin="anonymous"></script>
+
+    <title>Chefinho Delivery</title>
+</head>
+<body>
+
+    <div class="pag pag-config">
+
+        <!-- Header -->
+        <div class="config-header d-flex align-items-center">
+            <!-- Btn de voltar -->
+            <div class="btn-voltar">
+                <img class="svg" src="assets/imgs/SVG/seta-left.svg" alt="Voltar">
+            </div>
+            <div class="avatar">
+                <img src="assets/imgs/SVG/btn-config.svg" alt="Configurações">
+            </div>
+            <div class="nome">Configurações</div>
+        </div>
+        <div class="config-body">
+            <!-- Lista de endereços -->
+            <div class="meusEnderecos">
+                <div class="titulo">Meus endereços</div>
+                <!-- Lista -->
+                <ul class="lista">
+                    <!-- item / endereço -->
+                    <li class="item d-flex">
+                        <div class="fav">
+                            <!-- Só olhar a class do tipo de estrela -->
+                            <i class="far fa-star"></i>
+                        </div>
+                        <div class="ende d-flex align-items-center">
+                            <div class="rua">Avenida Tocantins</div>
+                            <div class="numero">Nº 774</div>
+                            <div class="bairrocidade">Taquaralto</div>
+                        </div>
+                    </li>
+                    <!-- item / endereço -->
+                    <li class="item d-flex">
+                        <div class="fav">
+                            <!-- Só olhar a class do tipo de estrela -->
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="ende d-flex align-items-center">
+                            <div class="rua">Rua SF 12</div>
+                            <div class="numero">Q 14 LT 3</div>
+                            <div class="bairrocidade">Taquaralto</div>
+                        </div>
+                    </li>
+                </ul>
+                <!-- Adicionar novo endereço -->
+                <div class="addEndereco" data-toggle="modal" data-target="#modalAddEndereco">+ Adicionar novo endereço</div>
+            </div>
+            <!-- Formas de pagamento -->
+            <div class="formasPag">
+                <div class="titulo">Formas de pagamento</div>
+                <!-- Lista das formas -->
+                <ul class="lista">
+                    <!-- Item / Método de pagamento -->
+                    <li class="item d-flex align-items-center">
+                        <div class="fav">
+                            <!-- Só olhar a class do tipo de estrela -->
+                            <i class="far fa-star"></i>
+                        </div>
+                        <div class="icone d-flex align-items-center justify-content-center">
+                            <img src="assets/imgs/SVG/logo_master.svg" alt="Master Card">
+                        </div>
+                        <div class="nome">Master</div>
+                    </li>
+                    <!-- Item / Método de pagamento -->
+                    <li class="item d-flex align-items-center">
+                        <div class="fav">
+                            <!-- Só olhar a class do tipo de estrela -->
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="icone d-flex align-items-center justify-content-center">
+                            <img src="assets/imgs/SVG/logo_visa.svg" alt="Visa">
+                        </div>
+                        <div class="nome">Master</div>
+                    </li>
+                    <!-- Item / Método de pagamento -->
+                    <li class="item d-flex align-items-center">
+                        <div class="fav">
+                            <!-- Só olhar a class do tipo de estrela -->
+                            <i class="far fa-star"></i>
+                        </div>
+                        <div class="icone d-flex align-items-center justify-content-center">
+                            <img src="assets/imgs/SVG/logo_elo.svg" alt="Elo">
+                        </div>
+                        <div class="nome">Elo</div>
+                    </li>
+                    <!-- Item com INPUT / Método de pagamento -->
+                    <li class="item d-flex align-items-center">
+                        <div class="fav">
+                            <!-- Só olhar a class do tipo de estrela -->
+                            <i class="far fa-star"></i>
+                        </div>
+                        <div class="icone d-flex align-items-center justify-content-center">
+                            <img src="assets/imgs/SVG/3pontinhos.svg" alt="Outro" style="width: 50%;">
+                        </div>
+                        <div class="nome">
+                            <!-- Input para digitação do cliente -->
+                            <input type="text" placeholder="Outro">
+                        </div>
+                    </li>
+                    <!-- Item / Método de pagamento -->
+                    <li class="item d-flex align-items-center">
+                        <div class="fav">
+                            <!-- Só olhar a class do tipo de estrela -->
+                            <i class="far fa-star"></i>
+                        </div>
+                        <div class="icone d-flex align-items-center justify-content-center">
+                            <img src="assets/imgs/SVG/dinheiro.svg" alt="Dinheiro">
+                        </div>
+                        <div class="nome">Dinheiro</div>
+                    </li>
+                </ul>
+            </div>
+            <!-- Links da área inferior -->
+            <div class="linksOutros">
+                <a href="#">+ Quero trabalhar para o app</a>
+                <a href="#">+ Quero meu negócio no app</a>
+                <a href="#">+ Quero sugerir para o app</a>
+                <div class="version">Versão 2.2.1</div>
+            </div>
+        </div>
+
+        <!-- Modal Formulario Convidado -->
+        <div class="modal fade" id="modalAddEndereco" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="bemvindo">Adicionar Endereço</div>
+                        <!-- Ativar localização -->
+                        <div class="localizacao">
+                            <a href="#localização">
+                                <img src="assets/imgs/SVG/mark.svg" alt="Marcador mapa">
+                                <span>Usar minha localização</span>
+                            </a>
+                        </div>
+
+                        <!-- Truque com o checkbox para exibir o formulario | via CSS -->
+                        <label for="inserirDados" class="labelInserirDados">
+                            <span>Inserir Dados</span>
+                            <div class="setinha">
+                                <img src="assets/imgs/SVG/seta-down.svg" alt="Setinha para baixo">
+                            </div>
+                        </label>
+                        <input type="checkbox" id="inserirDados">
+
+                        <!-- Inicio do formulario -->
+                        <form action="#">
+                            <!-- Campos -->
+                            <div class="campos">
+                                <div class="form-group">
+                                    <input type="text" placeholder="Rua">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Nº">
+                                </div>
+                                <div class="form-group editar">
+                                    <input type="text" value="Taqueralto" disabled>
+                                    <div class="btn-editar">
+                                        <img src="assets/imgs/SVG/iconEditar.svg" alt="Editar" class="svg">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Cidade">
+                                </div>
+                            </div>
+                            <!-- Botoões -->
+                            <div class="botoes">
+                                <button class="voltar" type="button" data-dismiss="modal">
+                                    <img src="assets/imgs/SVG/btn-voltar.svg" alt="Voltar">
+                                </button>
+                                <button class="cadastrar" type="button" data-dismiss="modal">
+                                    <img src="assets/imgs/SVG/btn-ok.svg" alt="Confirmar cadastro">
+                                </button>
+                            </div>
+                        </form>
+                        <!-- Fim do formulario -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal "Tem certeza?"  -->
+        <div class="modal fade" id="modalAddFavorito" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h2 class="titulo">Tem certeza?</h2>
+                        <p class="frase">Ao tornar essa opção favorita, ela será utilizada de maneira automática em todos os pedidos através do promospeed e da sacola. Deseja continuar?</p>
+                        <!-- Links destinos -->
+                        <div class="opcoes d-flex flex-row justify-content-between align-items-stretch">
+                            <div data-dismiss="modal" class="continuar d-flex align-items-center">Continuar editando</div>
+                            <div class="configs" class="d-flex align-items-center justify-content-center">Salvar como favorito</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/theme.js"></script>
+
+    <script>
+        $('.item .fav').on('click',function(){
+            $('#modalAddFavorito').modal('show');
+        });
+    </script>
+</body>
+
+</html>

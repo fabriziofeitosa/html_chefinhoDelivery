@@ -1091,6 +1091,239 @@ header.principal.focus + .area-conteudo {
 }
 
 /* #######################################
+        PAG. 11 - CONFIGURAÇÕES
+####################################### */
+.pag-config {
+  background-color: #ffa500;
+  color: #fff;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+.pag-config .config-header {
+  background-color: #ffa500;
+  color: #fff;
+  height: 60px;
+}
+
+.pag-config .config-header .btn-voltar {
+  width: 40px;
+  text-align: center;
+}
+
+.pag-config .config-header .btn-voltar svg {
+  height: 25px;
+}
+
+.pag-config .config-header .btn-voltar path {
+  fill: #fff;
+}
+
+.pag-config .config-header .btn-voltar img {
+  display: none;
+}
+
+.pag-config .config-header .avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.pag-config .config-header .avatar img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  display: inline-block;
+}
+
+.pag-config .config-header .nome {
+  font-size: 24px;
+  margin-left: 10px;
+  line-height: 1;
+}
+
+.pag-config .config-body {
+  position: relative;
+  height: calc(100% - 60px);
+  padding: 20px;
+  font-size: 17px;
+}
+
+.pag-config .config-body .meusEnderecos .titulo {
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.pag-config .config-body .meusEnderecos .lista {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.pag-config .config-body .meusEnderecos .lista .item {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.pag-config .config-body .meusEnderecos .lista .item .fav {
+  font-size: 16px;
+  margin-right: 20px;
+}
+
+.pag-config .config-body .meusEnderecos .lista .item .ende .numero,
+.pag-config .config-body .meusEnderecos .lista .item .ende .bairrocidade {
+  margin-left: 20px;
+}
+
+.pag-config .config-body .meusEnderecos .addEndereco {
+  width: 100%;
+  text-align: center;
+  color: #bb5733;
+  font-size: 14px;
+}
+
+.pag-config .config-body .formasPag {
+  margin-top: 20px;
+}
+
+.pag-config .config-body .formasPag .titulo {
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.pag-config .config-body .formasPag .lista {
+  padding: 0;
+  margin: 0;
+}
+
+.pag-config .config-body .formasPag .lista .item {
+  margin-bottom: 10px;
+}
+
+.pag-config .config-body .formasPag .lista .item .fav {
+  margin-right: 20px;
+}
+
+.pag-config .config-body .formasPag .lista .item .icone {
+  background-color: #fff;
+  width: 30px;
+  margin-right: 10px;
+  height: 20px;
+  border-radius: 5px;
+}
+
+.pag-config .config-body .formasPag .lista .item .icone img {
+  max-width: 80%;
+  height: 80%;
+}
+
+.pag-config .config-body .formasPag .lista .item .nome {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.pag-config .config-body .formasPag .lista .item .nome input {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  border-bottom: 1px solid transparent;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.pag-config .config-body .formasPag .lista .item .nome input.placeholder {
+  color: #fff;
+  opacity: 1;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.pag-config .config-body .formasPag .lista .item .nome input:-moz-placeholder {
+  color: #fff;
+  opacity: 1;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.pag-config .config-body .formasPag .lista .item .nome input::-moz-placeholder {
+  color: #fff;
+  opacity: 1;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.pag-config .config-body .formasPag .lista .item .nome input:-ms-input-placeholder {
+  color: #fff;
+  opacity: 1;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.pag-config .config-body .formasPag .lista .item .nome input::-webkit-input-placeholder {
+  color: #fff;
+  opacity: 1;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.pag-config .config-body .formasPag .lista .item .nome input:active, .pag-config .config-body .formasPag .lista .item .nome input:hover {
+  border-bottom: 1px solid #bb5733;
+}
+
+.pag-config .config-body .formasPag .lista .item .nome input:active.placeholder, .pag-config .config-body .formasPag .lista .item .nome input:hover.placeholder {
+  opacity: 0;
+}
+
+.pag-config .config-body .formasPag .lista .item .nome input:active:-moz-placeholder, .pag-config .config-body .formasPag .lista .item .nome input:hover:-moz-placeholder {
+  opacity: 0;
+}
+
+.pag-config .config-body .formasPag .lista .item .nome input:active::-moz-placeholder, .pag-config .config-body .formasPag .lista .item .nome input:hover::-moz-placeholder {
+  opacity: 0;
+}
+
+.pag-config .config-body .formasPag .lista .item .nome input:active:-ms-input-placeholder, .pag-config .config-body .formasPag .lista .item .nome input:hover:-ms-input-placeholder {
+  opacity: 0;
+}
+
+.pag-config .config-body .formasPag .lista .item .nome input:active::-webkit-input-placeholder, .pag-config .config-body .formasPag .lista .item .nome input:hover::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+.pag-config .config-body .linksOutros {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  text-align: right;
+}
+
+.pag-config .config-body .linksOutros a {
+  display: block;
+  color: #fff;
+  font-size: 20px;
+}
+
+.pag-config .config-body .linksOutros a:hover, .pag-config .config-body .linksOutros a:active {
+  color: inherit;
+}
+
+.pag-config .config-body .linksOutros a:not(::last-child) {
+  margin-bottom: 5px;
+}
+
+.pag-config .config-body .linksOutros .version {
+  color: #bb5733;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+/* #######################################
         PAG. 16 - LOGIN
 ####################################### */
 .pag-login {
@@ -1329,6 +1562,7 @@ header.principal.focus + .area-conteudo {
 /* #######################################
         Modals
 ####################################### */
+#modalAddEndereco .modal-body .bemvindo,
 #modalPerfil .modal-body .bemvindo,
 #modalLogin .modal-body .bemvindo,
 #modalRegistro .modal-body .bemvindo,
@@ -1340,6 +1574,7 @@ header.principal.focus + .area-conteudo {
   margin-bottom: 20px;
 }
 
+#modalAddEndereco .modal-body .sub-frase,
 #modalPerfil .modal-body .sub-frase,
 #modalLogin .modal-body .sub-frase,
 #modalRegistro .modal-body .sub-frase,
@@ -1348,6 +1583,7 @@ header.principal.focus + .area-conteudo {
   line-height: 1.2;
 }
 
+#modalAddEndereco .modal-body .avatar,
 #modalPerfil .modal-body .avatar,
 #modalLogin .modal-body .avatar,
 #modalRegistro .modal-body .avatar,
@@ -1361,6 +1597,7 @@ header.principal.focus + .area-conteudo {
   border: 1px solid #ffa500;
 }
 
+#modalAddEndereco .modal-body .avatar::before,
 #modalPerfil .modal-body .avatar::before,
 #modalLogin .modal-body .avatar::before,
 #modalRegistro .modal-body .avatar::before,
@@ -1370,6 +1607,7 @@ header.principal.focus + .area-conteudo {
   float: left;
 }
 
+#modalAddEndereco .modal-body .avatar::after,
 #modalPerfil .modal-body .avatar::after,
 #modalLogin .modal-body .avatar::after,
 #modalRegistro .modal-body .avatar::after,
@@ -1379,6 +1617,7 @@ header.principal.focus + .area-conteudo {
   clear: both;
 }
 
+#modalAddEndereco .modal-body .avatar .editar,
 #modalPerfil .modal-body .avatar .editar,
 #modalLogin .modal-body .avatar .editar,
 #modalRegistro .modal-body .avatar .editar,
@@ -1393,6 +1632,7 @@ header.principal.focus + .area-conteudo {
   text-align: center;
 }
 
+#modalAddEndereco .modal-body .avatar .editar img,
 #modalPerfil .modal-body .avatar .editar img,
 #modalLogin .modal-body .avatar .editar img,
 #modalRegistro .modal-body .avatar .editar img,
@@ -1401,6 +1641,7 @@ header.principal.focus + .area-conteudo {
   max-width: 100%;
 }
 
+#modalAddEndereco .modal-body .form-group,
 #modalPerfil .modal-body .form-group,
 #modalLogin .modal-body .form-group,
 #modalRegistro .modal-body .form-group,
@@ -1408,6 +1649,7 @@ header.principal.focus + .area-conteudo {
   position: relative;
 }
 
+#modalAddEndereco .modal-body .form-group input,
 #modalPerfil .modal-body .form-group input,
 #modalLogin .modal-body .form-group input,
 #modalRegistro .modal-body .form-group input,
@@ -1421,6 +1663,7 @@ header.principal.focus + .area-conteudo {
   border-radius: 10px;
 }
 
+#modalAddEndereco .modal-body .form-group .btn-editar,
 #modalPerfil .modal-body .form-group .btn-editar,
 #modalLogin .modal-body .form-group .btn-editar,
 #modalRegistro .modal-body .form-group .btn-editar,
@@ -1435,6 +1678,7 @@ header.principal.focus + .area-conteudo {
   height: 25px;
 }
 
+#modalAddEndereco .modal-body .form-group .btn-editar img,
 #modalPerfil .modal-body .form-group .btn-editar img,
 #modalLogin .modal-body .form-group .btn-editar img,
 #modalRegistro .modal-body .form-group .btn-editar img,
@@ -1442,6 +1686,7 @@ header.principal.focus + .area-conteudo {
   max-width: 100%;
 }
 
+#modalAddEndereco .modal-body .form-group .btn-editar path,
 #modalPerfil .modal-body .form-group .btn-editar path,
 #modalLogin .modal-body .form-group .btn-editar path,
 #modalRegistro .modal-body .form-group .btn-editar path,
@@ -1449,6 +1694,7 @@ header.principal.focus + .area-conteudo {
   fill: #ffa500;
 }
 
+#modalAddEndereco .modal-body .form-group.editar input:disabled,
 #modalPerfil .modal-body .form-group.editar input:disabled,
 #modalLogin .modal-body .form-group.editar input:disabled,
 #modalRegistro .modal-body .form-group.editar input:disabled,
@@ -1457,6 +1703,7 @@ header.principal.focus + .area-conteudo {
   background-color: transparent;
 }
 
+#modalAddEndereco .modal-body .form-group.editar .btn-editar,
 #modalPerfil .modal-body .form-group.editar .btn-editar,
 #modalLogin .modal-body .form-group.editar .btn-editar,
 #modalRegistro .modal-body .form-group.editar .btn-editar,
@@ -1464,6 +1711,7 @@ header.principal.focus + .area-conteudo {
   display: block;
 }
 
+#modalAddEndereco .modal-body .form-group.noBlock .btn-editar,
 #modalPerfil .modal-body .form-group.noBlock .btn-editar,
 #modalLogin .modal-body .form-group.noBlock .btn-editar,
 #modalRegistro .modal-body .form-group.noBlock .btn-editar,
@@ -1471,6 +1719,7 @@ header.principal.focus + .area-conteudo {
   display: block;
 }
 
+#modalAddEndereco .modal-body .botoes,
 #modalPerfil .modal-body .botoes,
 #modalLogin .modal-body .botoes,
 #modalRegistro .modal-body .botoes,
@@ -1480,6 +1729,8 @@ header.principal.focus + .area-conteudo {
   padding-bottom: 20px;
 }
 
+#modalAddEndereco .modal-body .botoes .voltar,
+#modalAddEndereco .modal-body .botoes .cadastrar,
 #modalPerfil .modal-body .botoes .voltar,
 #modalPerfil .modal-body .botoes .cadastrar,
 #modalLogin .modal-body .botoes .voltar,
@@ -1495,6 +1746,7 @@ header.principal.focus + .area-conteudo {
   border: none;
 }
 
+#modalAddEndereco .modal-body .botoes .voltar,
 #modalPerfil .modal-body .botoes .voltar,
 #modalLogin .modal-body .botoes .voltar,
 #modalRegistro .modal-body .botoes .voltar,
@@ -1574,43 +1826,52 @@ header.principal.focus + .area-conteudo {
   padding: 4px 15px;
 }
 
+#modalAddEndereco .modal-body,
 #modalFormConvidado .modal-body {
   position: relative;
 }
 
+#modalAddEndereco .modal-body .sub-frase,
 #modalFormConvidado .modal-body .sub-frase {
   padding: 0 20px;
 }
 
+#modalAddEndereco .modal-body .localizacao,
 #modalFormConvidado .modal-body .localizacao {
   color: #ffa500;
   text-align: center;
   margin-bottom: 20px;
 }
 
+#modalAddEndereco .modal-body .localizacao a,
 #modalFormConvidado .modal-body .localizacao a {
   color: inherit;
 }
 
+#modalAddEndereco .modal-body .localizacao img,
 #modalFormConvidado .modal-body .localizacao img {
   display: inline-block;
   width: 10px;
 }
 
+#modalAddEndereco .modal-body form .campos,
 #modalFormConvidado .modal-body form .campos {
   display: none;
 }
 
+#modalAddEndereco .modal-body form .botoes,
 #modalFormConvidado .modal-body form .botoes {
   margin-top: 20px;
 }
 
+#modalAddEndereco .modal-body label,
 #modalFormConvidado .modal-body label {
   color: #c37129;
   text-align: center;
   display: block;
 }
 
+#modalAddEndereco .modal-body label .setinha,
 #modalFormConvidado .modal-body label .setinha {
   display: inline-block;
   width: 10px;
@@ -1620,24 +1881,29 @@ header.principal.focus + .area-conteudo {
   transition: all .2s;
 }
 
+#modalAddEndereco .modal-body label .setinha img,
 #modalFormConvidado .modal-body label .setinha img {
   max-width: 100%;
 }
 
+#modalAddEndereco .modal-body label.checked .setinha,
 #modalFormConvidado .modal-body label.checked .setinha {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
 }
 
+#modalAddEndereco .modal-body #inserirDados,
 #modalFormConvidado .modal-body #inserirDados {
   position: absolute;
   left: -9999px;
 }
 
+#modalAddEndereco .modal-body #inserirDados:checked + form .campos,
 #modalFormConvidado .modal-body #inserirDados:checked + form .campos {
   display: block;
 }
 
+#modalAddFavorito .modal-content,
 #modalCancelarPedido .modal-content,
 #modalProdutos .modal-content,
 #modalContinuar .modal-content,
@@ -1645,13 +1911,16 @@ header.principal.focus + .area-conteudo {
   overflow: hidden;
 }
 
+#modalAddFavorito .modal-body,
 #modalCancelarPedido .modal-body,
 #modalProdutos .modal-body,
 #modalContinuar .modal-body,
 #modalAtention .modal-body {
   padding: 25px;
+  color: #000;
 }
 
+#modalAddFavorito .modal-body .titulo,
 #modalCancelarPedido .modal-body .titulo,
 #modalProdutos .modal-body .titulo,
 #modalContinuar .modal-body .titulo,
@@ -1660,6 +1929,7 @@ header.principal.focus + .area-conteudo {
   margin-bottom: 10px;
 }
 
+#modalAddFavorito .modal-body .frase,
 #modalCancelarPedido .modal-body .frase,
 #modalProdutos .modal-body .frase,
 #modalContinuar .modal-body .frase,
@@ -1668,6 +1938,10 @@ header.principal.focus + .area-conteudo {
   line-height: 1.2;
 }
 
+#modalAddFavorito .modal-body .opcoes .sacola,
+#modalAddFavorito .modal-body .opcoes .continuar,
+#modalAddFavorito .modal-body .opcoes .configs,
+#modalAddFavorito .modal-body .opcoes .prosseguir,
 #modalCancelarPedido .modal-body .opcoes .sacola,
 #modalCancelarPedido .modal-body .opcoes .continuar,
 #modalCancelarPedido .modal-body .opcoes .configs,
@@ -1692,7 +1966,15 @@ header.principal.focus + .area-conteudo {
   font-size: 16px;
 }
 
-#modalCancelarPedido .modal-body .opcoes .sacola:hover, #modalCancelarPedido .modal-body .opcoes .sacola:active,
+#modalAddFavorito .modal-body .opcoes .sacola:hover, #modalAddFavorito .modal-body .opcoes .sacola:active,
+#modalAddFavorito .modal-body .opcoes .continuar:hover,
+#modalAddFavorito .modal-body .opcoes .continuar:active,
+#modalAddFavorito .modal-body .opcoes .configs:hover,
+#modalAddFavorito .modal-body .opcoes .configs:active,
+#modalAddFavorito .modal-body .opcoes .prosseguir:hover,
+#modalAddFavorito .modal-body .opcoes .prosseguir:active,
+#modalCancelarPedido .modal-body .opcoes .sacola:hover,
+#modalCancelarPedido .modal-body .opcoes .sacola:active,
 #modalCancelarPedido .modal-body .opcoes .continuar:hover,
 #modalCancelarPedido .modal-body .opcoes .continuar:active,
 #modalCancelarPedido .modal-body .opcoes .configs:hover,
@@ -1726,6 +2008,7 @@ header.principal.focus + .area-conteudo {
   text-decoration: none;
 }
 
+#modalAddFavorito .modal-body .opcoes .continuar,
 #modalCancelarPedido .modal-body .opcoes .continuar,
 #modalProdutos .modal-body .opcoes .continuar,
 #modalContinuar .modal-body .opcoes .continuar,
@@ -1735,6 +2018,7 @@ header.principal.focus + .area-conteudo {
   border-right: 1px solid #686868;
 }
 
+#modalAddFavorito .modal-body .opcoes .configs,
 #modalCancelarPedido .modal-body .opcoes .configs,
 #modalProdutos .modal-body .opcoes .configs,
 #modalContinuar .modal-body .opcoes .configs,
@@ -1743,6 +2027,8 @@ header.principal.focus + .area-conteudo {
   border-top: 1px solid #686868;
 }
 
+#modalAddFavorito .modal-body .opcoes .sacola,
+#modalAddFavorito .modal-body .opcoes .prosseguir,
 #modalCancelarPedido .modal-body .opcoes .sacola,
 #modalCancelarPedido .modal-body .opcoes .prosseguir,
 #modalProdutos .modal-body .opcoes .sacola,

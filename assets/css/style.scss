@@ -992,6 +992,171 @@ $headerChat-h: 60px;
 }
 
 /* #######################################
+        PAG. 11 - CONFIGURAÇÕES
+####################################### */
+
+$headerConfig-h: 60px;
+.pag-config {
+    background-color: $laranja;
+    color: #fff;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    .config {
+        &-header {
+            background-color: $laranja;
+            color: #fff;
+            height: $headerChat-h;
+            .btn-voltar {
+                width: 40px;
+                text-align: center;
+                svg {
+                    height: 25px;
+                }
+                path {
+                    fill: #fff;
+                }
+                img {
+                    display: none;
+                }
+            }
+            .avatar {
+                width: 45px;
+                height: 45px;
+                border-radius: 100%;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    max-width: 100%;
+                    display: inline-block;
+                }
+            }
+            .nome {
+                font-size: 24px;
+                margin-left: 10px;
+                line-height: 1;
+            }
+        }
+        &-body {
+            position: relative;
+            height: calc(100% - #{$headerChat-h});
+            padding: 20px;
+            font-size: 17px;
+            .meusEnderecos {
+                .titulo {
+                    text-transform: uppercase;
+                    line-height: 1;
+                    margin-bottom: 10px;
+                }
+                .lista {
+                    list-style-type: none;
+                    padding: 0;
+                    margin: 0;
+                    margin-bottom: 10px;
+                    .item {
+                        font-size: 14px;
+                        margin-bottom: 5px;
+                        .fav {
+                            font-size: 16px;
+                            margin-right: 20px;
+                        }
+                        .ende {
+                            .numero,
+                            .bairrocidade {
+                                margin-left: 20px;
+                            }
+                        }
+                    }
+                }
+                .addEndereco {
+                    width: 100%;
+                    text-align: center;
+                    color: rgb(187, 87, 51);
+                    font-size: 14px;
+                }
+            }
+            .formasPag {
+                margin-top: 20px;
+                .titulo {
+                    text-transform: uppercase;
+                    line-height: 1;
+                    margin-bottom: 10px;
+                }
+                .lista {
+                    padding: 0;
+                    margin: 0;
+                    .item {
+                        margin-bottom: 10px;
+                        .fav {
+                            margin-right: 20px;
+                        }
+                        .icone {
+                            background-color: #fff;
+                            width: 30px;
+                            margin-right: 10px;
+                            height: 20px;
+                            border-radius: 5px;
+                            img {
+                                max-width: 80%;
+                                height: 80%;
+                            }
+                        }
+                        .nome {
+                            font-size: 14px;
+                            line-height: 1;
+                            input {
+                                background-color: transparent;
+                                border: none;
+                                color: #fff;
+                                border-bottom: 1px solid transparent;
+                                transition: all .2s;
+                                @include input-placeholder() {
+                                    color: #fff;
+                                    opacity: 1;
+                                    transition: all .2s;
+                                }
+                                &:active,
+                                &:hover {
+                                    border-bottom: 1px solid rgb(187, 87, 51);
+                                    @include input-placeholder() {
+                                        opacity: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .linksOutros {
+                position: absolute;
+                right: 20px;
+                bottom: 20px;
+                text-align: right;
+                a {
+                    display: block;
+                    color: #fff;
+                    font-size: 20px;
+                    &:hover,
+                    &:active {
+                        color: inherit;
+                    }
+                    &:not(::last-child) {
+                        margin-bottom: 5px;
+                    }
+                }
+                .version {
+                    color: rgb(187, 87, 51);
+                    font-size: 20px;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
+
+/* #######################################
         PAG. 16 - LOGIN
 ####################################### */
 
@@ -1188,6 +1353,7 @@ $headerChat-h: 60px;
         Modals
 ####################################### */
 
+#modalAddEndereco,
 #modalPerfil,
 #modalLogin,
 #modalRegistro,
@@ -1367,6 +1533,7 @@ $headerChat-h: 60px;
     }
 }
 
+#modalAddEndereco,
 #modalFormConvidado {
     .modal-body {
         position: relative;
@@ -1424,6 +1591,7 @@ $headerChat-h: 60px;
     }
 }
 
+#modalAddFavorito,
 #modalCancelarPedido,
 #modalProdutos,
 #modalContinuar,
@@ -1433,6 +1601,7 @@ $headerChat-h: 60px;
     }
     .modal-body {
         padding: 25px;
+        color: #000;
         .titulo {
             color: $laranja;
             margin-bottom: 10px;
