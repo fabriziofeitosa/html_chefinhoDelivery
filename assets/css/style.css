@@ -2185,4 +2185,57 @@ header.principal.focus + .area-conteudo {
   background-color: #ffa500;
   color: #fff;
 }
+
+/* #######################################
+        PAG. 26 - Card de produto
+####################################### */
+.card-produto {
+  padding: 8px 15px;
+}
+
+.card-produto .produto-img {
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  max-width: 24%;
+  border-radius: 20px;
+}
+
+.card-produto .produto-img::before {
+  content: '';
+  padding-top: 100%;
+  float: left;
+}
+
+.card-produto .produto-img::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.card-produto .produto-infor {
+  padding-left: 20px;
+}
+
+.card-produto .produto-infor .nome {
+  color: #000;
+}
+
+.card-produto .produto-infor .sobre {
+  color: silver;
+  font-size: 14px;
+}
+
+.card-produto .produto-infor .preco {
+  font-size: 14px;
+}
+
+.card-produto .produto-infor .preco .old {
+  text-decoration: line-through;
+}
+
+.card-produto .produto-infor .preco .new {
+  margin-left: 5px;
+  color: #00cc00;
+}
 /*# sourceMappingURL=style.css.map */

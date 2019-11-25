@@ -1779,3 +1779,50 @@ $headerConfig-h: 60px;
         }
     }
 }
+
+/* #######################################
+        PAG. 26 - Card de produto
+####################################### */
+
+.card-produto {
+    padding: 8px 15px;
+    .produto {
+        &-img {
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+            max-width: 24%;
+            border-radius: 20px;
+            &::before {
+                content: '';
+                padding-top: 100%;
+                float: left;
+            }
+            &::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+        }
+        &-infor {
+            padding-left: 20px;
+            .nome {
+                color: #000;
+            }
+            .sobre {
+                color: silver;
+                font-size: 14px;
+            }
+            .preco {
+                font-size: 14px;
+                .old {
+                    text-decoration: line-through
+                }
+                .new {
+                    margin-left: 5px;
+                    color: darken(lime, 10%);
+                }
+            }
+        }
+    }
+}
