@@ -2321,4 +2321,170 @@ header.principal.focus + .area-conteudo {
   display: inline-block;
   padding: 0 15px;
 }
+
+/* #######################################
+        PAG. 27 - Montar o pedido / Modal Lateral
+####################################### */
+.modal-lateral {
+  position: fixed;
+  top: 0;
+  left: 100vw;
+  width: 100vw;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  padding: 0 20px;
+}
+
+.modal-lateral .header {
+  padding: 10px 0px;
+}
+
+.modal-lateral .header .btn-voltar {
+  position: relative;
+  background-color: #ffa500;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 10px;
+  border-radius: 8px;
+  margin-right: 20px;
+  line-height: 1;
+}
+
+.modal-lateral .header .titulo {
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.modal-lateral .sobre-produto {
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+
+.modal-lateral .sobre-produto .nome {
+  font-size: 20px;
+}
+
+.modal-lateral .sobre-produto .fatias {
+  font-size: 14px;
+}
+
+.modal-lateral .sobre-produto .preco {
+  color: #00cc00;
+}
+
+.modal-lateral .aviso {
+  padding: 10px 30px;
+  line-height: 1.4;
+  color: silver;
+  font-size: 14px;
+}
+
+.modal-lateral .escolher-sabor {
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+.modal-lateral .escolher-sabor .titulo {
+  padding-right: 10px;
+}
+
+.modal-lateral .escolher-sabor .definido span {
+  display: inline-block;
+  background-color: #ffedcc;
+  color: #c37129;
+  font-size: 12px;
+  line-height: 1;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.modal-lateral .escolher-sabor .seta {
+  padding: 7px 15px;
+  font-size: 18px;
+  color: silver;
+  line-height: 1;
+}
+
+.modal-lateral .qtd-produto {
+  padding: 15px 0;
+}
+
+.modal-lateral .qtd-produto .qtd .btn-menos,
+.modal-lateral .qtd-produto .qtd .btn-mais {
+  font-size: 30px;
+  line-height: 1;
+  color: #ffa500;
+}
+
+.modal-lateral .qtd-produto .qtd .valor {
+  margin: 0 10px;
+}
+
+.modal-lateral .qtd-produto .qtd .valor input {
+  display: inline-block;
+  width: 50px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  text-align: center;
+}
+
+.modal-lateral .observacao {
+  margin-bottom: 20px;
+}
+
+.modal-lateral .observacao .titulo {
+  margin-bottom: 10px;
+}
+
+.modal-lateral .observacao textarea {
+  border: none;
+  border-bottom: 1px solid silver;
+  width: 100%;
+  height: 40px;
+}
+
+.modal-lateral .observacao textarea.placeholder {
+  color: silver;
+}
+
+.modal-lateral .observacao textarea:-moz-placeholder {
+  color: silver;
+}
+
+.modal-lateral .observacao textarea::-moz-placeholder {
+  color: silver;
+}
+
+.modal-lateral .observacao textarea:-ms-input-placeholder {
+  color: silver;
+}
+
+.modal-lateral .observacao textarea::-webkit-input-placeholder {
+  color: silver;
+}
+
+.modal-lateral .btn-addCarrinho {
+  border: 2px solid #ffa500;
+  background-color: #fff;
+  color: #ffa500;
+  width: 100%;
+  line-height: 1;
+  padding: 15px;
+  text-transform: uppercase;
+  font-size: 14px;
+  border-radius: 10px;
+}
+
+.modal-lateral .btn-addCarrinho:hover, .modal-lateral .btn-addCarrinho:active {
+  background-color: #ffa500;
+  color: #fff;
+}
+
+.modal-lateral.mostrar {
+  left: 0;
+}
 /*# sourceMappingURL=style.css.map */
