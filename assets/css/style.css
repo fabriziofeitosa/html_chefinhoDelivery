@@ -2189,6 +2189,66 @@ header.principal.focus + .area-conteudo {
 /* #######################################
         PAG. 26 - Card de produto
 ####################################### */
+.box-sobreEmpresa {
+  padding: 10px 15px;
+}
+
+.box-sobreEmpresa > .avatar {
+  width: 20%;
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+}
+
+.box-sobreEmpresa > .avatar::before {
+  content: '';
+  padding-top: 100%;
+  float: left;
+}
+
+.box-sobreEmpresa > .avatar::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.box-sobreEmpresa > .infor {
+  font-size: 12px;
+  padding-left: 20px;
+}
+
+.box-sobreEmpresa > .avaliacao .nota {
+  background-color: #e6e6e6;
+  padding: 5px 8px;
+  border-radius: 8px;
+}
+
+.pesquisa-simples {
+  position: relative;
+  width: 100%;
+  max-width: 90%;
+  margin: 10px auto;
+}
+
+.pesquisa-simples input {
+  border: none;
+  background-color: #f0f0f0;
+  width: 100%;
+  padding: 8px 20px 8px 40px;
+  border-radius: 8px;
+}
+
+.pesquisa-simples button {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border: none;
+  background-color: transparent;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding: 5px 10px;
+}
+
 .card-produto {
   padding: 8px 15px;
 }

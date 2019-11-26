@@ -1784,6 +1784,60 @@ $headerConfig-h: 60px;
         PAG. 26 - Card de produto
 ####################################### */
 
+.box-sobreEmpresa {
+    padding: 10px 15px;
+    > .avatar {
+        width: 20%;
+        background-position: center;
+        background-size: cover;
+        border-radius: 20px;
+        &::before {
+            content: '';
+            padding-top: 100%;
+            float: left;
+        }
+        &::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+    }
+    > .infor {
+        font-size: 12px;
+        padding-left: 20px;
+    }
+    > .avaliacao {
+        .nota {
+            background-color: rgb(230, 230, 230);
+            padding: 5px 8px;
+            border-radius: 8px;
+        }
+    }
+}
+
+.pesquisa-simples {
+    position: relative;
+    width: 100%;
+    max-width: 90%;
+    margin: 10px auto;
+    input {
+        border: none;
+        background-color: rgb(240, 240, 240);
+        width: 100%;
+        padding: 8px 20px 8px 40px;
+        border-radius: 8px;
+    }
+    button {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        border: none;
+        background-color: transparent;
+        transform: translateY(-50%);
+        padding: 5px 10px;
+    }
+}
+
 .card-produto {
     padding: 8px 15px;
     .produto {
