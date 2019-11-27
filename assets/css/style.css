@@ -2528,15 +2528,20 @@ header.principal.focus + .area-conteudo {
   height: 25px;
   line-height: 25px;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 5px;
   -webkit-transition: all .2s;
   transition: all .2s;
+  color: #fff;
 }
 
 .modal-lateral.sabor .listaAdicionais .item label .check svg, .modal-lateral.adicional .listaAdicionais .item label .check svg {
   opacity: 0;
   -webkit-transition: all .2s;
   transition: all .2s;
+}
+
+.modal-lateral.sabor .listaAdicionais .item label input[type=radio] + .check, .modal-lateral.adicional .listaAdicionais .item label input[type=radio] + .check {
+  border-radius: 100%;
 }
 
 .modal-lateral.sabor .listaAdicionais .item label input[type=radio]:checked + .check,
