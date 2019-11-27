@@ -2326,6 +2326,7 @@ header.principal.focus + .area-conteudo {
         PAG. 27 - Montar o pedido / Modal Lateral
 ####################################### */
 .modal-lateral {
+  z-index: 200;
   position: fixed;
   top: 0;
   left: 100vw;
@@ -2335,6 +2336,7 @@ header.principal.focus + .area-conteudo {
   -webkit-transition: all .2s;
   transition: all .2s;
   padding: 0 20px;
+  background-color: #fff;
 }
 
 .modal-lateral .header {
@@ -2482,6 +2484,71 @@ header.principal.focus + .area-conteudo {
 .modal-lateral .btn-addCarrinho:hover, .modal-lateral .btn-addCarrinho:active {
   background-color: #ffa500;
   color: #fff;
+}
+
+.modal-lateral.sabor .titulo-principal, .modal-lateral.adicional .titulo-principal {
+  padding-top: 20px;
+  font-size: 18px;
+}
+
+.modal-lateral.sabor .listaAdicionais, .modal-lateral.adicional .listaAdicionais {
+  list-style: none;
+  padding: 0;
+}
+
+.modal-lateral.sabor .listaAdicionais .item, .modal-lateral.adicional .listaAdicionais .item {
+  padding: 5px 0;
+  margin-top: 10px;
+}
+
+.modal-lateral.sabor .listaAdicionais .item label, .modal-lateral.adicional .listaAdicionais .item label {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  padding-left: 40px;
+  line-height: 1;
+  min-height: 25px;
+  font-size: 14px;
+}
+
+.modal-lateral.sabor .listaAdicionais .item label input[type=radio],
+.modal-lateral.sabor .listaAdicionais .item label input[type=checkbox], .modal-lateral.adicional .listaAdicionais .item label input[type=radio],
+.modal-lateral.adicional .listaAdicionais .item label input[type=checkbox] {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+}
+
+.modal-lateral.sabor .listaAdicionais .item label .check, .modal-lateral.adicional .listaAdicionais .item label .check {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ffdb99;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  border-radius: 10px;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.modal-lateral.sabor .listaAdicionais .item label .check svg, .modal-lateral.adicional .listaAdicionais .item label .check svg {
+  opacity: 0;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.modal-lateral.sabor .listaAdicionais .item label input[type=radio]:checked + .check,
+.modal-lateral.sabor .listaAdicionais .item label input[type=checkbox]:checked + .check, .modal-lateral.adicional .listaAdicionais .item label input[type=radio]:checked + .check,
+.modal-lateral.adicional .listaAdicionais .item label input[type=checkbox]:checked + .check {
+  background-color: #ffa500;
+}
+
+.modal-lateral.sabor .listaAdicionais .item label input[type=radio]:checked + .check svg,
+.modal-lateral.sabor .listaAdicionais .item label input[type=checkbox]:checked + .check svg, .modal-lateral.adicional .listaAdicionais .item label input[type=radio]:checked + .check svg,
+.modal-lateral.adicional .listaAdicionais .item label input[type=checkbox]:checked + .check svg {
+  opacity: 1;
 }
 
 .modal-lateral.mostrar {

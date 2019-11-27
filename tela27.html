@@ -49,7 +49,7 @@
             </div>
 
             <!-- Escolher o sabor | Ao tocar abre outro modal -->
-            <div class="escolher-sabor d-flex justify-content-end align-items-center">
+            <div id="abrirAdicional" class="escolher-sabor d-flex justify-content-end align-items-center">
                 <div class="titulo mr-auto">Escolha o sabor (1/2)</div>
                 <!-- Nessa div a seguir só mostrar se ja estiver definido -->
                 <div class="definido">
@@ -61,7 +61,7 @@
             </div>
 
             <!-- Escolher o sabor | Ao tocar abre outro modal -->
-            <div class="escolher-sabor d-flex justify-content-end align-items-center">
+            <div id="abrirSabor" class="escolher-sabor d-flex justify-content-end align-items-center">
                 <div class="titulo mr-auto">Escolha o sabor (1/2)</div>
                 <!-- Nessa div a seguir só mostrar se ja estiver definido -->
                 <div class="definido">
@@ -96,7 +96,104 @@
 
             <!-- Btn add carrinho -->
             <button class="btn-addCarrinho">Adicionar ao carrinho</button>
+        </div>
 
+        <!-- Para mostrar o modal Lateral, basta add a class "mostrar" -->
+        <!-- Escolha adicional -->
+        <div class="modal-lateral adicional">
+            <!-- Header -->
+            <div class="header d-flex align-items-center">
+                <!-- Voltar -->
+                <div class="btn-voltar">
+                    <i class="fas fa-arrow-left"></i>
+                    <a href="#voltar" class="tudo"></a>
+                </div>
+            </div>
+
+            <div class="titulo-principal">Escolha adicional (opticional)</div>
+
+            <!-- Lista checkbox -->
+            <ul class="listaAdicionais">
+                <!-- item -->
+                <li class="item">
+                    <label class="d-flex align-items-center">
+                        <input type="checkbox">
+                        <div class="check">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div>Leite condensado - R$ 1,75</div>
+                    </label>
+                </li>
+                <!-- item -->
+                <li class="item">
+                    <label class="d-flex align-items-center">
+                        <input type="checkbox">
+                        <div class="check">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div>Leite em pó - R$ 1,75</div>
+                    </label>
+                </li>
+                <!-- item -->
+                <li class="item">
+                    <label class="d-flex align-items-center">
+                        <input type="checkbox">
+                        <div class="check">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div>Granola - R$ 1,75</div>
+                    </label>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Para mostrar o modal Lateral, basta add a class "mostrar" -->
+        <!-- Escolha adicional -->
+        <div class="modal-lateral sabor mostrar">
+            <!-- Header -->
+            <div class="header d-flex align-items-center">
+                <!-- Voltar -->
+                <div class="btn-voltar">
+                    <i class="fas fa-arrow-left"></i>
+                    <a href="#voltar" class="tudo"></a>
+                </div>
+            </div>
+
+            <div class="titulo-principal">Escolha o sabor (1/2)</div>
+
+            <!-- Lista checkbox -->
+            <ul class="listaAdicionais">
+                <!-- item -->
+                <li class="item">
+                    <label class="d-flex align-items-center">
+                        <input type="radio" name="sabor">
+                        <div class="check">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div>Leite condensado - R$ 1,75</div>
+                    </label>
+                </li>
+                <!-- item -->
+                <li class="item">
+                    <label class="d-flex align-items-center">
+                        <input type="radio" name="sabor">
+                        <div class="check">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div>Leite em pó - R$ 1,75</div>
+                    </label>
+                </li>
+                <!-- item -->
+                <li class="item">
+                    <label class="d-flex align-items-center">
+                        <input type="radio" name="sabor">
+                        <div class="check">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div>Granola - R$ 1,75</div>
+                    </label>
+                </li>
+            </ul>
         </div>
 
     </div>
@@ -109,6 +206,18 @@
         crossorigin="anonymous"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/theme.js"></script>
+
+    <script>
+        $('.modal-lateral .header .btn-voltar').click(function(){
+            $(this).parents('.modal-lateral').toggleClass('mostrar');
+        });
+        $('#abrirAdicional').click(function(){
+            $('.modal-lateral.adicional').toggleClass('mostrar');
+        });
+        $('#abrirSabor').click(function () {
+                $('.modal-lateral.sabor').toggleClass('mostrar');
+            });
+    </script>
 </body>
 
 </html>

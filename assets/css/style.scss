@@ -1908,6 +1908,7 @@ $headerConfig-h: 60px;
 ####################################### */
 
 .modal-lateral {
+    z-index: 200;
     position: fixed;
     top: 0;
     left: 100vw;
@@ -1916,6 +1917,7 @@ $headerConfig-h: 60px;
     height: calc(var(--vh, 1vh) * 100);
     transition: all .2s;
     padding: 0 20px;
+    background-color: #fff;
     .header {
         padding: 10px 0px;
         .btn-voltar {
@@ -2030,6 +2032,63 @@ $headerConfig-h: 60px;
             color: #fff;
         }
     }
+
+    &.sabor,
+    &.adicional {
+        .titulo-principal {
+            padding-top: 20px;
+            font-size: 18px;
+        }
+        .listaAdicionais {
+            list-style: none;
+            padding: 0;
+            .item {
+                padding: 5px 0;
+                margin-top: 10px;
+
+                $tamanhoCaixinha: 25px;
+                label {
+                    margin: 0;
+                    padding: 0;
+                    position: relative;
+                    padding-left: 40px;
+                    line-height: 1;
+                    min-height: $tamanhoCaixinha;
+                    font-size: 14px;
+                    input[type=radio],
+                    input[type=checkbox] {
+                        position: absolute;
+                        top: 0;
+                        left: -9999px;
+                    }
+                    .check {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background-color: lighten($laranja, 30%);
+                        width: $tamanhoCaixinha;
+                        height: $tamanhoCaixinha;
+                        line-height: $tamanhoCaixinha;
+                        text-align: center;
+                        border-radius: 10px;
+                        transition: all .2s;
+                        svg {
+                            opacity: 0;
+                            transition: all .2s;
+                        }
+                    }
+                    input[type=radio]:checked + .check,
+                    input[type=checkbox]:checked + .check {
+                        background-color: $laranja;
+                        svg {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     &.mostrar {
         left: 0;
     }
