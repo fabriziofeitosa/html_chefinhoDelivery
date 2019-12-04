@@ -282,6 +282,8 @@ body.modal-open .pag > *:not(.modal) {
 }
 
 .card-item .infor .avaliacao {
+  z-index: 100;
+  position: relative;
   font-size: 12px;
   color: #ffa500;
 }
@@ -293,6 +295,18 @@ body.modal-open .pag > *:not(.modal) {
 
 .card-item .infor .avaliacao .nota {
   margin-left: 5px;
+}
+
+.card-item .infor .avaliacao .darAvaliacao {
+  display: inline-block;
+  background-color: #ffa500;
+  color: #fff;
+  line-height: 1;
+  font-size: 14px;
+  border-radius: 100%;
+  width: 14px;
+  height: 14px;
+  text-align: center;
 }
 
 .card-item .infor .categoria {
@@ -855,8 +869,8 @@ header.principal.focus + .area-conteudo {
 }
 
 .pedido-infor {
-  min-height: 380px;
   text-align: center;
+  padding-bottom: 40px;
 }
 
 .pedido-infor .titulo-status {
@@ -1436,239 +1450,6 @@ header.principal.focus + .area-conteudo {
   color: orange !important;
 }
 
-.pag-carrinho .sobre-compra .confirmar-dados > .titulo,
-.pag-carrinho .sobre-compra .confirmar-itens > .titulo {
-  font-size: 28px;
-}
-
-.pag-carrinho .sobre-compra .confirmar-dados .empresa > .logo,
-.pag-carrinho .sobre-compra .confirmar-itens .empresa > .logo {
-  width: 20%;
-  background-position: center;
-  background-size: cover;
-  border-radius: 100%;
-}
-
-.pag-carrinho .sobre-compra .confirmar-dados .empresa > .logo::before,
-.pag-carrinho .sobre-compra .confirmar-itens .empresa > .logo::before {
-  content: '';
-  padding-top: 100%;
-  float: left;
-}
-
-.pag-carrinho .sobre-compra .confirmar-dados .empresa > .logo::after,
-.pag-carrinho .sobre-compra .confirmar-itens .empresa > .logo::after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-.pag-carrinho .sobre-compra .confirmar-dados .empresa > .nome,
-.pag-carrinho .sobre-compra .confirmar-itens .empresa > .nome {
-  font-size: 34px;
-  padding-left: 10px;
-  letter-spacing: -2px;
-}
-
-.pag-carrinho .sobre-compra .confirmar-dados .pedido-lista,
-.pag-carrinho .sobre-compra .confirmar-itens .pedido-lista {
-  padding: 0;
-  margin: 20px 0 0;
-  list-style: none;
-}
-
-.pag-carrinho .sobre-compra .confirmar-dados .pedido-lista > .item,
-.pag-carrinho .sobre-compra .confirmar-dados .pedido-lista > .total,
-.pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .item,
-.pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .total {
-  position: relative;
-  padding-left: 30px;
-}
-
-.pag-carrinho .sobre-compra .confirmar-dados .pedido-lista > .item .editar,
-.pag-carrinho .sobre-compra .confirmar-dados .pedido-lista > .total .editar,
-.pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .item .editar,
-.pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .total .editar {
-  position: absolute;
-  top: -2px;
-  left: 0;
-  width: 18px;
-}
-
-.pag-carrinho .sobre-compra .confirmar-dados .pedido-lista > .item .editar img,
-.pag-carrinho .sobre-compra .confirmar-dados .pedido-lista > .total .editar img,
-.pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .item .editar img,
-.pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .total .editar img {
-  max-width: 100%;
-}
-
-.pag-carrinho .sobre-compra .confirmar-dados .pedido-lista > .item .editar path,
-.pag-carrinho .sobre-compra .confirmar-dados .pedido-lista > .total .editar path,
-.pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .item .editar path,
-.pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .total .editar path {
-  fill: #ffa500;
-}
-
-.pag-carrinho .sobre-compra .confirmar-dados .pedido-lista > .item .sobre > .nome,
-.pag-carrinho .sobre-compra .confirmar-dados .pedido-lista > .total .sobre > .nome,
-.pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .item .sobre > .nome,
-.pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .total .sobre > .nome {
-  font-size: 20px;
-  line-height: 1;
-}
-
-.pag-carrinho .sobre-compra .confirmar-dados .pedido-lista > .item .sobre .observacao,
-.pag-carrinho .sobre-compra .confirmar-dados .pedido-lista > .total .sobre .observacao,
-.pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .item .sobre .observacao,
-.pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .total .sobre .observacao {
-  position: relative;
-  padding: 4px 0 4px 30px;
-  margin: 4px 0;
-  color: #a7a7a7;
-  font-size: 12px;
-}
-
-.pag-carrinho .sobre-compra .confirmar-dados .pedido-lista > .item .sobre .observacao::before,
-.pag-carrinho .sobre-compra .confirmar-dados .pedido-lista > .total .sobre .observacao::before,
-.pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .item .sobre .observacao::before,
-.pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .total .sobre .observacao::before {
-  content: '';
-  display: block;
-  position: absolute;
-  left: 15px;
-  top: 0;
-  width: 1px;
-  height: 100%;
-  background-color: #a7a7a7;
-}
-
-.pag-carrinho .sobre-compra .confirmar-dados .pedido-lista > .item .preco,
-.pag-carrinho .sobre-compra .confirmar-dados .pedido-lista > .total .preco,
-.pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .item .preco,
-.pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .total .preco {
-  color: #ffa500;
-  font-size: 20px;
-}
-
-.pag-carrinho .sobre-compra .confirmar-dados .pedido-lista > .item,
-.pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .item {
-  margin-bottom: 5px;
-}
-
-.pag-carrinho .sobre-compra .confirmar-dados .pedido-lista > .total,
-.pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .total {
-  margin: 30px 0 20px;
-}
-
-.pag-carrinho .sobre-compra .confirmar-dados .pedido-lista > .total .preco .taxa,
-.pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .total .preco .taxa {
-  display: block;
-  color: #a7a7a7;
-  font-size: 12px;
-}
-
-.pag-carrinho .sobre-compra .confirmar-dados .dados-pagamento .confira,
-.pag-carrinho .sobre-compra .confirmar-itens .dados-pagamento .confira {
-  color: #ffa500;
-  text-transform: uppercase;
-  font-size: 12px;
-  text-align: center;
-  padding: 0 30px;
-  margin: 20px 0px;
-  display: block;
-}
-
-.pag-carrinho .sobre-compra .confirmar-dados .dados-pagamento .dados,
-.pag-carrinho .sobre-compra .confirmar-itens .dados-pagamento .dados {
-  font-size: 12px;
-}
-
-.pag-carrinho .sobre-compra .confirmar-dados .dados-pagamento .dados .favoritos,
-.pag-carrinho .sobre-compra .confirmar-itens .dados-pagamento .dados .favoritos {
-  width: 100%;
-  border-right: 1px solid silver;
-  padding-right: 20px;
-  margin-bottom: 30px;
-}
-
-.pag-carrinho .sobre-compra .confirmar-dados .dados-pagamento .dados .favoritos .item,
-.pag-carrinho .sobre-compra .confirmar-itens .dados-pagamento .dados .favoritos .item {
-  line-height: 1;
-  margin-bottom: 10px;
-}
-
-.pag-carrinho .sobre-compra .confirmar-dados .dados-pagamento .dados .favoritos .item .estrela,
-.pag-carrinho .sobre-compra .confirmar-itens .dados-pagamento .dados .favoritos .item .estrela {
-  margin-right: 10px;
-}
-
-.pag-carrinho .sobre-compra .confirmar-dados .dados-pagamento .dados .favoritos .item .mais,
-.pag-carrinho .sobre-compra .confirmar-dados .dados-pagamento .dados .favoritos .item .rua,
-.pag-carrinho .sobre-compra .confirmar-itens .dados-pagamento .dados .favoritos .item .mais,
-.pag-carrinho .sobre-compra .confirmar-itens .dados-pagamento .dados .favoritos .item .rua {
-  margin-right: 10px;
-}
-
-.pag-carrinho .sobre-compra .confirmar-dados .dados-pagamento .dados .favoritos .item .icone,
-.pag-carrinho .sobre-compra .confirmar-itens .dados-pagamento .dados .favoritos .item .icone {
-  border: 1px solid #000;
-  padding: 2px;
-  margin-right: 4px;
-  border-radius: 4px;
-}
-
-.pag-carrinho .sobre-compra .confirmar-dados .dados-pagamento .dados .favoritos .item .icone img,
-.pag-carrinho .sobre-compra .confirmar-itens .dados-pagamento .dados .favoritos .item .icone img {
-  width: 20px;
-}
-
-.pag-carrinho .sobre-compra .confirmar-dados .dados-pagamento .dados .config,
-.pag-carrinho .sobre-compra .confirmar-itens .dados-pagamento .dados .config {
-  padding-left: 20px;
-}
-
-.pag-carrinho .sobre-compra .confirmar-dados .dados-pagamento .dados .config img,
-.pag-carrinho .sobre-compra .confirmar-itens .dados-pagamento .dados .config img {
-  width: 40px;
-  height: 40px;
-}
-
-.pag-carrinho .sobre-compra .confirmar-dados .enviar-localizacao,
-.pag-carrinho .sobre-compra .confirmar-itens .enviar-localizacao {
-  position: relative;
-  font-size: 12px;
-  line-height: 1.2;
-  padding: 0 40px;
-  margin-bottom: 30px;
-}
-
-.pag-carrinho .sobre-compra .confirmar-dados .enviar-localizacao .check,
-.pag-carrinho .sobre-compra .confirmar-itens .enviar-localizacao .check {
-  width: 30px;
-  height: 30px;
-  border: 2px solid silver;
-  margin-right: 10px;
-}
-
-.pag-carrinho .sobre-compra .confirmar-dados .enviar-localizacao .check .icon,
-.pag-carrinho .sobre-compra .confirmar-itens .enviar-localizacao .check .icon {
-  font-size: 24px;
-  text-align: center;
-  color: #ffa500;
-  display: none;
-}
-
-.pag-carrinho .sobre-compra .confirmar-dados .enviar-localizacao input[type='checkbox'],
-.pag-carrinho .sobre-compra .confirmar-itens .enviar-localizacao input[type='checkbox'] {
-  position: absolute;
-  left: -9999px;
-}
-
-.pag-carrinho .sobre-compra .confirmar-dados .enviar-localizacao input[type='checkbox']:checked + div .check .icon,
-.pag-carrinho .sobre-compra .confirmar-itens .enviar-localizacao input[type='checkbox']:checked + div .check .icon {
-  display: block;
-}
-
 .pag-carrinho .sobre-compra .btn-continuar {
   background-color: #ffa500;
   color: #fff;
@@ -1680,10 +1461,289 @@ header.principal.focus + .area-conteudo {
   padding: 8px;
 }
 
+.pag-carrinho .confirmar-dados > .titulo,
+.pag-carrinho .confirmar-itens > .titulo {
+  font-size: 28px;
+}
+
+.pag-carrinho .confirmar-dados .empresa > .logo,
+.pag-carrinho .confirmar-itens .empresa > .logo {
+  width: 20%;
+  background-position: center;
+  background-size: cover;
+  border-radius: 100%;
+}
+
+.pag-carrinho .confirmar-dados .empresa > .logo::before,
+.pag-carrinho .confirmar-itens .empresa > .logo::before {
+  content: '';
+  padding-top: 100%;
+  float: left;
+}
+
+.pag-carrinho .confirmar-dados .empresa > .logo::after,
+.pag-carrinho .confirmar-itens .empresa > .logo::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.pag-carrinho .confirmar-dados .empresa > .nome,
+.pag-carrinho .confirmar-itens .empresa > .nome {
+  font-size: 34px;
+  padding-left: 10px;
+  letter-spacing: -2px;
+}
+
+.pag-carrinho .confirmar-dados .pedido-lista,
+.pag-carrinho .confirmar-itens .pedido-lista {
+  padding: 0;
+  margin: 20px 0 0;
+  list-style: none;
+}
+
+.pag-carrinho .confirmar-dados .pedido-lista > .item,
+.pag-carrinho .confirmar-dados .pedido-lista > .total,
+.pag-carrinho .confirmar-itens .pedido-lista > .item,
+.pag-carrinho .confirmar-itens .pedido-lista > .total {
+  position: relative;
+  padding-left: 30px;
+}
+
+.pag-carrinho .confirmar-dados .pedido-lista > .item .editar,
+.pag-carrinho .confirmar-dados .pedido-lista > .total .editar,
+.pag-carrinho .confirmar-itens .pedido-lista > .item .editar,
+.pag-carrinho .confirmar-itens .pedido-lista > .total .editar {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 18px;
+}
+
+.pag-carrinho .confirmar-dados .pedido-lista > .item .editar img,
+.pag-carrinho .confirmar-dados .pedido-lista > .total .editar img,
+.pag-carrinho .confirmar-itens .pedido-lista > .item .editar img,
+.pag-carrinho .confirmar-itens .pedido-lista > .total .editar img {
+  max-width: 100%;
+}
+
+.pag-carrinho .confirmar-dados .pedido-lista > .item .editar path,
+.pag-carrinho .confirmar-dados .pedido-lista > .total .editar path,
+.pag-carrinho .confirmar-itens .pedido-lista > .item .editar path,
+.pag-carrinho .confirmar-itens .pedido-lista > .total .editar path {
+  fill: #ffa500;
+}
+
+.pag-carrinho .confirmar-dados .pedido-lista > .item .sobre > .nome,
+.pag-carrinho .confirmar-dados .pedido-lista > .total .sobre > .nome,
+.pag-carrinho .confirmar-itens .pedido-lista > .item .sobre > .nome,
+.pag-carrinho .confirmar-itens .pedido-lista > .total .sobre > .nome {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.pag-carrinho .confirmar-dados .pedido-lista > .item .sobre .observacao,
+.pag-carrinho .confirmar-dados .pedido-lista > .total .sobre .observacao,
+.pag-carrinho .confirmar-itens .pedido-lista > .item .sobre .observacao,
+.pag-carrinho .confirmar-itens .pedido-lista > .total .sobre .observacao {
+  position: relative;
+  padding: 4px 0 4px 30px;
+  margin: 4px 0;
+  color: #a7a7a7;
+  font-size: 12px;
+}
+
+.pag-carrinho .confirmar-dados .pedido-lista > .item .sobre .observacao::before,
+.pag-carrinho .confirmar-dados .pedido-lista > .total .sobre .observacao::before,
+.pag-carrinho .confirmar-itens .pedido-lista > .item .sobre .observacao::before,
+.pag-carrinho .confirmar-itens .pedido-lista > .total .sobre .observacao::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 15px;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background-color: #a7a7a7;
+}
+
+.pag-carrinho .confirmar-dados .pedido-lista > .item .preco,
+.pag-carrinho .confirmar-dados .pedido-lista > .total .preco,
+.pag-carrinho .confirmar-itens .pedido-lista > .item .preco,
+.pag-carrinho .confirmar-itens .pedido-lista > .total .preco {
+  color: #ffa500;
+  font-size: 20px;
+}
+
+.pag-carrinho .confirmar-dados .pedido-lista > .item,
+.pag-carrinho .confirmar-itens .pedido-lista > .item {
+  margin-bottom: 5px;
+}
+
+.pag-carrinho .confirmar-dados .pedido-lista > .total,
+.pag-carrinho .confirmar-itens .pedido-lista > .total {
+  margin: 30px 0 20px;
+}
+
+.pag-carrinho .confirmar-dados .pedido-lista > .total .preco .taxa,
+.pag-carrinho .confirmar-itens .pedido-lista > .total .preco .taxa {
+  display: block;
+  color: #a7a7a7;
+  font-size: 12px;
+}
+
+.pag-carrinho .confirmar-dados .dados-pagamento .confira,
+.pag-carrinho .confirmar-itens .dados-pagamento .confira {
+  color: #ffa500;
+  text-transform: uppercase;
+  font-size: 12px;
+  text-align: center;
+  padding: 0 30px;
+  margin: 20px 0px;
+  display: block;
+}
+
+.pag-carrinho .confirmar-dados .dados-pagamento .dados,
+.pag-carrinho .confirmar-itens .dados-pagamento .dados {
+  font-size: 12px;
+}
+
+.pag-carrinho .confirmar-dados .dados-pagamento .dados .favoritos,
+.pag-carrinho .confirmar-itens .dados-pagamento .dados .favoritos {
+  width: 100%;
+  border-right: 1px solid silver;
+  padding-right: 20px;
+  margin-bottom: 30px;
+}
+
+.pag-carrinho .confirmar-dados .dados-pagamento .dados .favoritos .item,
+.pag-carrinho .confirmar-itens .dados-pagamento .dados .favoritos .item {
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.pag-carrinho .confirmar-dados .dados-pagamento .dados .favoritos .item .estrela,
+.pag-carrinho .confirmar-itens .dados-pagamento .dados .favoritos .item .estrela {
+  margin-right: 10px;
+}
+
+.pag-carrinho .confirmar-dados .dados-pagamento .dados .favoritos .item .mais,
+.pag-carrinho .confirmar-dados .dados-pagamento .dados .favoritos .item .rua,
+.pag-carrinho .confirmar-itens .dados-pagamento .dados .favoritos .item .mais,
+.pag-carrinho .confirmar-itens .dados-pagamento .dados .favoritos .item .rua {
+  margin-right: 10px;
+}
+
+.pag-carrinho .confirmar-dados .dados-pagamento .dados .favoritos .item .icone,
+.pag-carrinho .confirmar-itens .dados-pagamento .dados .favoritos .item .icone {
+  border: 1px solid #000;
+  padding: 2px;
+  margin-right: 4px;
+  border-radius: 4px;
+}
+
+.pag-carrinho .confirmar-dados .dados-pagamento .dados .favoritos .item .icone img,
+.pag-carrinho .confirmar-itens .dados-pagamento .dados .favoritos .item .icone img {
+  width: 20px;
+}
+
+.pag-carrinho .confirmar-dados .dados-pagamento .dados .config,
+.pag-carrinho .confirmar-itens .dados-pagamento .dados .config {
+  padding-left: 20px;
+}
+
+.pag-carrinho .confirmar-dados .dados-pagamento .dados .config img,
+.pag-carrinho .confirmar-itens .dados-pagamento .dados .config img {
+  width: 40px;
+  height: 40px;
+}
+
+.pag-carrinho .confirmar-dados .enviar-localizacao,
+.pag-carrinho .confirmar-itens .enviar-localizacao {
+  position: relative;
+  font-size: 12px;
+  line-height: 1.2;
+  padding: 0 40px;
+  margin-bottom: 30px;
+}
+
+.pag-carrinho .confirmar-dados .enviar-localizacao .check,
+.pag-carrinho .confirmar-itens .enviar-localizacao .check {
+  width: 30px;
+  height: 30px;
+  border: 2px solid silver;
+  margin-right: 10px;
+}
+
+.pag-carrinho .confirmar-dados .enviar-localizacao .check .icon,
+.pag-carrinho .confirmar-itens .enviar-localizacao .check .icon {
+  font-size: 24px;
+  text-align: center;
+  color: #ffa500;
+  display: none;
+}
+
+.pag-carrinho .confirmar-dados .enviar-localizacao input[type='checkbox'],
+.pag-carrinho .confirmar-itens .enviar-localizacao input[type='checkbox'] {
+  position: absolute;
+  left: -9999px;
+}
+
+.pag-carrinho .confirmar-dados .enviar-localizacao input[type='checkbox']:checked + div .check .icon,
+.pag-carrinho .confirmar-itens .enviar-localizacao input[type='checkbox']:checked + div .check .icon {
+  display: block;
+}
+
 .pag-carrinho .pedidos-anteriores > .titulo {
   font-size: 20px;
   padding-left: 15px;
   margin-bottom: 10px;
+}
+
+.pedido-andamento .etapas {
+  position: relative;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+}
+
+.pedido-andamento .etapas::before {
+  position: absolute;
+  top: 0;
+  left: 51px;
+  content: '';
+  display: block;
+  width: 4px;
+  height: 100%;
+  background-color: darkorange;
+}
+
+.pedido-andamento .etapas .etapa {
+  font-size: 14px;
+}
+
+.pedido-andamento .etapas .etapa:not(:first-child) {
+  margin-top: 10px;
+}
+
+.pedido-andamento .etapas .etapa .tempo {
+  width: 30px;
+  text-align: center;
+}
+
+.pedido-andamento .etapas .etapa .bola {
+  z-index: 10;
+  position: relative;
+  border: 4px solid darkorange;
+  background-color: #fff;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  margin: 0 10px;
+}
+
+.pedido-andamento .etapas .etapa.ok .bola {
+  background-color: darkorange;
 }
 
 /* #######################################

@@ -272,6 +272,8 @@ $tamanhoBola: 70px;
             white-space: nowrap;
         }
         .avaliacao {
+            z-index: 100;
+            position: relative;
             font-size: 12px;
             color: $laranja;
             .estrelas,
@@ -280,6 +282,17 @@ $tamanhoBola: 70px;
             }
             .nota {
                 margin-left: 5px;
+            }
+            .darAvaliacao {
+                display: inline-block;
+                background-color: $laranja;
+                color: #fff;
+                line-height: 1;
+                font-size: 14px;
+                border-radius: 100%;
+                width: 14px;
+                height: 14px;
+                text-align: center;
             }
         }
         .categoria {
@@ -789,8 +802,9 @@ header.principal {
     }
 }
 .pedido-infor {
-    min-height: 380px;
+    // min-height: 380px;
     text-align: center;
+    padding-bottom: 40px;
     .titulo-status {
         padding-top: 20px;
         font-family: 'nougatregular';
@@ -1239,173 +1253,6 @@ $headerConfig-h: 60px;
                 color:orange !important;
             }
         }
-        .confirmar-dados,
-        .confirmar-itens {
-            > .titulo {
-                font-size: 28px;
-            }
-            .empresa {
-                > .logo {
-                    width: 20%;
-                    background-position: center;
-                    background-size: cover;
-                    border-radius: 100%;
-                    &::before {
-                        content: '';
-                        padding-top: 100%;
-                        float: left;
-                    }
-                    &::after {
-                        content: '';
-                        display: block;
-                        clear: both;
-                    }
-                }
-                > .nome {
-                    font-size: 34px;
-                    padding-left: 10px;
-                    letter-spacing: -2px;
-                }
-            }
-            .pedido-lista {
-                padding: 0;
-                margin: 20px 0 0;
-                list-style: none;
-                > .item,
-                > .total {
-                    position: relative;
-                    padding-left: 30px;
-                    .editar {
-                        position: absolute;
-                        top: -2px;
-                        left: 0;
-                        width: 18px;
-                        img {
-                            max-width: 100%;
-                        }
-                        path {
-                            fill: $laranja;
-                        }
-                    }
-                    .sobre {
-                        > .nome {
-                            font-size: 20px;
-                            line-height: 1;
-                        }
-                        .observacao {
-                            position: relative;
-                            padding: 4px 0 4px 30px;
-                            margin: 4px 0;
-                            color: darken(silver, 10%);
-                            font-size: 12px;
-                            &::before {
-                                content: '';
-                                display: block;
-                                position: absolute;
-                                left: 15px;
-                                top: 0;
-                                width: 1px;
-                                height: 100%;
-                                background-color: darken(silver, 10%);
-                            }
-                        }
-                    }
-                    .preco {
-                        color: $laranja;
-                        font-size: 20px;
-                    }
-                }
-                > .item {
-                    margin-bottom: 5px;
-                }
-                > .total {
-                    margin: 30px 0 20px;
-                    .preco {
-                        .taxa {
-                            display: block;
-                            color: darken(silver, 10%);
-                            font-size: 12px;
-                        }
-                    }
-                }
-            }
-            .dados-pagamento {
-                .confira {
-                    color: $laranja;
-                    text-transform: uppercase;
-                    font-size: 12px;
-                    text-align: center;
-                    padding: 0 30px;
-                    margin: 20px 0px;
-                    display: block;
-                }
-                .dados {
-                    font-size: 12px;
-                    .favoritos {
-                        width: 100%;
-                        border-right: 1px solid silver;
-                        padding-right: 20px;
-                        margin-bottom: 30px;
-                        .item {
-                            line-height: 1;
-                            margin-bottom: 10px;
-                            .estrela {
-                                margin-right: 10px;
-                            }
-                            .mais,
-                            .rua {
-                                margin-right: 10px;
-                            }
-                            .icone {
-                                border: 1px solid #000;
-                                padding: 2px;
-                                margin-right: 4px;
-                                border-radius: 4px;
-                                img {
-                                    width: 20px;
-                                }
-                            }
-                        }
-                    }
-                    .config {
-                        padding-left: 20px;
-                        img {
-                            width: 40px;
-                            height: 40px;
-                        }
-                    }
-                }
-            }
-            .enviar-localizacao {
-                position: relative;
-                font-size: 12px;
-                line-height: 1.2;
-                padding: 0 40px;
-                margin-bottom: 30px;
-                .check {
-                    width: 30px;
-                    height: 30px;
-                    border: 2px solid silver;
-                    margin-right: 10px;
-                    .icon {
-                        font-size: 24px;
-                        text-align: center;
-                        color: $laranja;
-                        display: none;
-                    }
-                }
-                input[type='checkbox'] {
-                    position: absolute;
-                    left: -9999px;
-
-                    &:checked + div .check {
-                        .icon {
-                            display: block;
-                        }
-                    }
-                }
-            }
-        }
         .btn-continuar {
             background-color: $laranja;
             color: #fff;
@@ -1417,11 +1264,222 @@ $headerConfig-h: 60px;
             padding: 8px;
         }
     }
+    .confirmar-dados,
+    .confirmar-itens {
+        > .titulo {
+            font-size: 28px;
+        }
+        .empresa {
+            > .logo {
+                width: 20%;
+                background-position: center;
+                background-size: cover;
+                border-radius: 100%;
+                &::before {
+                    content: '';
+                    padding-top: 100%;
+                    float: left;
+                }
+                &::after {
+                    content: '';
+                    display: block;
+                    clear: both;
+                }
+            }
+            > .nome {
+                font-size: 34px;
+                padding-left: 10px;
+                letter-spacing: -2px;
+            }
+        }
+        .pedido-lista {
+            padding: 0;
+            margin: 20px 0 0;
+            list-style: none;
+            > .item,
+            > .total {
+                position: relative;
+                padding-left: 30px;
+                .editar {
+                    position: absolute;
+                    top: -2px;
+                    left: 0;
+                    width: 18px;
+                    img {
+                        max-width: 100%;
+                    }
+                    path {
+                        fill: $laranja;
+                    }
+                }
+                .sobre {
+                    > .nome {
+                        font-size: 20px;
+                        line-height: 1;
+                    }
+                    .observacao {
+                        position: relative;
+                        padding: 4px 0 4px 30px;
+                        margin: 4px 0;
+                        color: darken(silver, 10%);
+                        font-size: 12px;
+                        &::before {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            left: 15px;
+                            top: 0;
+                            width: 1px;
+                            height: 100%;
+                            background-color: darken(silver, 10%);
+                        }
+                    }
+                }
+                .preco {
+                    color: $laranja;
+                    font-size: 20px;
+                }
+            }
+            > .item {
+                margin-bottom: 5px;
+            }
+            > .total {
+                margin: 30px 0 20px;
+                .preco {
+                    .taxa {
+                        display: block;
+                        color: darken(silver, 10%);
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+        .dados-pagamento {
+            .confira {
+                color: $laranja;
+                text-transform: uppercase;
+                font-size: 12px;
+                text-align: center;
+                padding: 0 30px;
+                margin: 20px 0px;
+                display: block;
+            }
+            .dados {
+                font-size: 12px;
+                .favoritos {
+                    width: 100%;
+                    border-right: 1px solid silver;
+                    padding-right: 20px;
+                    margin-bottom: 30px;
+                    .item {
+                        line-height: 1;
+                        margin-bottom: 10px;
+                        .estrela {
+                            margin-right: 10px;
+                        }
+                        .mais,
+                        .rua {
+                            margin-right: 10px;
+                        }
+                        .icone {
+                            border: 1px solid #000;
+                            padding: 2px;
+                            margin-right: 4px;
+                            border-radius: 4px;
+                            img {
+                                width: 20px;
+                            }
+                        }
+                    }
+                }
+                .config {
+                    padding-left: 20px;
+                    img {
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
+            }
+        }
+        .enviar-localizacao {
+            position: relative;
+            font-size: 12px;
+            line-height: 1.2;
+            padding: 0 40px;
+            margin-bottom: 30px;
+            .check {
+                width: 30px;
+                height: 30px;
+                border: 2px solid silver;
+                margin-right: 10px;
+                .icon {
+                    font-size: 24px;
+                    text-align: center;
+                    color: $laranja;
+                    display: none;
+                }
+            }
+            input[type='checkbox'] {
+                position: absolute;
+                left: -9999px;
+
+                &:checked + div .check {
+                    .icon {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
     .pedidos-anteriores {
         > .titulo {
             font-size: 20px;
             padding-left: 15px;
             margin-bottom: 10px;
+        }
+    }
+}
+
+.pedido-andamento {
+    .etapas {
+        position: relative;
+        list-style: none;
+        padding: 10px 0;
+        margin: 0;
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 51px;
+            content: '';
+            display: block;
+            width: 4px;
+            height: 100%;
+            background-color: darkorange;
+        }
+        .etapa {
+            font-size: 14px;
+            &:not(:first-child) {
+                margin-top: 10px;
+            }
+            .tempo {
+                width: 30px;
+                text-align: center;
+            }
+            .bola {
+                z-index: 10;
+                position: relative;
+                border: 4px solid darkorange;
+                background-color: #fff;
+                width: 25px;
+                height: 25px;
+                border-radius: 100%;
+                margin: 0 10px;
+            }
+            &.ok {
+                .bola {
+                    background-color: darkorange;
+                }
+            }
         }
     }
 }

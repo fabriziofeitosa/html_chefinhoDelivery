@@ -309,6 +309,53 @@
                         </div>
                     </div>
                     <!-- Fim Caso expire -->
+
+                    <!-- Pedido em andamento -->
+                    <div class="pedido-andamento d-flex flex-column align-items-center">
+                        <h4 class="titulo text-center">Pedido em Andamento</h4>
+                        <!-- Lista de Etapas-->
+                        <ul class="etapas">
+                            <!-- Add class "ok" para marcar -->
+                            <li class="etapa ok d-flex align-items-center">
+                                <div class="tempo">11:17</div>
+                                <div class="bola"></div>
+                                <div class="nome">Pedido recebido</div>
+                            </li>
+                            <li class="etapa ok d-flex align-items-center">
+                                <div class="tempo">11:18</div>
+                                <div class="bola"></div>
+                                <div class="nome">Pedido enviado</div>
+                            </li>
+                            <!-- Etapas normais deixa o tempo vazio -->
+                            <li class="etapa d-flex align-items-center">
+                                <div class="tempo"></div>
+                                <div class="bola"></div>
+                                <div class="nome">Em produção</div>
+                            </li>
+                            <li class="etapa d-flex align-items-center">
+                                <div class="tempo"></div>
+                                <div class="bola"></div>
+                                <div class="nome">Saiu para entrega</div>
+                            </li>
+                            <li class="etapa d-flex align-items-center">
+                                <div class="tempo"></div>
+                                <div class="bola"></div>
+                                <div class="nome">Entregue</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Fim Pedido em andamento -->
+
+                    <!-- Pedido Enviado -->
+                    <div class="pedido-recebido">
+                        <div class="pedido-infor">
+                            <div class="status-tempo">
+                                <br>
+                                <div class="status">Você não tem nenhum pedido em andamento.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim Pedido Enviado  -->
                 </div>
 
                 <!-- Btn Próximo -->
@@ -330,14 +377,7 @@
                     <div class="infor d-flex flex-column justify-content-center">
                         <div class="nome">Tognin Pizzas</div>
                         <div class="avaliacao">
-                            <div class="estrelas">
-                                <!-- Atenção aos 3 tipos de icones a seguir -->
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                            </div>
+                            <div class="darAvaliacao">+</div>
                         </div>
                         <div class="categoria">3 itens</div>
                     </div>
@@ -569,7 +609,7 @@
 
         // Slide Carrinho
         $('#slideCarrinho').slick({
-            // initialSlide: 2,
+            initialSlide: 5,
             infinite: false,
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -590,7 +630,7 @@
         });
 
         // Abrir Avaliar
-        $('.pedidos-anteriores .card-item').on('click',function(){
+        $('.pedidos-anteriores .darAvaliacao').on('click',function(){
             $('#modalAvaliarPedido').modal('show');
         });
 
