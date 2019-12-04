@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="theme-color" content="#ffa500">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#ffa500">
+    <meta name="msapplication-navbutton-color" content="#ffa500">
+
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>Chefinho Delivery</title>
+</head>
+<body>
+
+    <div class="pag d-flex flex-column align-items-center justify-content-center">
+        <div id="quadro"></div>
+        <div id="event"></div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/hammer.min.js"></script>
+    <script src="assets/js/theme.js"></script>
+
+    <style>
+        .pag {
+            width: 100vw;
+            height: 100vh;
+        }
+        #quadro {
+            width: 80vw;
+            height: 50vh;
+            background-color: red;
+        }
+        #event {
+            height: 30px;
+            line-height: 30px;
+        }
+    </style>
+
+    <script>
+        $(function () {
+            var quadro = document.getElementById("quadro");
+            //Swipe
+            Hammer(quadro).on("swipeleft", function () {
+                $(this).find(".color").animate({ left: "-=100" }, 500);
+                $("#event").text("swipe esquerda");
+            });
+
+            Hammer(quadro).on("swiperight", function () {
+                $(this).find(".color").animate({ left: "+=100" }, 500);
+                $("#event").text("swipe direita");
+            });
+        });
+
+        // jquery.hammer.js
+        (function ($, Hammer, dataAttr) {
+            function hammerify(el, options) {
+                var $el = $(el);
+                if (!$el.data(dataAttr)) {
+                    $el.data(dataAttr, new Hammer($el[0], options));
+                }
+            }
+
+            $.fn.hammer = function (options) {
+                return this.each(function () {
+                    hammerify(this, options);
+                });
+            };
+
+            // extend the emit method to also trigger jQuery events
+            Hammer.Manager.prototype.emit = (function (originalEmit) {
+                return function (type, data) {
+                    originalEmit.call(this, type, data);
+                    jQuery(this.element).triggerHandler({
+                        type: type,
+                        gesture: data
+                    });
+                };
+            })(Hammer.Manager.prototype.emit);
+        })(jQuery, Hammer, "hammer");
+    </script>
+</body>
+
+</html>
