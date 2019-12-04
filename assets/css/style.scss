@@ -779,71 +779,70 @@ header.principal {
     .area-conteudo {
         padding-top: 20px;
         padding-bottom: 80px;
-        .pedido-infor {
-            min-height: 380px;
-            text-align: center;
-            .titulo-status {
-                padding-top: 20px;
-                font-family: 'nougatregular';
-                text-transform: uppercase;
-                color: $laranja;
-                line-height: 1;
-            }
-            .status-tempo {
-                $tamanhoCirculo: 150px;
-                .circulo {
-                    position: relative;
-                    strong {
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        font-size: 34px;
-                    }
-                }
-                .status {
-                    font-size: 24px;
-                    line-height: 1;
-                }
-            }
-            .aviso-ops {
-                padding: 0 30px 0;
-                .titulo {
-                    font-size: 60px;
-                }
-                .sub {
-                    color: $laranja;
-                    line-height: 1;
-                }
-                .sobre {
-                    font-size: 14px;
-                    line-height: 1;
-                }
-            }
-            .options {
-                padding-top: 30px;
-                > div {
-                    position: relative;
-                    width: 20%;
-                    color: $laranja;
-                    line-height: 1;
-                    span {
-                        margin-top: 5px;
-                        display: inline-block;
-                    }
-                }
-                .ligacao,
-                .chat {
-                    margin-left: 5%;
-                }
-            }
-        }
     }
     .pedidos-anteriores {
         > .titulo {
             font-size: 20px;
             padding-left: 15px;
             margin-bottom: 10px;
+        }
+    }
+}
+.pedido-infor {
+    min-height: 380px;
+    text-align: center;
+    .titulo-status {
+        padding-top: 20px;
+        font-family: 'nougatregular';
+        text-transform: uppercase;
+        color: $laranja;
+        line-height: 1;
+    }
+    .status-tempo {
+        .circulo {
+            position: relative;
+            strong {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 34px;
+            }
+        }
+        .status {
+            font-size: 24px;
+            line-height: 1;
+        }
+    }
+    .aviso-ops {
+        padding: 0 30px 0;
+        .titulo {
+            font-size: 60px;
+        }
+        .sub {
+            color: $laranja;
+            line-height: 1;
+        }
+        .sobre {
+            font-size: 14px;
+            line-height: 1;
+        }
+    }
+    .options {
+        padding-top: 30px;
+        > div {
+            position: relative;
+            width: 20%;
+            color: $laranja;
+            line-height: 1;
+            span {
+                margin-top: 5px;
+                display: inline-block;
+            }
+        }
+        .ligacao,
+        .chat {
+            margin-left: 5%;
         }
     }
 }
@@ -1240,6 +1239,7 @@ $headerConfig-h: 60px;
                 color:orange !important;
             }
         }
+        .confirmar-dados,
         .confirmar-itens {
             > .titulo {
                 font-size: 28px;
@@ -1325,6 +1325,82 @@ $headerConfig-h: 60px;
                             display: block;
                             color: darken(silver, 10%);
                             font-size: 12px;
+                        }
+                    }
+                }
+            }
+            .dados-pagamento {
+                .confira {
+                    color: $laranja;
+                    text-transform: uppercase;
+                    font-size: 12px;
+                    text-align: center;
+                    padding: 0 30px;
+                    margin: 20px 0px;
+                    display: block;
+                }
+                .dados {
+                    font-size: 12px;
+                    .favoritos {
+                        width: 100%;
+                        border-right: 1px solid silver;
+                        padding-right: 20px;
+                        margin-bottom: 30px;
+                        .item {
+                            line-height: 1;
+                            margin-bottom: 10px;
+                            .estrela {
+                                margin-right: 10px;
+                            }
+                            .mais,
+                            .rua {
+                                margin-right: 10px;
+                            }
+                            .icone {
+                                border: 1px solid #000;
+                                padding: 2px;
+                                margin-right: 4px;
+                                border-radius: 4px;
+                                img {
+                                    width: 20px;
+                                }
+                            }
+                        }
+                    }
+                    .config {
+                        padding-left: 20px;
+                        img {
+                            width: 40px;
+                            height: 40px;
+                        }
+                    }
+                }
+            }
+            .enviar-localizacao {
+                position: relative;
+                font-size: 12px;
+                line-height: 1.2;
+                padding: 0 40px;
+                margin-bottom: 30px;
+                .check {
+                    width: 30px;
+                    height: 30px;
+                    border: 2px solid silver;
+                    margin-right: 10px;
+                    .icon {
+                        font-size: 24px;
+                        text-align: center;
+                        color: $laranja;
+                        display: none;
+                    }
+                }
+                input[type='checkbox'] {
+                    position: absolute;
+                    left: -9999px;
+
+                    &:checked + div .check {
+                        .icon {
+                            display: block;
                         }
                     }
                 }
@@ -1592,6 +1668,8 @@ $headerConfig-h: 60px;
     }
 }
 
+#modalAvaliarPedido,
+#modalPedidoFoiCancelado,
 #modalAddFavorito,
 #modalCancelarPedido,
 #modalProdutos,
@@ -1776,6 +1854,47 @@ $headerConfig-h: 60px;
                 border: none;
                 background-color: $laranja;
                 color: #fff;
+            }
+        }
+    }
+}
+
+#modalAvaliarPedido,
+#modalPedidoFoiCancelado {
+    .modal-body {
+        .frase {
+            text-align: center;
+            color: $laranja;
+            font-size: 18px;
+            padding: 20px 0;
+        }
+        .opcoes {
+            margin: 0 -25px -25px -25px;
+            .continuar {
+                margin: 0;
+                text-align: center;
+            }
+        }
+    }
+}
+
+#modalAvaliarPedido {
+    .modal-body {
+        .frase {
+            margin-bottom: 0;
+            padding-bottom: 10px;
+        }
+        .estrelas {
+            text-align: center;
+            font-size: 32px;
+            color: $laranja;
+            margin-bottom: 20px;
+        }
+        .opcoes {
+            .continuar {
+                background-color: $laranja;
+                color: #fff;
+                border: none;
             }
         }
     }

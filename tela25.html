@@ -189,12 +189,126 @@
                     </div>
                     <!-- Fim Confirmação -->
 
-                    <!-- Outros slides -->
-                    <div class="outro">AAAA</div>
-                    <div class="outro">BBBB</div>
-                    <div class="outro">CCCC</div>
-                    <div class="outro">DDDD</div>
-                    <!-- Fim Outros slides -->
+                    <!-- Confiamr dados -->
+                    <div class="confirmar-dados">
+                        <div class="titulo">Confirmar Itens</div>
+                        <!-- Sobre empresa -->
+                        <div class="empresa d-flex align-items-center">
+                            <div class="logo" style="background-image: url(assets/imgs/empresa06.jpg);"></div>
+                            <div class="nome">Hot Burgers</div>
+                        </div>
+                        <!-- Dados do pagamento -->
+                        <div class="dados-pagamento">
+                            <div class="confira">Confira se seus dados favoritos estão corretos</div>
+                            <!-- Dados Favoritos -->
+                            <div class="dados d-flex">
+                                <div class="favoritos">
+                                    <!-- Endereço -->
+                                    <div class="item d-flex align-items-center">
+                                        <div class="estrela">
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <div class="rua">Rua SF 12</div>
+                                        <div class="mais">Q 14 LT 3</div>
+                                        <div class="cidade">Taquaralto</div>
+                                    </div>
+                                    <!-- Método Pagamento -->
+                                    <div class="item d-flex align-items-center">
+                                        <div class="estrela">
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <div class="icone">
+                                            <img src="assets/imgs/SVG/logo_master.svg" alt="Master">
+                                        </div>
+                                        <div class="metodo">Master</div>
+                                    </div>
+                                </div>
+                                <div class="config ml-auto">
+                                    <a href="#config">
+                                        <img src="assets/imgs/SVG/btn-config.svg" alt="Configurações">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Localização -->
+                        <label class="enviar-localizacao d-flex align-items-center">
+                            <!-- Input -->
+                            <input type="checkbox" checked>
+                            <div>
+                                <div class="check">
+                                    <div class="icon">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="txt">Enviar minha localização para o navagador para agilizar a entrega.</div>
+                        </label>
+                    </div>
+                    <!-- Fim Confiamr dados -->
+
+                    <!-- Pedido Recebido -->
+                    <div class="pedido-recebido">
+                        <div class="pedido-infor">
+                            <h1 class="titulo-status">Pedido<br>Recebido</h1>
+                            <!-- Gráfico / Tempo -->
+                            <!-- Configurado no final desse arquivo -->
+                            <div class="status-tempo">
+                                <div class="status">Aguardando<br>confirmação...</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim Pedido Recebido -->
+
+                    <!-- Pedido Enviado -->
+                    <div class="pedido-recebido">
+                        <div class="pedido-infor">
+                            <h1 class="titulo-status">Pedido<br>Enviado</h1>
+                            <!-- Gráfico / Tempo -->
+                            <!-- Configurado no final desse arquivo -->
+                            <div class="status-tempo">
+                                <div class="circulo" data-size="150" data-reverse="true">
+                                    <strong>2:47</strong>
+                                </div>
+                                <div class="status">Aguardando confirmação de Hot Burguer</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim Pedido Enviado  -->
+
+                    <!-- Caso expire -->
+                    <div class="expirou">
+                        <div class="pedido-infor">
+                            <div class="aviso-ops">
+                                <h1 class="titulo titulo-status">Ops!</h1>
+                                <p class="sub">Parece que o restaurante não conseguiu confirmar seu pedido ainda.</p>
+                                <div class="sobre">Um restaurante pode não confirmar um pedido quando não conseguiu acessar app à tempo ou
+                                    quando pode ter esquecido de informar ao app quando está fechado. Escolha como prefere prosseguir:</div>
+                            </div>
+
+                            <!-- Links de Apoio -->
+                            <div class="options d-flex justify-content-center">
+                                <div class="novoPedido">
+                                    <img src="assets/imgs/SVG/icon_home.svg" alt="Novo pedido">
+                                    <span>Novo<br>Pedido</span>
+                                    <!-- Link de destino | Não precisa de conteudo -->
+                                    <a href="#1" class="tudo" data-toggle="modal" data-target="#modalCancelarPedido"></a>
+                                </div>
+                                <div class="ligacao">
+                                    <img src="assets/imgs/SVG/icon_phone.svg" alt="Ligar por telefone">
+                                    <span>Ligar por<br>telefone</span>
+                                    <!-- Link de destino | Não precisa de conteudo -->
+                                    <a href="#2" class="tudo"></a>
+                                </div>
+                                <div class="chat">
+                                    <img src="assets/imgs/SVG/icon_chat.svg" alt="Abrir o ChefChat">
+                                    <span>Abrir o<br>ChefChat</span>
+                                    <!-- Link de destino | Não precisa de conteudo -->
+                                    <a href="#3" class="tudo"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim Caso expire -->
                 </div>
 
                 <!-- Btn Próximo -->
@@ -266,6 +380,117 @@
 
         </section>
 
+        <!-- Modal de produtos  -->
+        <div class="modal fade" id="modalProdutos" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+
+                        <!-- Lista de itens -->
+                        <div class="lista-itens">
+
+                            <!-- Produto -->
+                            <div class="item-produto aberto">
+                                <!-- Principais informações -->
+                                <div class="sobre">
+                                    <div class="nome">Burger Bacon</div>
+                                    <div class="desc">Pão, hamburguer, mussarela, presunto, ovo, bacon, tomate, alface e molho
+                                        especial.</div>
+                                    <div class="preco">R$ 13,00</div>
+                                </div>
+                                <!-- Opção para enviar ao sacola/carrinho -->
+                                <div class="paraCarrinho">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="qtd d-flex flex-row">
+                                            <!-- Btn menos -->
+                                            <button class="menos">
+                                                <img src="assets/imgs/SVG/seta-down.svg" alt="Menos">
+                                            </button>
+                                            <!-- Input de quantidade -->
+                                            <input type="number" class="qtd-iten" value="1" min="1" max="99">
+                                            <!-- Btn mais -->
+                                            <button class="mais">
+                                                <img src="assets/imgs/SVG/seta-down.svg" alt="Menos">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- Obersavação do usuario -->
+                                    <div class="observacao">
+                                        <textarea rows="3" placeholder="Observação"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Fim do Produto -->
+
+                        </div>
+                        <!-- Fim Lista de itens -->
+
+                        <!-- Btn da sacola/carrinho -->
+                        <div class="opcoes d-flex flex-row justify-content-between align-items-center">
+                            <a href="#" class="sacola">Salvar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal "Tem certeza?"  -->
+        <div class="modal fade" id="modalCancelarPedido" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h2 class="titulo">Tem certeza?</h2>
+                        <p class="frase">Você está prestes a cancelar o pedido atual e realizar um novo pedido, mas ainda pode
+                            entrar em contato conosco e continuar com o pedido atual normalmente.</p>
+                        <!-- Links destinos -->
+                        <div class="opcoes d-flex flex-row justify-content-between align-items-stretch">
+                            <div class="continuar d-flex align-items-center" data-toggle="modal" data-target="#modalPedidoFoiCancelado">Cancelar e realizar um novo pedido</div>
+                            <div data-dismiss="modal" class="configs" class="d-flex align-items-center justify-content-center">
+                                Entrar em<br>contato</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Pedido cancelado!  -->
+        <div class="modal fade" id="modalPedidoFoiCancelado" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <p class="frase">Seu pedido foi cancelado!</p>
+                        <!-- Links destinos -->
+                        <div class="opcoes">
+                            <div class="continuar">Continuar</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Avaliar -->
+        <div class="modal fade" id="modalAvaliarPedido" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <p class="frase">Como você avalia esse pedido?</p>
+                        <!-- Estrelas -->
+                        <div class="estrelas">
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <!-- Links destinos -->
+                        <div class="opcoes">
+                            <div class="continuar">Enviar Avaiação</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Btn Principal Flutuante -->
         <!-- Basta add class "aberto" para mostrar os outros -->
         <section class="btn-principal">
@@ -305,9 +530,19 @@
         crossorigin="anonymous"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/slick/slick.min.js"></script>
+    <script src="assets/js/circle-progress.min.js"></script>
     <script src="assets/js/theme.js"></script>
 
     <script>
+        // Círuclo
+        var c4 = $('.circulo');
+        c4.circleProgress({
+            startAngle: -Math.PI / 2,
+            value: 0.55,
+            lineCap: 'round',
+            fill: { color: '#ffa500' }
+        });
+
         // Receber DATA do botão
         $('#modalProdutos').on('show.bs.modal', function (event) {
             var button = $(event.relatedTarget);
@@ -332,13 +567,9 @@
             inputQtd.val(+inputQtd.val() + 1);
         });
 
-        // Clica no produto e abrir opções
-        $('.item-produto .sobre').on('click', function(){
-            $(this).parents('.item-produto').toggleClass('aberto');
-        });
-
         // Slide Carrinho
         $('#slideCarrinho').slick({
+            // initialSlide: 2,
             infinite: false,
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -351,6 +582,16 @@
         // Passar Slide
         $('.sobre-compra .btn-continuar').on('click',function(){
             $('#slideCarrinho').slick('slickNext');
+        });
+
+        // Abrir Editar
+        $('.item .editar').on('click',function(){
+            $('#modalProdutos').modal('show');
+        });
+
+        // Abrir Avaliar
+        $('.pedidos-anteriores .card-item').on('click',function(){
+            $('#modalAvaliarPedido').modal('show');
         });
 
     </script>

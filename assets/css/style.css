@@ -848,12 +848,18 @@ header.principal.focus + .area-conteudo {
   padding-bottom: 80px;
 }
 
-.pag-enviado .area-conteudo .pedido-infor {
+.pag-enviado .pedidos-anteriores > .titulo {
+  font-size: 20px;
+  padding-left: 15px;
+  margin-bottom: 10px;
+}
+
+.pedido-infor {
   min-height: 380px;
   text-align: center;
 }
 
-.pag-enviado .area-conteudo .pedido-infor .titulo-status {
+.pedido-infor .titulo-status {
   padding-top: 20px;
   font-family: 'nougatregular';
   text-transform: uppercase;
@@ -861,11 +867,11 @@ header.principal.focus + .area-conteudo {
   line-height: 1;
 }
 
-.pag-enviado .area-conteudo .pedido-infor .status-tempo .circulo {
+.pedido-infor .status-tempo .circulo {
   position: relative;
 }
 
-.pag-enviado .area-conteudo .pedido-infor .status-tempo .circulo strong {
+.pedido-infor .status-tempo .circulo strong {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -874,54 +880,48 @@ header.principal.focus + .area-conteudo {
   font-size: 34px;
 }
 
-.pag-enviado .area-conteudo .pedido-infor .status-tempo .status {
+.pedido-infor .status-tempo .status {
   font-size: 24px;
   line-height: 1;
 }
 
-.pag-enviado .area-conteudo .pedido-infor .aviso-ops {
+.pedido-infor .aviso-ops {
   padding: 0 30px 0;
 }
 
-.pag-enviado .area-conteudo .pedido-infor .aviso-ops .titulo {
+.pedido-infor .aviso-ops .titulo {
   font-size: 60px;
 }
 
-.pag-enviado .area-conteudo .pedido-infor .aviso-ops .sub {
+.pedido-infor .aviso-ops .sub {
   color: #ffa500;
   line-height: 1;
 }
 
-.pag-enviado .area-conteudo .pedido-infor .aviso-ops .sobre {
+.pedido-infor .aviso-ops .sobre {
   font-size: 14px;
   line-height: 1;
 }
 
-.pag-enviado .area-conteudo .pedido-infor .options {
+.pedido-infor .options {
   padding-top: 30px;
 }
 
-.pag-enviado .area-conteudo .pedido-infor .options > div {
+.pedido-infor .options > div {
   position: relative;
   width: 20%;
   color: #ffa500;
   line-height: 1;
 }
 
-.pag-enviado .area-conteudo .pedido-infor .options > div span {
+.pedido-infor .options > div span {
   margin-top: 5px;
   display: inline-block;
 }
 
-.pag-enviado .area-conteudo .pedido-infor .options .ligacao,
-.pag-enviado .area-conteudo .pedido-infor .options .chat {
+.pedido-infor .options .ligacao,
+.pedido-infor .options .chat {
   margin-left: 5%;
-}
-
-.pag-enviado .pedidos-anteriores > .titulo {
-  font-size: 20px;
-  padding-left: 15px;
-  margin-bottom: 10px;
 }
 
 /* #######################################
@@ -1436,10 +1436,12 @@ header.principal.focus + .area-conteudo {
   color: orange !important;
 }
 
+.pag-carrinho .sobre-compra .confirmar-dados > .titulo,
 .pag-carrinho .sobre-compra .confirmar-itens > .titulo {
   font-size: 28px;
 }
 
+.pag-carrinho .sobre-compra .confirmar-dados .empresa > .logo,
 .pag-carrinho .sobre-compra .confirmar-itens .empresa > .logo {
   width: 20%;
   background-position: center;
@@ -1447,36 +1449,44 @@ header.principal.focus + .area-conteudo {
   border-radius: 100%;
 }
 
+.pag-carrinho .sobre-compra .confirmar-dados .empresa > .logo::before,
 .pag-carrinho .sobre-compra .confirmar-itens .empresa > .logo::before {
   content: '';
   padding-top: 100%;
   float: left;
 }
 
+.pag-carrinho .sobre-compra .confirmar-dados .empresa > .logo::after,
 .pag-carrinho .sobre-compra .confirmar-itens .empresa > .logo::after {
   content: '';
   display: block;
   clear: both;
 }
 
+.pag-carrinho .sobre-compra .confirmar-dados .empresa > .nome,
 .pag-carrinho .sobre-compra .confirmar-itens .empresa > .nome {
   font-size: 34px;
   padding-left: 10px;
   letter-spacing: -2px;
 }
 
+.pag-carrinho .sobre-compra .confirmar-dados .pedido-lista,
 .pag-carrinho .sobre-compra .confirmar-itens .pedido-lista {
   padding: 0;
   margin: 20px 0 0;
   list-style: none;
 }
 
+.pag-carrinho .sobre-compra .confirmar-dados .pedido-lista > .item,
+.pag-carrinho .sobre-compra .confirmar-dados .pedido-lista > .total,
 .pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .item,
 .pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .total {
   position: relative;
   padding-left: 30px;
 }
 
+.pag-carrinho .sobre-compra .confirmar-dados .pedido-lista > .item .editar,
+.pag-carrinho .sobre-compra .confirmar-dados .pedido-lista > .total .editar,
 .pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .item .editar,
 .pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .total .editar {
   position: absolute;
@@ -1485,22 +1495,30 @@ header.principal.focus + .area-conteudo {
   width: 18px;
 }
 
+.pag-carrinho .sobre-compra .confirmar-dados .pedido-lista > .item .editar img,
+.pag-carrinho .sobre-compra .confirmar-dados .pedido-lista > .total .editar img,
 .pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .item .editar img,
 .pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .total .editar img {
   max-width: 100%;
 }
 
+.pag-carrinho .sobre-compra .confirmar-dados .pedido-lista > .item .editar path,
+.pag-carrinho .sobre-compra .confirmar-dados .pedido-lista > .total .editar path,
 .pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .item .editar path,
 .pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .total .editar path {
   fill: #ffa500;
 }
 
+.pag-carrinho .sobre-compra .confirmar-dados .pedido-lista > .item .sobre > .nome,
+.pag-carrinho .sobre-compra .confirmar-dados .pedido-lista > .total .sobre > .nome,
 .pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .item .sobre > .nome,
 .pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .total .sobre > .nome {
   font-size: 20px;
   line-height: 1;
 }
 
+.pag-carrinho .sobre-compra .confirmar-dados .pedido-lista > .item .sobre .observacao,
+.pag-carrinho .sobre-compra .confirmar-dados .pedido-lista > .total .sobre .observacao,
 .pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .item .sobre .observacao,
 .pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .total .sobre .observacao {
   position: relative;
@@ -1510,6 +1528,8 @@ header.principal.focus + .area-conteudo {
   font-size: 12px;
 }
 
+.pag-carrinho .sobre-compra .confirmar-dados .pedido-lista > .item .sobre .observacao::before,
+.pag-carrinho .sobre-compra .confirmar-dados .pedido-lista > .total .sobre .observacao::before,
 .pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .item .sobre .observacao::before,
 .pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .total .sobre .observacao::before {
   content: '';
@@ -1522,24 +1542,131 @@ header.principal.focus + .area-conteudo {
   background-color: #a7a7a7;
 }
 
+.pag-carrinho .sobre-compra .confirmar-dados .pedido-lista > .item .preco,
+.pag-carrinho .sobre-compra .confirmar-dados .pedido-lista > .total .preco,
 .pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .item .preco,
 .pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .total .preco {
   color: #ffa500;
   font-size: 20px;
 }
 
+.pag-carrinho .sobre-compra .confirmar-dados .pedido-lista > .item,
 .pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .item {
   margin-bottom: 5px;
 }
 
+.pag-carrinho .sobre-compra .confirmar-dados .pedido-lista > .total,
 .pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .total {
   margin: 30px 0 20px;
 }
 
+.pag-carrinho .sobre-compra .confirmar-dados .pedido-lista > .total .preco .taxa,
 .pag-carrinho .sobre-compra .confirmar-itens .pedido-lista > .total .preco .taxa {
   display: block;
   color: #a7a7a7;
   font-size: 12px;
+}
+
+.pag-carrinho .sobre-compra .confirmar-dados .dados-pagamento .confira,
+.pag-carrinho .sobre-compra .confirmar-itens .dados-pagamento .confira {
+  color: #ffa500;
+  text-transform: uppercase;
+  font-size: 12px;
+  text-align: center;
+  padding: 0 30px;
+  margin: 20px 0px;
+  display: block;
+}
+
+.pag-carrinho .sobre-compra .confirmar-dados .dados-pagamento .dados,
+.pag-carrinho .sobre-compra .confirmar-itens .dados-pagamento .dados {
+  font-size: 12px;
+}
+
+.pag-carrinho .sobre-compra .confirmar-dados .dados-pagamento .dados .favoritos,
+.pag-carrinho .sobre-compra .confirmar-itens .dados-pagamento .dados .favoritos {
+  width: 100%;
+  border-right: 1px solid silver;
+  padding-right: 20px;
+  margin-bottom: 30px;
+}
+
+.pag-carrinho .sobre-compra .confirmar-dados .dados-pagamento .dados .favoritos .item,
+.pag-carrinho .sobre-compra .confirmar-itens .dados-pagamento .dados .favoritos .item {
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.pag-carrinho .sobre-compra .confirmar-dados .dados-pagamento .dados .favoritos .item .estrela,
+.pag-carrinho .sobre-compra .confirmar-itens .dados-pagamento .dados .favoritos .item .estrela {
+  margin-right: 10px;
+}
+
+.pag-carrinho .sobre-compra .confirmar-dados .dados-pagamento .dados .favoritos .item .mais,
+.pag-carrinho .sobre-compra .confirmar-dados .dados-pagamento .dados .favoritos .item .rua,
+.pag-carrinho .sobre-compra .confirmar-itens .dados-pagamento .dados .favoritos .item .mais,
+.pag-carrinho .sobre-compra .confirmar-itens .dados-pagamento .dados .favoritos .item .rua {
+  margin-right: 10px;
+}
+
+.pag-carrinho .sobre-compra .confirmar-dados .dados-pagamento .dados .favoritos .item .icone,
+.pag-carrinho .sobre-compra .confirmar-itens .dados-pagamento .dados .favoritos .item .icone {
+  border: 1px solid #000;
+  padding: 2px;
+  margin-right: 4px;
+  border-radius: 4px;
+}
+
+.pag-carrinho .sobre-compra .confirmar-dados .dados-pagamento .dados .favoritos .item .icone img,
+.pag-carrinho .sobre-compra .confirmar-itens .dados-pagamento .dados .favoritos .item .icone img {
+  width: 20px;
+}
+
+.pag-carrinho .sobre-compra .confirmar-dados .dados-pagamento .dados .config,
+.pag-carrinho .sobre-compra .confirmar-itens .dados-pagamento .dados .config {
+  padding-left: 20px;
+}
+
+.pag-carrinho .sobre-compra .confirmar-dados .dados-pagamento .dados .config img,
+.pag-carrinho .sobre-compra .confirmar-itens .dados-pagamento .dados .config img {
+  width: 40px;
+  height: 40px;
+}
+
+.pag-carrinho .sobre-compra .confirmar-dados .enviar-localizacao,
+.pag-carrinho .sobre-compra .confirmar-itens .enviar-localizacao {
+  position: relative;
+  font-size: 12px;
+  line-height: 1.2;
+  padding: 0 40px;
+  margin-bottom: 30px;
+}
+
+.pag-carrinho .sobre-compra .confirmar-dados .enviar-localizacao .check,
+.pag-carrinho .sobre-compra .confirmar-itens .enviar-localizacao .check {
+  width: 30px;
+  height: 30px;
+  border: 2px solid silver;
+  margin-right: 10px;
+}
+
+.pag-carrinho .sobre-compra .confirmar-dados .enviar-localizacao .check .icon,
+.pag-carrinho .sobre-compra .confirmar-itens .enviar-localizacao .check .icon {
+  font-size: 24px;
+  text-align: center;
+  color: #ffa500;
+  display: none;
+}
+
+.pag-carrinho .sobre-compra .confirmar-dados .enviar-localizacao input[type='checkbox'],
+.pag-carrinho .sobre-compra .confirmar-itens .enviar-localizacao input[type='checkbox'] {
+  position: absolute;
+  left: -9999px;
+}
+
+.pag-carrinho .sobre-compra .confirmar-dados .enviar-localizacao input[type='checkbox']:checked + div .check .icon,
+.pag-carrinho .sobre-compra .confirmar-itens .enviar-localizacao input[type='checkbox']:checked + div .check .icon {
+  display: block;
 }
 
 .pag-carrinho .sobre-compra .btn-continuar {
@@ -1903,6 +2030,8 @@ header.principal.focus + .area-conteudo {
   display: block;
 }
 
+#modalAvaliarPedido .modal-content,
+#modalPedidoFoiCancelado .modal-content,
 #modalAddFavorito .modal-content,
 #modalCancelarPedido .modal-content,
 #modalProdutos .modal-content,
@@ -1911,6 +2040,8 @@ header.principal.focus + .area-conteudo {
   overflow: hidden;
 }
 
+#modalAvaliarPedido .modal-body,
+#modalPedidoFoiCancelado .modal-body,
 #modalAddFavorito .modal-body,
 #modalCancelarPedido .modal-body,
 #modalProdutos .modal-body,
@@ -1920,6 +2051,8 @@ header.principal.focus + .area-conteudo {
   color: #000;
 }
 
+#modalAvaliarPedido .modal-body .titulo,
+#modalPedidoFoiCancelado .modal-body .titulo,
 #modalAddFavorito .modal-body .titulo,
 #modalCancelarPedido .modal-body .titulo,
 #modalProdutos .modal-body .titulo,
@@ -1929,6 +2062,8 @@ header.principal.focus + .area-conteudo {
   margin-bottom: 10px;
 }
 
+#modalAvaliarPedido .modal-body .frase,
+#modalPedidoFoiCancelado .modal-body .frase,
 #modalAddFavorito .modal-body .frase,
 #modalCancelarPedido .modal-body .frase,
 #modalProdutos .modal-body .frase,
@@ -1938,6 +2073,14 @@ header.principal.focus + .area-conteudo {
   line-height: 1.2;
 }
 
+#modalAvaliarPedido .modal-body .opcoes .sacola,
+#modalAvaliarPedido .modal-body .opcoes .continuar,
+#modalAvaliarPedido .modal-body .opcoes .configs,
+#modalAvaliarPedido .modal-body .opcoes .prosseguir,
+#modalPedidoFoiCancelado .modal-body .opcoes .sacola,
+#modalPedidoFoiCancelado .modal-body .opcoes .continuar,
+#modalPedidoFoiCancelado .modal-body .opcoes .configs,
+#modalPedidoFoiCancelado .modal-body .opcoes .prosseguir,
 #modalAddFavorito .modal-body .opcoes .sacola,
 #modalAddFavorito .modal-body .opcoes .continuar,
 #modalAddFavorito .modal-body .opcoes .configs,
@@ -1966,7 +2109,23 @@ header.principal.focus + .area-conteudo {
   font-size: 16px;
 }
 
-#modalAddFavorito .modal-body .opcoes .sacola:hover, #modalAddFavorito .modal-body .opcoes .sacola:active,
+#modalAvaliarPedido .modal-body .opcoes .sacola:hover, #modalAvaliarPedido .modal-body .opcoes .sacola:active,
+#modalAvaliarPedido .modal-body .opcoes .continuar:hover,
+#modalAvaliarPedido .modal-body .opcoes .continuar:active,
+#modalAvaliarPedido .modal-body .opcoes .configs:hover,
+#modalAvaliarPedido .modal-body .opcoes .configs:active,
+#modalAvaliarPedido .modal-body .opcoes .prosseguir:hover,
+#modalAvaliarPedido .modal-body .opcoes .prosseguir:active,
+#modalPedidoFoiCancelado .modal-body .opcoes .sacola:hover,
+#modalPedidoFoiCancelado .modal-body .opcoes .sacola:active,
+#modalPedidoFoiCancelado .modal-body .opcoes .continuar:hover,
+#modalPedidoFoiCancelado .modal-body .opcoes .continuar:active,
+#modalPedidoFoiCancelado .modal-body .opcoes .configs:hover,
+#modalPedidoFoiCancelado .modal-body .opcoes .configs:active,
+#modalPedidoFoiCancelado .modal-body .opcoes .prosseguir:hover,
+#modalPedidoFoiCancelado .modal-body .opcoes .prosseguir:active,
+#modalAddFavorito .modal-body .opcoes .sacola:hover,
+#modalAddFavorito .modal-body .opcoes .sacola:active,
 #modalAddFavorito .modal-body .opcoes .continuar:hover,
 #modalAddFavorito .modal-body .opcoes .continuar:active,
 #modalAddFavorito .modal-body .opcoes .configs:hover,
@@ -2008,6 +2167,8 @@ header.principal.focus + .area-conteudo {
   text-decoration: none;
 }
 
+#modalAvaliarPedido .modal-body .opcoes .continuar,
+#modalPedidoFoiCancelado .modal-body .opcoes .continuar,
 #modalAddFavorito .modal-body .opcoes .continuar,
 #modalCancelarPedido .modal-body .opcoes .continuar,
 #modalProdutos .modal-body .opcoes .continuar,
@@ -2018,6 +2179,8 @@ header.principal.focus + .area-conteudo {
   border-right: 1px solid #686868;
 }
 
+#modalAvaliarPedido .modal-body .opcoes .configs,
+#modalPedidoFoiCancelado .modal-body .opcoes .configs,
 #modalAddFavorito .modal-body .opcoes .configs,
 #modalCancelarPedido .modal-body .opcoes .configs,
 #modalProdutos .modal-body .opcoes .configs,
@@ -2027,6 +2190,10 @@ header.principal.focus + .area-conteudo {
   border-top: 1px solid #686868;
 }
 
+#modalAvaliarPedido .modal-body .opcoes .sacola,
+#modalAvaliarPedido .modal-body .opcoes .prosseguir,
+#modalPedidoFoiCancelado .modal-body .opcoes .sacola,
+#modalPedidoFoiCancelado .modal-body .opcoes .prosseguir,
 #modalAddFavorito .modal-body .opcoes .sacola,
 #modalAddFavorito .modal-body .opcoes .prosseguir,
 #modalCancelarPedido .modal-body .opcoes .sacola,
@@ -2184,6 +2351,43 @@ header.principal.focus + .area-conteudo {
   border: none;
   background-color: #ffa500;
   color: #fff;
+}
+
+#modalAvaliarPedido .modal-body .frase,
+#modalPedidoFoiCancelado .modal-body .frase {
+  text-align: center;
+  color: #ffa500;
+  font-size: 18px;
+  padding: 20px 0;
+}
+
+#modalAvaliarPedido .modal-body .opcoes,
+#modalPedidoFoiCancelado .modal-body .opcoes {
+  margin: 0 -25px -25px -25px;
+}
+
+#modalAvaliarPedido .modal-body .opcoes .continuar,
+#modalPedidoFoiCancelado .modal-body .opcoes .continuar {
+  margin: 0;
+  text-align: center;
+}
+
+#modalAvaliarPedido .modal-body .frase {
+  margin-bottom: 0;
+  padding-bottom: 10px;
+}
+
+#modalAvaliarPedido .modal-body .estrelas {
+  text-align: center;
+  font-size: 32px;
+  color: #ffa500;
+  margin-bottom: 20px;
+}
+
+#modalAvaliarPedido .modal-body .opcoes .continuar {
+  background-color: #ffa500;
+  color: #fff;
+  border: none;
 }
 
 /* #######################################
