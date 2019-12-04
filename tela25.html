@@ -367,29 +367,67 @@
             <div class="pedidos-anteriores">
                 <div class="titulo">Pedidos Anteriores</div>
 
-                <!-- Card Item -->
-                <div class="card-item deBusca d-flex flex-row">
-                    <!-- Logotipo da empresa -->
-                    <div class="logotipo">
-                        <img src="assets/imgs/empresa02.jpg" alt="Logo da Empresa">
-                    </div>
-                    <!-- Informações -->
-                    <div class="infor d-flex flex-column justify-content-center">
-                        <div class="nome">Tognin Pizzas</div>
-                        <div class="avaliacao">
-                            <div class="darAvaliacao">+</div>
+                <!-- Card Item | add class "aberto" para mostrar mais informações -->
+                <div class="card-item comDetalhes aberto">
+                    <div class="d-flex flex-row">
+                        <!-- Logotipo da empresa -->
+                        <div class="logotipo">
+                            <img src="assets/imgs/empresa02.jpg" alt="Logo da Empresa">
                         </div>
-                        <div class="categoria">3 itens</div>
+                        <!-- Informações -->
+                        <div class="infor d-flex flex-column">
+                            <div class="nome">Tognin Pizzas</div>
+                            <div class="avaliacao">
+                                <div class="darAvaliacao">+</div>
+                            </div>
+                            <div class="categoria">3 itens</div>
+                        </div>
+                        <!-- Itens do pedido & preço -->
+                        <div class="mais">
+                            <div class="itens-pedido">
+                                <div class="item">1 Burguer Bacon</div>
+                                <div class="item">
+                                    1 Burguer Duplo
+                                    <span class="observacao">Sem tomate e sem cebola</span>
+                                </div>
+                                <div class="item">Pepsi 2L</div>
+                            </div>
+                            <div class="preco">R$ 22,30</div>
+                        </div>
                     </div>
-                    <!-- Status da Empresa -->
-                    <div class="status online">
-                        R$ 22,30
+                    <!-- Etapas -->
+                    <div class="etapas justify-content-center">
+                        <div class="etapa d-flex flex-column align-items-center">
+                            <div class="hora">11:47</div>
+                            <div class="bola"></div>
+                            <div class="nome">Pedido<br>Recebido</div>
+                        </div>
+                        <div class="etapa d-flex flex-column align-items-center">
+                            <div class="hora">11:48</div>
+                            <div class="bola"></div>
+                            <div class="nome">Pedido<br>Enviado</div>
+                        </div>
+                        <div class="etapa d-flex flex-column align-items-center">
+                            <div class="hora">11:50</div>
+                            <div class="bola"></div>
+                            <div class="nome">Em<br>Pordução</div>
+                        </div>
+                        <div class="etapa d-flex flex-column align-items-center">
+                            <div class="hora">11:55</div>
+                            <div class="bola"></div>
+                            <div class="nome">Saiu para<br>Entrega</div>
+                        </div>
+                        <div class="etapa d-flex flex-column align-items-center">
+                            <div class="hora">11:60</div>
+                            <div class="bola"></div>
+                            <div class="nome">Entregue</div>
+                        </div>
                     </div>
                 </div>
                 <!-- Fim do Card Item -->
 
                 <!-- Card Item -->
-                <div class="card-item deBusca d-flex flex-row">
+                <div class="card-item comDetalhes d-flex flex-row">
                     <!-- Logotipo da empresa -->
                     <div class="logotipo">
                         <img src="assets/imgs/empresa06.jpg" alt="Logo da Empresa">

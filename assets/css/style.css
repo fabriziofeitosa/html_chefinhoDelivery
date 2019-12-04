@@ -248,6 +248,8 @@ body.modal-open .pag > *:not(.modal) {
   max-width: 30%;
   background-position: center;
   background-size: cover;
+  -webkit-transition: all .2s;
+  transition: all .2s;
 }
 
 .card-item .logotipo::before {
@@ -313,6 +315,7 @@ body.modal-open .pag > *:not(.modal) {
   font-size: 14px;
 }
 
+.card-item .mais,
 .card-item .status {
   position: absolute;
   bottom: 10px;
@@ -320,6 +323,7 @@ body.modal-open .pag > *:not(.modal) {
   font-size: 14px;
 }
 
+.card-item .mais .bola,
 .card-item .status .bola {
   display: inline-block;
   width: 8px;
@@ -328,21 +332,126 @@ body.modal-open .pag > *:not(.modal) {
   border-radius: 100%;
 }
 
+.card-item .mais.online .bola,
 .card-item .status.online .bola {
   background-color: green;
 }
 
-.card-item.deBusca {
+.card-item.comDetalhes, .card-item.deBusca {
   -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
           box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  background-color: #f6f7f8;
 }
 
-.card-item.deBusca .infor {
+.card-item.comDetalhes .infor, .card-item.deBusca .infor {
   background-color: #f6f7f8;
 }
 
 .card-item:hover, .card-item:active {
   background-color: #e7e6e6;
+}
+
+.card-item .itens-pedido {
+  display: none;
+  max-width: 120px;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.card-item .itens-pedido .item {
+  margin-bottom: 5px;
+}
+
+.card-item .itens-pedido .item span.observacao {
+  display: block;
+  color: silver;
+  font-size: 10px;
+  border-left: 1px solid silver;
+  padding-left: 5px;
+}
+
+.card-item.comDetalhes .logotipo {
+  border-radius: 10px;
+}
+
+.card-item.comDetalhes .logotipo img {
+  border-radius: 10px;
+}
+
+.card-item.comDetalhes .infor {
+  width: 50%;
+  padding: 5px 10px;
+}
+
+.card-item.comDetalhes .infor .nome {
+  font-size: 20px;
+}
+
+.card-item.comDetalhes.aberto .logotipo {
+  width: 25%;
+}
+
+.card-item.comDetalhes.aberto .mais {
+  width: 50%;
+  position: inherit;
+  padding: 10px;
+}
+
+.card-item.comDetalhes.aberto .mais .preco {
+  text-align: right;
+}
+
+.card-item.comDetalhes.aberto .itens-pedido {
+  display: block;
+}
+
+.card-item.comDetalhes.aberto .etapas {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.card-item.comDetalhes .etapas {
+  display: none;
+  position: relative;
+  font-size: 10px;
+  padding-bottom: 20px;
+}
+
+.card-item.comDetalhes .etapas::before {
+  position: absolute;
+  top: 20px;
+  left: 15px;
+  content: '';
+  display: block;
+  width: calc(100% - 30px);
+  height: 2px;
+  background-color: darkorange;
+}
+
+.card-item.comDetalhes .etapas .etapa {
+  max-width: 20%;
+}
+
+.card-item.comDetalhes .etapas .etapa:not(:first-child) {
+  margin-left: 15px;
+}
+
+.card-item.comDetalhes .etapas .etapa .hora {
+  height: 15px;
+}
+
+.card-item.comDetalhes .etapas .etapa .bola {
+  width: 15px;
+  height: 15px;
+  background-color: darkorange;
+  border-radius: 10px;
+  margin-bottom: 4px;
+}
+
+.card-item.comDetalhes .etapas .etapa .nome {
+  text-align: center;
+  line-height: 1;
 }
 
 .stories-list {
